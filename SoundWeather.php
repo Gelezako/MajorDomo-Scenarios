@@ -11,7 +11,7 @@ SoundWeather
 	//Температура
     $tempw=round(gg("ow_fact.temperature"));
     if($tempw >= 11 and $tempw <= 14){
-    $tempcels=" градусов ";
+    $degree=" градусов ";
     }
     else{
 
@@ -20,11 +20,11 @@ SoundWeather
     }
     
     if($tempw == 0 or $tempw >= 5 and $tempw <= 9){
-    $tempcels= градусов ; }
+    $degree= градусов ; }
     if($tempw == 1){
-    $tempcels= градус ; }
+    $degree= градус ; }
     if($tempw >= 2 and $tempw <= 4){
-    $tempcels= градуса ; }
+    $degree= градуса ; }
     }
     $tNew = abs((float)getGlobal('ow_fact.temperature'));
 
@@ -71,6 +71,6 @@ SoundWeather
      $stw.=" Ожидается ураган ";
     }
 	
-	$status.="Сегодня ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".$tempcels." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".$tempcels.". ".$stp.$stw.;;
+	$status.="Сегодня ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".$degree." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".$tempcels.". ".$stp.$stw;
 	say($status,1);
 ?>
