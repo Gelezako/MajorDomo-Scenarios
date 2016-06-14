@@ -1,0 +1,37 @@
+<? php
+/**
+ExchangeRates
+*
+* @author Alex Sokolov <admin@gelezako.com>
+* @version 0.1 ([14.06.2016])
+Сценарий для Majordomo (majordomo.smartliving.ru). Получает курсы валют покупки\продажи евро и доллар от API PrivatBank.
+*/
+
+$url = 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5';
+$xml = simplexml_load_file($url);
+$i=0;
+//получам курс евро
+foreach($xml->row[0]->exchangerate->attributes() as $key => $exchangerate){
+if($i==2){
+sg("Rate.eurobuy",floatval($exchangerate));
+}
+else if($i==3){
+sg("Rate.eurosale",floatval($exchangerate));
+}
+++$i;
+echo floatval($exchangerate);
+}
+
+//получаем курс доллара
+$j=0;
+foreach($xml->row[2]->exchangerate->attributes() as $key => $exchangerate){
+if($j==2){
+sg("Rate.usdbuy",floatval($exchangerate));
+}
+else if($j==3){
+sg("Rate.usdsale",floatval($exchangerate));
+}
+++$j;
+echo floatval($exchangerate);
+}
+?>
