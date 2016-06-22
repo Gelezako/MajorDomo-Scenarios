@@ -8,7 +8,13 @@ SoundWeather
 
 Сценарий для Majordomo (majordomo.smartliving.ru) на основе данных из плагина получения информации о погоде openweather. Перед применением скрипта установить плагин openweather. 
 */
-	//Температура
+
+    //Запускаем обновленние данных с сервиса
+    include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
+    $openweather = new app_openweather();
+    $openweather->get_weather(gg('ow_city.id'));
+    
+    //Температура
     $tempw=round(gg("ow_fact.temperature"));
     if($tempw >= 11 and $tempw <= 14){
     $degree=" градусов ";
@@ -71,6 +77,6 @@ SoundWeather
      $stw.=" Ожидается ураган ";
     }
 	
-	$status.="Сегодня ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".$degree." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".$tempcels.". ".$stp.$stw;
-	say($status,1);
+	$status.="Погода в ".gg("ow_city.name")." на cегодня: ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".$degree." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".$tempcels.". ".$stp.$stw;
+	say($status,2);
 ?>
