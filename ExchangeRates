@@ -10,7 +10,7 @@ ExchangeRates
 $url = 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5';
 $xml = simplexml_load_file($url);
 $i=0;
-//получам курс евро
+//получаем курс евро
 foreach($xml->row[0]->exchangerate->attributes() as $key => $exchangerate){
 if($i==2){
 sg("Rate.eurobuy",floatval($exchangerate));
