@@ -7,16 +7,17 @@ ExchangeRates
 Сценарий для Majordomo (majordomo.smartliving.ru). Получает курсы валют покупки\продажи евро и доллар от API PrivatBank.
 */
 
+Наличный курс ПриватБанка (в отделениях):
 $url = 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5';
 $xml = simplexml_load_file($url);
 $i=0;
 //получаем курс евро
 foreach($xml->row[0]->exchangerate->attributes() as $key => $exchangerate){
 if($i==2){
-sg("Rate.eurobuy",floatval($exchangerate));
+sg("Rate.eurobuy",round((float)$exchangerate,2);
 }
 else if($i==3){
-sg("Rate.eurosale",floatval($exchangerate));
+sg("Rate.eurosale",round((float)$exchangerate,2);
 }
 ++$i;
 echo floatval($exchangerate);
@@ -26,12 +27,58 @@ echo floatval($exchangerate);
 $j=0;
 foreach($xml->row[2]->exchangerate->attributes() as $key => $exchangerate){
 if($j==2){
-sg("Rate.usdbuy",floatval($exchangerate));
+sg("Rate.usdbuy",round((float)$exchangerate,2);
 }
 else if($j==3){
-sg("Rate.usdsale",floatval($exchangerate));
+sg("Rate.usdsale",round((float)$exchangerate,2);
 }
 ++$j;
 echo floatval($exchangerate);
 }
+?>
+
+Безналичный курс ПриватБанка (конвертация по картам, Приват24, пополнение вкладов):
+<? php
+$url = 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=11';
+$xml = simplexml_load_file($url);
+$i=0;
+//получаем курс евро
+foreach($xml->row[1]->exchangerate->attributes() as $key => $exchangerate){
+if($i==2){
+
+  sg("Rate.eurobuy",round((float)$exchangerate,2));
+}
+else if($i==3){
+sg("Rate.eurosale",round((float)$exchangerate,2));
+}
+++$i;
+}
+
+//получаем курс доллара
+$j=0;
+foreach($xml->row[0]->exchangerate->attributes() as $key => $exchangerate){
+if($j==2){
+sg("Rate.usdbuy",round((float)$exchangerate,2));
+}
+else if($j==3){
+sg("Rate.usdsale",round((float)$exchangerate,2));
+}
+++$j;
+}
+
+
+
+$eurob=(string)gg("Rate.eurobuy");
+$pieces_eb = explode(".", $eurob);
+$euros=(string)gg("Rate.eurosale");
+$pieces_es = explode(".", $euros);
+
+$usdb=(string)gg("Rate.usdbuy");
+$pieces_ub = explode(".", $usdb);
+$usds=(string)gg("Rate.usdsale");
+$pieces_us = explode(".", $usds);
+
+//с дробными, без дробных
+$currency.="Курс валют: евро ".$pieces_eb[0]." и ".$pieces_eb[1]."  ".$pieces_es[0]." и ".$pieces_es[1].". Доллар: ".$pieces_ub[0]." и ".$pieces_ub[1]."  ".$pieces_us[0]." и ".$pieces_us[1];
+//say($currency,2);
 ?>
