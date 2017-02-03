@@ -26,9 +26,7 @@ sg("Rate.usdsale",round((float)$exchangerate,1));
 }
 
 function grivna($kop){
-if ($kop=="") return "гривен";
-else if ($kop=="1") return "гривен";
-else if ($kop=="2" or $kop=="3" or $kop=="4") return "гривны";
+if ($kop=="2" or $kop=="3" or $kop=="4") return "гривны";
 else return "гривен";
 }
 
