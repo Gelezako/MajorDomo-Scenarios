@@ -45,5 +45,5 @@ $euros*=10;
 $usdb*=10;
 $usds*=10;
 
-$currency.="Курс валют: за 10 евро. Покупка ".$eurob." ".grivna($pieces_eb[1]).", продажа ".$euros." ".grivna($pieces_es[1])." . За 10 долларов: покупка ".$usdb." и ".grivna($pieces_ub[1])." . Продажа ".$usds." ".grivna($pieces_us[1]);
+$currency.="Курс валют: за 10 евро. Покупка ".$eurob." ".grivna($pieces_eb[1]).", продажа ".$euros." ".grivna($pieces_es[1])." . За 10 долларов: покупка ".$usdb." ".grivna($pieces_ub[1])." . Продажа ".$usds." ".grivna($pieces_us[1]);
 say($currency,2);
