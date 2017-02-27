@@ -13,6 +13,10 @@ Rate.eurobuy<br>
 Rate.eurosale<br>
 Rate.usdbuy<br>
 Rate.usdsale<br>
+
+Обновлено: либо просто установить модуль, который всё сделает автоматически:
+https://github.com/Gelezako/MajorDomo-ExchangeRates
+
 Для того что бы данные обновлялись автоматически, необходимо в классе "Timer" открыть метод "onNewHour" и добавить в конец:
 <br>
 //проверяем изменение курса валют, вызываем сценарий<br>
