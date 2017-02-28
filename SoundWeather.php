@@ -77,6 +77,6 @@ SoundWeather
      $stw.=" Ожидается ураган ";
     }
 	
-	$status.="Погода в ".gg("ow_city.name")." на cегодня: ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".$degree." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".$tempcels.". ".$stp.$stw;
+	$status.="Погода в ".gg("ow_city.name")." на на данный момент: ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".$degree." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".$tempcels.". ".$stp.$stw;
 	say($status,2);
 ?>
