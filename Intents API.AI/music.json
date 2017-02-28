@@ -1,0 +1,96 @@
+{
+  "templates": [
+    "вруби @typemusic:typemusic ",
+    "хочу послушать @typemusic:typemusic ",
+    "включи @typemusic:typemusic "
+  ],
+  "userSays": [
+    {
+      "id": "63a1c44a-4b18-4bd5-8b63-2c218cc25e52",
+      "data": [
+        {
+          "text": "вруби "
+        },
+        {
+          "text": "транс",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "eb68dbb5-97aa-4f20-8e50-37850e51f372",
+      "data": [
+        {
+          "text": "хочу послушать "
+        },
+        {
+          "text": "транс",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "440a40b6-9009-4713-892b-623957dfa7da",
+      "data": [
+        {
+          "text": "включи "
+        },
+        {
+          "text": "транс",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "620047c2-44a1-4222-bf77-a387c56db5d1",
+  "name": "music",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@typemusic",
+          "name": "typemusic",
+          "value": "$typemusic"
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "уже бегу менять пластинку",
+            "ставлю",
+            "секундочку",
+            "о, моё любимое",
+            "хорошо"
+          ]
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

@@ -1,0 +1,289 @@
+{
+  "templates": [
+    "Какая будет @sys.date-period:date-period  @weather:weather ?",
+    "Какая @sys.date-period:date-period  @weather:weather ?",
+    "Какая @weather:weather ?",
+    "@sys.date-period:date-period будет @weather:weather ?",
+    "Какая будет @sys.date-period:date-period  @weather:weather ?",
+    "@sys.date-period:date-period будет @weather:weather ?",
+    "@sys.date-period:date-period будет @weather:weather ?",
+    "@sys.date-period:date-period будет @weather:weather ?",
+    "Какая @sys.date-period:date-period  @weather:weather ?"
+  ],
+  "userSays": [
+    {
+      "id": "260c7ba6-302a-49ed-9ce9-1dbe4ad7302a",
+      "data": [
+        {
+          "text": "Какая будет "
+        },
+        {
+          "text": "завтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "температура",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "2c0f649f-f7bf-4736-a230-6e2ca0180ec5",
+      "data": [
+        {
+          "text": "Какая "
+        },
+        {
+          "text": "сейчас",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "температура",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "c8b79c5d-8ca5-4e1e-806a-bff703b1e139",
+      "data": [
+        {
+          "text": "Какая "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "71d9c1a1-748e-4226-a2bd-9839853b6b05",
+      "data": [
+        {
+          "text": "Завтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " будет "
+        },
+        {
+          "text": "тепло",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3d91b670-bb71-4e58-9fe2-7c0886ed02f1",
+      "data": [
+        {
+          "text": "Какая будет "
+        },
+        {
+          "text": "завтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3e95184c-18f3-4ad1-8fbc-8aa86f4afb5d",
+      "data": [
+        {
+          "text": "Сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " будет "
+        },
+        {
+          "text": "тепло",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": " ?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a2e6be4b-d9c1-4c6e-b905-f2b597691379",
+      "data": [
+        {
+          "text": "Сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " будет "
+        },
+        {
+          "text": "холодно",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ba7e6772-3cfc-484c-b180-2b9a87f23010",
+      "data": [
+        {
+          "text": "Сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " будет "
+        },
+        {
+          "text": "жарко",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "67e19069-f310-455c-aa3e-6eaa83a530ca",
+      "data": [
+        {
+          "text": "Какая "
+        },
+        {
+          "text": "сейчас",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": " ?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "de6b6185-aac9-464e-868b-29732e86f9b0",
+  "name": "Weather",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@weather",
+          "name": "weather",
+          "value": "$weather",
+          "prompts": [
+            "Уточни, что ты спрашиваешь?"
+          ],
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
