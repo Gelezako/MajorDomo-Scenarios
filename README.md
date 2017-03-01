@@ -6,16 +6,17 @@ Control Panel\Ease of Access\Speech Recognition\Text to Speech
 необходимо выбрать русский синтез речи. Если у вас нерусская ОС, то вам необходимо установить дополнительно русский синтез речи, готовый не идёт по--умолчанию в нерусской ОС Windows.
 
 #ExchangeRates
-Сценарий для "Majordomo" (majordomo.smartliving.ru) Получает курсы валют покупки\продажи евро и доллар от API PrivatBank.
-Необходимо создать класс "ExchangeRates" в разделе "Объекты", внутри класса создать объект "Rate" и выполнить сценарий. После этого у объекта класса будет автоматически создано и инициализировано 4 свойства:
+Сценарий для "Majordomo" (majordomo.smartliving.ru) Получает курсы валют покупки\продажи евро, доллар и рубль по отношению к гривне от API PrivatBank. А так же курсы валют евро, доллар по отношению к рублю Банка России.
+Необходимо установить модуль: ExchangeRates<br>
+https://github.com/Gelezako/MajorDomo-ExchangeRates<br>
+После этого у объекта класса будет автоматически создано и инициализировано 6 свойств:
 <br>
 Rate.eurobuy<br>
 Rate.eurosale<br>
 Rate.usdbuy<br>
 Rate.usdsale<br>
-
-Обновлено: либо просто установить модуль, который всё сделает автоматически:
-https://github.com/Gelezako/MajorDomo-ExchangeRates
+Rate.dollarrur<br>
+Rate.eurorur<br>
 
 Для того что бы данные обновлялись автоматически, необходимо в классе "Timer" открыть метод "onNewHour" и добавить в конец:
 <br>
