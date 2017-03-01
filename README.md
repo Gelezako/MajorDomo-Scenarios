@@ -1,14 +1,19 @@
 # SoundWeather
-Сценарий для "Majordomo" (majordomo.smartliving.ru) на основе данных из плагина получения информации о погоде openweather. Перед применением скрипта установить плагин "openweather". Код добавить либо в раздел "Сценарии" либо "Шаблоны поведения". Так же для успешного озвучивания у вас должен быть установлен плагин" Windows TTS" для ОС Windows. А в настройках Windows
+Сценарий для "Majordomo" (majordomo.smartliving.ru) на основе данных из плагина получения информации о погоде openweather. Перед применением скрипта установить плагин "openweather"  и "API.AI". Код добавить либо в раздел "Сценарии" либо "Шаблоны поведения". Так же для успешного озвучивания у вас должен быть установлен плагин" Windows TTS" для ОС Windows. А в настройках Windows
 <br>
 Control Panel\Ease of Access\Speech Recognition\Text to Speech
 <br>
 необходимо выбрать русский синтез речи. Если у вас нерусская ОС, то вам необходимо установить дополнительно русский синтез речи, готовый не идёт по--умолчанию в нерусской ОС Windows.
+<br>
+Видео уроки по настройке плагинов и сценариев: https://www.youtube.com/playlist?list=PLYOYjvcehgZKWUxcNR25o37EdBGtX084E
+
+
 
 #ExchangeRates
 Сценарий для "Majordomo" (majordomo.smartliving.ru) Получает курсы валют покупки\продажи евро, доллар и рубль по отношению к гривне от API PrivatBank. А так же курсы валют евро, доллар по отношению к рублю Банка России.
 Необходимо установить модуль: ExchangeRates<br>
 https://github.com/Gelezako/MajorDomo-ExchangeRates<br>
+И плагин API.AI<br>
 После этого у объекта класса будет автоматически создано и инициализировано 6 свойств:
 <br>
 Rate.eurobuy<br>
@@ -29,3 +34,5 @@ eurosale<br>
 usdbuy<br>
 usdsale<br>
 Указать колличество дней для хранения значений курса.
+
+Видео уроки по настройке плагинов и сценариев: https://www.youtube.com/playlist?list=PLYOYjvcehgZKWUxcNR25o37EdBGtX084E
