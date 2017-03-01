@@ -25,9 +25,13 @@ sg("Rate.usdsale",round((float)$exchangerate,1));
 ++$j;
 }
 
-function grivna($kop){
-if ($kop=="2" or $kop=="3" or $kop=="4") return "гривны";
-else return "гривен";
+// определяем падеж слова
+function padej($kop,$valuta){
+ if ($valuta=="gr" and $kop=="2" or $kop=="3" or $kop=="4") return "гривны";
+ else if($valuta=="gr") return "гривен";
+ else if($valuta=="rub"and $kop=="1") return "рубль";
+ else if($valuta=="rub"and $kop=="2" or $kop=="3" or $kop=="4") return "рубля";
+ else if($valuta=="rub") return "рублей";
 }
 
 $eurob=(string)gg("Rate.eurobuy");
@@ -40,10 +44,54 @@ $pieces_ub = explode(".", $usdb);
 $usds=(string)gg("Rate.usdsale");
 $pieces_us = explode(".", $usds);
 
+$rurd=(string)gg("Rate.dollarrur");
+$pieces_rd = explode(".", $rurd);
+
+$rure=(string)gg("Rate.eurorur");
+$pieces_re = explode(".", $rure);
+
 $eurob*=10;
 $euros*=10;
 $usdb*=10;
 $usds*=10;
+$rurb*=10;
+$rurs*=10;
 
-$currency.="Курс валют: за 10 евро. Покупка ".$eurob." ".grivna($pieces_eb[1]).", продажа ".$euros." ".grivna($pieces_es[1])." . За 10 долларов: покупка ".$usdb." ".grivna($pieces_ub[1])." . Продажа ".$usds." ".grivna($pieces_us[1]);
+//для гривны
+if($params['Currency'] == 'евро' and $params['Currency1'] == '' and $params['number'] == '') say("За 10 евро ".$euros." ".padej($pieces_es[1],"gr"),2);
+else if($params['Currency'] == 'доллара' and $params['Currency1'] == '' and $params['number'] == '') say("За 10 долларов ".$usds." ".padej($pieces_us[1],"gr"),2);
+else if($params['Currency'] == 'рубль' and $params['Currency1'] == '' and $params['number'] == '') say("За 10 рублей ".$rurs." ".padej($pieces_rs[1],"gr"),2);
+
+else if($params['Currency'] == 'доллар' or $params['Currency'] == 'доллара' or $params['Currency'] == 'долларов'){
+ 	if($params['Currency1'] == 'гривна' or $params['Currency1'] == 'гривнах'){
+      $cur=$params['number']*gg('Rate.usdsale')." ".padej($pieces_us[1],"gr");
+      say($cur,2);
+	}
+  	else if($params['Currency1'] == 'рубль' or $params['Currency1'] == 'рублях'){
+      $cur=$params['number']*gg('Rate.dollarrur')." ".padej($pieces_rd[1],"rub");
+      say($cur,2);
+	}
+}
+
+else if($params['Currency'] == 'евро'){
+ 	if($params['Currency1'] == 'гривна' or $params['Currency1'] == 'гривнах'){
+      $cur=$params['number']*gg('Rate.eurosale')." ".padej($pieces_es[1],"gr");
+      say($cur,2);
+	}
+ 	 else if($params['Currency1'] == 'рубль' or $params['Currency1'] == 'рублях'){
+      $cur=$params['number']*gg('Rate.eurorur')." ".padej($pieces_re[1],"rub");
+      say($cur,2);
+	}
+}
+
+else if($params['Currency'] == 'рубль' or $params['Currency'] == 'рублей'){
+ 	if($params['Currency1'] == 'гривна' or $params['Currency1'] == 'гривнах'){
+     $cur=$params['number']*gg('Rate.rursale')." ".padej($pieces_rs[1],"gr");
+     say($cur,2);
+	}
+}
+
+else if($params['Currency'] == 'все валюты' or $params['Currency'] == 'всех валют')
+$currency.="Курс валют: за 10 евро. Покупка ".$eurob." ".padej($pieces_eb[1],"gr").", продажа ".$euros." ".padej($pieces_es[1],"gr")." . За 10 долларов: покупка ".$usdb." ".padej($pieces_ub[1],"gr")." . Продажа ".$usds." ".padej($pieces_us[1],"gr");
 say($currency,2);
+
