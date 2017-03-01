@@ -1,0 +1,127 @@
+{
+  "templates": [
+    "Курс валют",
+    "Курс @Currency:Currency ",
+    "Сколько будет @sys.number:number  @Currency:Currency в @Currency:Currency1 "
+  ],
+  "userSays": [
+    {
+      "id": "345e2207-7e9c-4a10-99cd-5fcde3599188",
+      "data": [
+        {
+          "text": "Курс валют"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0f9bbb2d-c685-4cf3-a2e0-8158f11cb6db",
+      "data": [
+        {
+          "text": "Курс "
+        },
+        {
+          "text": "евро",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "10c363b5-fbd2-438f-a590-12bb0544d468",
+      "data": [
+        {
+          "text": "Сколько будет "
+        },
+        {
+          "text": "10",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "долларов",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": false
+        },
+        {
+          "text": " в "
+        },
+        {
+          "text": "гривнах",
+          "alias": "Currency1",
+          "meta": "@Currency",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    }
+  ],
+  "id": "3fdfc5d5-a361-4142-a2e0-42327f699e9b",
+  "name": "Rate",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Currency",
+          "name": "Currency",
+          "value": "$Currency",
+          "prompts": [
+            "Какая валюта?"
+          ],
+          "isList": false
+        },
+        {
+          "required": false,
+          "dataType": "@Currency",
+          "name": "Currency1",
+          "value": "$Currency1",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Сейчас посчитаю",
+            "Секундочку"
+          ]
+        },
+        {
+          "type": 0,
+          "speech": []
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
