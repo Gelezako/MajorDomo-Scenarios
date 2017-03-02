@@ -62,6 +62,7 @@ if($params['Currency'] == 'евро' and $params['Currency1'] == '' and $params[
 else if($params['Currency'] == 'доллара' and $params['Currency1'] == '' and $params['number'] == '') say("За 10 долларов ".$usds." ".padej($pieces_us[1],"gr"),2);
 else if($params['Currency'] == 'рубль' and $params['Currency1'] == '' and $params['number'] == '') say("За 10 рублей ".$rurs." ".padej($pieces_rs[1],"gr"),2);
 
+// вычисляем доллар - гривна(рубль)
 else if($params['Currency'] == 'доллар' or $params['Currency'] == 'доллара' or $params['Currency'] == 'долларов'){
  	if($params['Currency1'] == 'гривна' or $params['Currency1'] == 'гривнах'){
       $cur=$params['number']*gg('Rate.usdsale')." ".padej($pieces_us[1],"gr");
@@ -73,7 +74,8 @@ else if($params['Currency'] == 'доллар' or $params['Currency'] == 'дол�
 	}
 }
 
-else if($params['Currency'] == 'евро'){
+// вычисляем евро - гривна(рубль)
+	else if($params['Currency'] == 'евро'){
  	if($params['Currency1'] == 'гривна' or $params['Currency1'] == 'гривнах'){
       $cur=$params['number']*gg('Rate.eurosale')." ".padej($pieces_es[1],"gr");
       say($cur,2);
@@ -84,6 +86,7 @@ else if($params['Currency'] == 'евро'){
 	}
 }
 
+// вычисляем рубль - гривна
 else if($params['Currency'] == 'рубль' or $params['Currency'] == 'рублей'){
  	if($params['Currency1'] == 'гривна' or $params['Currency1'] == 'гривнах'){
      $cur=$params['number']*gg('Rate.rursale')." ".padej($pieces_rs[1],"gr");
@@ -91,7 +94,31 @@ else if($params['Currency'] == 'рубль' or $params['Currency'] == 'рубл�
 	}
 }
 
+// вычисляем гривна(рубль) - евро
+	else if($params['Currency1'] == 'евро'){
+ 	if($params['Currency'] == 'гривна'){
+      $cur=round((float)$params['number']/gg('Rate.eurosale'),2)." ".$params['Currency1'];
+      say($cur,2);
+	}
+ 	 else if($params['Currency'] == 'рубль'){
+      $cur=round((float)$params['number']/gg('Rate.eurorur'),2)." ".$params['Currency1'];
+      say($cur,2);
+	}
+}
+
+// вычисляем гривна(рубль) - доллар
+	else if($params['Currency1'] == 'доллар'){
+ 	if($params['Currency'] == 'гривна'){
+      $cur=round((float)$params['number']/gg('Rate.usdsale'),2)." ".$params['Currency1'];
+      say($cur,2);
+	}
+ 	  if($params['Currency'] == 'рубль' or $params['Currency1'] == 'рублей'){
+      $cur=round((float)$params['number']/gg('Rate.dollarrur'),2)." ".$params['Currency1'];
+      say($cur,2);
+	}
+}
+
+
 else if($params['Currency'] == 'все валюты' or $params['Currency'] == 'всех валют')
 $currency.="Курс валют: за 10 евро. Покупка ".$eurob." ".padej($pieces_eb[1],"gr").", продажа ".$euros." ".padej($pieces_es[1],"gr")." . За 10 долларов: покупка ".$usdb." ".padej($pieces_ub[1],"gr")." . Продажа ".$usds." ".padej($pieces_us[1],"gr");
 say($currency,2);
-
