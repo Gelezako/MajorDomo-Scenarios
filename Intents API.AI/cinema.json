@@ -1,290 +1,46 @@
 {
-  "templates": [
-    "Что интересного в @sys.music-artist:music-artist ?",
-    "Что @sys.date:date идёт в @sys.music-artist:music-artist ?",
-    "Что @sys.date:date  @sys.time-period:time-period показывают в @films:films ",
-    "Что @sys.date:date  @sys.time-period:time-period в показывают в @films:films ",
-    "Что @sys.date:date в  @sys.time:time показывают в @films:films ?",
-    "Что @sys.date:date показывают в @films:films ?",
-    "Что @sys.date:date показывают в @films:films ?"
-  ],
-  "userSays": [
+  "id": "97ed728e-c568-4998-b6a7-b11a93358c25",
+  "name": "films",
+  "isOverridable": true,
+  "entries": [
     {
-      "id": "ae1f6187-f858-428c-8c7c-195943a8ec0c",
-      "data": [
-        {
-          "text": "Что интересного в "
-        },
-        {
-          "text": "кино",
-          "alias": "music-artist",
-          "meta": "@sys.music-artist",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
+      "value": "imax",
+      "synonyms": [
+        "аймакс"
+      ]
     },
     {
-      "id": "890353e1-0fb8-4ed7-a8ee-1cdb61cc7179",
-      "data": [
-        {
-          "text": "Что "
-        },
-        {
-          "text": "сегодня",
-          "alias": "date",
-          "meta": "@sys.date",
-          "userDefined": false
-        },
-        {
-          "text": " идёт в "
-        },
-        {
-          "text": "кино",
-          "alias": "music-artist",
-          "meta": "@sys.music-artist",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
+      "value": "Cinetech+3D",
+      "synonyms": [
+        "3д",
+        "3D",
+        "4dx-3d"
+      ]
     },
     {
-      "id": "63d1c112-8e83-4e4a-b123-dbc61e5fc5a5",
-      "data": [
-        {
-          "text": "Что "
-        },
-        {
-          "text": "завтра",
-          "alias": "date",
-          "meta": "@sys.date",
-          "userDefined": false
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "днём",
-          "alias": "time-period",
-          "meta": "@sys.time-period",
-          "userDefined": false
-        },
-        {
-          "text": " показывают в "
-        },
-        {
-          "text": "аймакс",
-          "alias": "films",
-          "meta": "@films",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
+      "value": "Cinetech+2D",
+      "synonyms": [
+        "2д",
+        "2D"
+      ]
     },
     {
-      "id": "d4c9b70d-11ae-49eb-8e5a-c1096a6148f2",
-      "data": [
-        {
-          "text": "Что "
-        },
-        {
-          "text": "завтра",
-          "alias": "date",
-          "meta": "@sys.date",
-          "userDefined": false
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "вечером",
-          "alias": "time-period",
-          "meta": "@sys.time-period",
-          "userDefined": true
-        },
-        {
-          "text": " в показывают в "
-        },
-        {
-          "text": "аймакс",
-          "alias": "films",
-          "meta": "@films",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
+      "value": "4dx",
+      "synonyms": [
+        "4dx",
+        "4DX",
+        "4D",
+        "4dx-3d"
+      ]
     },
     {
-      "id": "f631d23f-a46f-4897-a531-e6e6a8543ef8",
-      "data": [
-        {
-          "text": "Что "
-        },
-        {
-          "text": "завтра",
-          "alias": "date",
-          "meta": "@sys.date",
-          "userDefined": true
-        },
-        {
-          "text": " в  "
-        },
-        {
-          "text": "18 часов",
-          "alias": "time",
-          "meta": "@sys.time",
-          "userDefined": false
-        },
-        {
-          "text": " показывают в "
-        },
-        {
-          "text": "аймакс",
-          "alias": "films",
-          "meta": "@films",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "258fecfc-b77f-4e69-8b10-5cb1d66befbe",
-      "data": [
-        {
-          "text": "Что "
-        },
-        {
-          "text": "6 марта",
-          "alias": "date",
-          "meta": "@sys.date",
-          "userDefined": false
-        },
-        {
-          "text": " показывают в "
-        },
-        {
-          "text": "аймакс",
-          "alias": "films",
-          "meta": "@films",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 3
-    },
-    {
-      "id": "e93f440d-0853-4393-9100-e3f17bdffec3",
-      "data": [
-        {
-          "text": "Что "
-        },
-        {
-          "text": "сегодня",
-          "alias": "date",
-          "meta": "@sys.date",
-          "userDefined": true
-        },
-        {
-          "text": " показывают в "
-        },
-        {
-          "text": "аймакс",
-          "alias": "films",
-          "meta": "@films",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    }
-  ],
-  "id": "89cd85cc-994a-4bed-a16f-f14b2f9b2f33",
-  "name": "cinema",
-  "auto": true,
-  "contexts": [],
-  "responses": [
-    {
-      "resetContexts": false,
-      "action": "",
-      "affectedContexts": [],
-      "parameters": [
-        {
-          "required": true,
-          "dataType": "@films",
-          "name": "films",
-          "value": "$films",
-          "prompts": [
-            "Какой тип технологии? 2D ,3D, 4D, аймакс?"
-          ],
-          "isList": false
-        },
-        {
-          "required": true,
-          "dataType": "@sys.date",
-          "name": "date",
-          "value": "$date",
-          "prompts": [
-            "На когда?",
-            "На какую дату смотреть расписание?"
-          ],
-          "isList": false
-        },
-        {
-          "dataType": "@sys.time",
-          "name": "time",
-          "value": "$time"
-        },
-        {
-          "dataType": "@sys.time-period",
-          "name": "time-period",
-          "value": "$time-period",
-          "isList": false
-        },
-        {
-          "dataType": "@sys.music-artist",
-          "name": "music-artist",
-          "value": "$music-artist",
-          "isList": false
-        }
-      ],
-      "messages": [
-        {
-          "type": 0,
-          "speech": [
-            "Секундочку",
-            "Сейчас узнаю"
-          ]
-        }
+      "value": "imax-3d",
+      "synonyms": [
+        "imax-3d",
+        "аймакс 3D"
       ]
     }
   ],
-  "priority": 500000,
-  "cortanaCommand": {
-    "navigateOrService": "NAVIGATE",
-    "target": ""
-  },
-  "webhookUsed": false,
-  "webhookForSlotFilling": false,
-  "fallbackIntent": false,
-  "events": []
+  "isEnum": false,
+  "automatedExpansion": false
 }
