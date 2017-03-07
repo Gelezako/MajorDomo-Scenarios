@@ -5,7 +5,6 @@
 * @copyright Alex Sokolov http://blog.gelezako.com (c)
 * @version 0.1 ([Mar 03, 2017])
 **/
-
 // $params['date-time'] (ex 'сегодня');
 // $params['date'] (ex '2017-03-06');
 // $params['films'] (ex 'imax');
@@ -33,8 +32,9 @@ if($time[1]=='00:00:00')$time[1]="23:59:59";
 $technology2='';
 if($params['films']=='4dx') $technology2='4dx-3d';
 else if($params['films']=='imax') {$technology2='imax-3d';}
+else if($params['films']=='Cinetech+3D') {$technology2='4dx-3d';}
 
-$url="http://planetakino.ua/kharkov/showtimes/xml/";
+$url=gg('City.URL');
 $data = simplexml_load_file($url);
 
 if($data){
