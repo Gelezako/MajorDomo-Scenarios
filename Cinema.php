@@ -37,7 +37,7 @@ else if($params['films']=='Cinetech+3D') {$technology2='4dx-3d';}
 $url=gg('City.URL');
 $data = simplexml_load_file($url);
 
-if($data){
+if(!empty($data)){
 $films= array();//массив для названий фильмов
 foreach ($data->showtimes->day as $day){ //ищем все дни проката
     if($day['date']==$date1){ // находим наш день
