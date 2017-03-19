@@ -1,37 +1,41 @@
 $url = 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=11';
 $xml = simplexml_load_file($url);
 $i=0;
-//получаем курс евро
-foreach($xml->row[1]->exchangerate->attributes() as $key => $exchangerate){
-if($i==2){
 
-  sg("Rate.eurobuy",round((float)$exchangerate,1));
-}
-else if($i==3){
-sg("Rate.eurosale",round((float)$exchangerate,1));
-}
-++$i;
+if(!empty($data)){
+	//получаем курс евро
+	foreach($xml->row[1]->exchangerate->attributes() as $key => $exchangerate){
+		if($i==2){
+
+		  sg("Rate.eurobuy",round((float)$exchangerate,1));
+		}
+	else if($i==3){
+		sg("Rate.eurosale",round((float)$exchangerate,1));
+		}
+		++$i;
+	}
 }
 
 //получаем курс доллара
 $j=0;
-foreach($xml->row[0]->exchangerate->attributes() as $key => $exchangerate){
-if($j==2){
-sg("Rate.usdbuy",round((float)$exchangerate,1));
+if(!empty($data)){
+	foreach($xml->row[0]->exchangerate->attributes() as $key => $exchangerate){
+		if($j==2){
+		sg("Rate.usdbuy",round((float)$exchangerate,1));
+		}
+		else if($j==3){
+		sg("Rate.usdsale",round((float)$exchangerate,1));
+		}
+		++$j;
+	}
 }
-else if($j==3){
-sg("Rate.usdsale",round((float)$exchangerate,1));
-}
-++$j;
-}
-
 // определяем падеж слова
 function padej($kop,$valuta){
- if ($valuta=="gr" and $kop=="2" or $kop=="3" or $kop=="4") return "гривны";
- else if($valuta=="gr") return "гривен";
- else if($valuta=="rub"and $kop=="1") return "рубль";
- else if($valuta=="rub"and $kop=="2" or $kop=="3" or $kop=="4") return "рубля";
- else if($valuta=="rub") return "рублей";
+	 if ($valuta=="gr" and $kop=="2" or $kop=="3" or $kop=="4") return "гривны";
+	 else if($valuta=="gr") return "гривен";
+	 else if($valuta=="rub"and $kop=="1") return "рубль";
+	 else if($valuta=="rub"and $kop=="2" or $kop=="3" or $kop=="4") return "рубля";
+	 else if($valuta=="rub") return "рублей";
 }
 
 $eurob=(string)gg("Rate.eurobuy");
