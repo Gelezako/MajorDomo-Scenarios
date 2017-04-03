@@ -1,0 +1,100 @@
+{
+  "id": "fbefb0a1-8882-44ee-8d2f-a9f42a76d1d8",
+  "name": "typemusic",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "транс",
+      "synonyms": [
+        "транс"
+      ]
+    },
+    {
+      "value": "чилаут",
+      "synonyms": [
+        "чилаут"
+      ]
+    },
+    {
+      "value": "драм",
+      "synonyms": [
+        "драм",
+        "драм-н-бэйс"
+      ]
+    },
+    {
+      "value": "хип-хоп",
+      "synonyms": [
+        "хип-хоп"
+      ]
+    },
+    {
+      "value": "трек",
+      "synonyms": [
+        "трек"
+      ]
+    },
+    {
+      "value": "рок",
+      "synonyms": [
+        "рок"
+      ]
+    },
+    {
+      "value": "поп",
+      "synonyms": [
+        "поп"
+      ]
+    },
+    {
+      "value": "прогресив",
+      "synonyms": [
+        "прогресив"
+      ]
+    },
+    {
+      "value": "техно",
+      "synonyms": [
+        "техно"
+      ]
+    },
+    {
+      "value": "лаунж",
+      "synonyms": [
+        "лаунж"
+      ]
+    },
+    {
+      "value": "хардкор",
+      "synonyms": [
+        "хардкор"
+      ]
+    },
+    {
+      "value": "хаус",
+      "synonyms": [
+        "хаус"
+      ]
+    },
+    {
+      "value": "минимал",
+      "synonyms": [
+        "минимал"
+      ]
+    },
+    {
+      "value": "технохаус",
+      "synonyms": [
+        "технохаус"
+      ]
+    },
+    {
+      "value": "релакс",
+      "synonyms": [
+        "релакс"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}
