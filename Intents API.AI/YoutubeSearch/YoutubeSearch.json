@@ -1,0 +1,387 @@
+{
+  "templates": [
+    "найди на ютубе @typemusic:typemusic ",
+    "найти на ютубе клипы @sys.music-artist:music-artist ",
+    "найти на ютубе клипы @sys.music-artist:music-artist ",
+    "давай @next:next ",
+    "@next:next трек",
+    "@next:next трек",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на ютубе @typemusic:typemusic ",
+    "найди на Ютубе @typemusic:typemusic ",
+    "найди на Ютубе @typemusic:typemusic ",
+    "найди на YouTube @sys.music-artist:music-artist ",
+    "найди на YouTube @typemusic:typemusic "
+  ],
+  "userSays": [
+    {
+      "id": "fbfde6a8-ec82-4226-a870-820f80768c8d",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "релакс",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "cc5ecf2f-ca8c-4111-b8a9-5c90271442d7",
+      "data": [
+        {
+          "text": "найти на ютубе клипы "
+        },
+        {
+          "text": "Tiesto",
+          "alias": "music-artist",
+          "meta": "@sys.music-artist",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "663a5793-bcba-4732-bec9-d9236b31f249",
+      "data": [
+        {
+          "text": "найти на ютубе клипы "
+        },
+        {
+          "text": "тиесто",
+          "alias": "music-artist",
+          "meta": "@sys.music-artist",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "3cabac78-551b-4fd9-a563-5ea8abfffb49",
+      "data": [
+        {
+          "text": "давай "
+        },
+        {
+          "text": "дальше",
+          "alias": "next",
+          "meta": "@next",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d8958b79-39f2-438e-a512-c09d8591129b",
+      "data": [
+        {
+          "text": "другой",
+          "alias": "next",
+          "meta": "@next",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "трек",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "47b94bc6-7898-4f48-be7c-0c17f6abd4c4",
+      "data": [
+        {
+          "text": "следующий",
+          "alias": "next",
+          "meta": "@next",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "трек",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7529cf74-583e-47c3-b27c-4c4943dd0533",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "технохаус",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "9053c2df-a4a6-454c-b320-d4b697f928ab",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "прогресив",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "84ab5154-4554-4f3a-ade3-3cbe8a62843a",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "минимал",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ef8b18dc-692e-47f9-a2f0-4ce08d6fdadd",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "хардкор",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b5166ae1-7d66-4602-848c-d37b198668a2",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "техно",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bf81ed59-f6c9-49f8-806e-e1c28b97d6c9",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "чилаут",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "da979888-55a7-4ea6-a97a-da6af8f18a44",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "хаус",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4b1e0fc6-a17a-4970-8b7c-41d94414814e",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "лаунж",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "08b11f11-6478-4fdf-a6c7-5e2f4a64e0ee",
+      "data": [
+        {
+          "text": "найди на ютубе "
+        },
+        {
+          "text": "поп",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "e9becfc7-6f6b-4e39-a85f-86a19da55cc0",
+      "data": [
+        {
+          "text": "найди на Ютубе "
+        },
+        {
+          "text": "рок",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "80695c51-68e7-440b-bb63-61c9fd6c87dd",
+      "data": [
+        {
+          "text": "найди на Ютубе "
+        },
+        {
+          "text": "транс",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fe13d089-8b3d-4333-8b52-6b1ed6dfce83",
+      "data": [
+        {
+          "text": "найди на YouTube "
+        },
+        {
+          "text": "майкла джексона",
+          "alias": "music-artist",
+          "meta": "@sys.music-artist",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "60dccdc1-02c2-4bf8-bf58-9ed562de4b65",
+      "data": [
+        {
+          "text": "найди на YouTube "
+        },
+        {
+          "text": "транс",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "abee273e-e60f-4700-81a0-12f841ade54c",
+  "name": "YoutubeSearch",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@typemusic",
+          "name": "typemusic",
+          "value": "$typemusic"
+        },
+        {
+          "dataType": "@sys.music-artist",
+          "name": "music-artist",
+          "value": "$music-artist"
+        },
+        {
+          "dataType": "@next",
+          "name": "next",
+          "value": "$next",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Секунду",
+            "Один момент",
+            "Секундочку",
+            "Уже бегу"
+          ]
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
