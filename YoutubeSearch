@@ -1,0 +1,58 @@
+/**
+* Сценарий для Majordomo
+* Голосовой поиск роликов на youtube
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright Alex Sokolov http://blog.gelezako.com (c)
+* @version 0.1 ([April 04, 2017])
+**/
+
+// $params['music-artist']
+// $params['typemusic'] (ex 'транс');
+
+//проверяем кого хотим слушать, солиста, группу или направление
+if($params['typemusic']=='' and $params['music-artist']!='')
+ 	$url='http://localhost/modules/SearchYoutube/search.php?q='.$params['music-artist'].'&maxResults='.gg("Youtube.maxCount");
+else if($params['music-artist']=='' and $params['typemusic']!='')
+ 	$url='http://localhost/modules/SearchYoutube/search.php?q='.$params['typemusic'].'&maxResults='.gg("Youtube.maxCount");
+else if($params['typemusic']=='' and $params['music-artist']==''and $params['next']==''){
+ 	$url=''; say("Неполучается найти",2);}
+
+//узнаем была ли команда воспроизвести другой трек,если треков больше чем один, то воспроизводим
+if($params['next']!='' and (int)gg("Youtube.maxCount")>1){
+ 	$next=(int)gg("Youtube.next");
+ 	if($next>1){
+      say("открываю следующий трек",2);
+      getURL(BASE_URL.ROOTHTML.'popup/app_player.html?ajax=1&command=refresh&play=https://www.youtube.com/watch?v='.gg("Youtube.videoId".$next),0);
+      sg("Youtube.next", (int)$next-1);
+    }
+ 	else {
+     // если проиграли все ролики, то играем по кругу
+     $next=gg("Youtube.maxCount");
+     say("открываю следующий трек",2);
+     getURL(BASE_URL.ROOTHTML.'popup/app_player.html?ajax=1&command=refresh&play=https://www.youtube.com/watch?v='.gg("Youtube.videoId".$next),0);
+     sg("Youtube.next",$next-1);
+    }
+}
+
+$i=0; // счётчик кол-ва ссылок на ютуб
+//libxml_use_internal_errors(true);
+if ($url!=''){
+ 	   $xml = simplexml_load_file($url);
+       if (false === $xml) say("Что-то сломалось",2);
+       else {
+               foreach($xml->clip as $clip){
+                   $i++;
+                   sg("Youtube.title".$i, $clip->title);
+                   sg("Youtube.videoId".$i, $clip->videoId);
+               }
+            }
+}
+
+//если удалось распознать артиста или музыкально направление, то открыть ссылку
+if($i>0 and $params['next']==''){
+ 	say("открываю",2);
+ 	getURL(BASE_URL.ROOTHTML.'popup/app_player.html?ajax=1&command=refresh&play=https://www.youtube.com/watch?v='.gg("Youtube.videoId".$i),0);
+}
+
+libxml_clear_errors(); //возможно и не надо чистить, но я оставил :)
+libxml_use_internal_errors($use_errors);
