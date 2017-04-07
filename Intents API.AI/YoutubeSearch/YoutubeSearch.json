@@ -1,5 +1,6 @@
 {
   "templates": [
+    "найди на YouTube  @typemusic:typemusic ",
     "найди на ютубе @typemusic:typemusic ",
     "найти на ютубе клипы @sys.music-artist:music-artist ",
     "найти на ютубе клипы @sys.music-artist:music-artist ",
@@ -21,6 +22,22 @@
     "найди на YouTube @typemusic:typemusic "
   ],
   "userSays": [
+    {
+      "id": "52603af8-6b04-4e85-af92-1d98b42e8a3b",
+      "data": [
+        {
+          "text": "найди на YouTube  "
+        },
+        {
+          "text": "релакс",
+          "alias": "typemusic",
+          "meta": "@typemusic",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
     {
       "id": "fbfde6a8-ec82-4226-a870-820f80768c8d",
       "data": [
