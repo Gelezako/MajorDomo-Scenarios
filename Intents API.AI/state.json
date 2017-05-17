@@ -1,0 +1,27 @@
+{
+  "id": "3fdeb2e5-e9e6-4901-965f-9ed27eb59c50",
+  "name": "state",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "выключить",
+      "synonyms": [
+        "выключить",
+        "выруби",
+        "потуши",
+        "потушить",
+        "вырубить"
+      ]
+    },
+    {
+      "value": "включить",
+      "synonyms": [
+        "включить",
+        "вруби",
+        "врубить"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
