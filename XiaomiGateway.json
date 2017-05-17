@@ -1,0 +1,207 @@
+{
+  "templates": [
+    "@state:state  @sys.color:color ночник на @sys.number:number процентов",
+    "измени цвет на @sys.color:color и яркость на @sys.number:number процентов",
+    "@state:state ночник на @sys.number:number процентов",
+    "@state:state ночник",
+    "изменить яркость на @sys.number:number процентов",
+    "изменить цвет на @sys.color:color "
+  ],
+  "userSays": [
+    {
+      "id": "f0470d80-4494-4629-a6ca-055a25967e32",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "синий",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        },
+        {
+          "text": " ночник на "
+        },
+        {
+          "text": "90",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " процентов"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "159fa452-bf54-410e-b4e9-7b23fde5f583",
+      "data": [
+        {
+          "text": "измени цвет на "
+        },
+        {
+          "text": "синий",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        },
+        {
+          "text": " и яркость на "
+        },
+        {
+          "text": "20",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " процентов"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bbd24dd3-b9cc-41ef-84aa-6b69ff2f6ad7",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": true
+        },
+        {
+          "text": " ночник на "
+        },
+        {
+          "text": "100",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " процентов"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "2add9260-1420-4667-8080-c1a3c63e1574",
+      "data": [
+        {
+          "text": "выключить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": true
+        },
+        {
+          "text": " ночник"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b002172d-8ca4-4c98-a5a0-7ea80133ec22",
+      "data": [
+        {
+          "text": "изменить яркость на "
+        },
+        {
+          "text": "100",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " процентов"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d63db20e-5f6a-4ab7-b7c6-c973483c957b",
+      "data": [
+        {
+          "text": "изменить цвет на "
+        },
+        {
+          "text": "красный",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "e76ca229-34b6-404a-b99c-9620a4ef6108",
+  "name": "XiaomiGateway",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@sys.color",
+          "name": "color",
+          "value": "$color",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        },
+        {
+          "dataType": "@state",
+          "name": "state",
+          "value": "$state",
+          "prompts": [],
+          "defaultValue": "",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "секунду.",
+            "секундочку.",
+            "меняю.",
+            "ща.",
+            "щас.",
+            "погодь.",
+            "жди.",
+            "момент.",
+            "один момент."
+          ]
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
