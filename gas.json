@@ -1,0 +1,33 @@
+{
+  "id": "6fbbbb24-5758-4cfb-94e0-02822c164ba4",
+  "name": "gas",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "угарный газ",
+      "synonyms": [
+        "угарный газ"
+      ]
+    },
+    {
+      "value": "углекислый газ",
+      "synonyms": [
+        "углекислый газ"
+      ]
+    },
+    {
+      "value": "воздуха",
+      "synonyms": [
+        "воздуха"
+      ]
+    },
+    {
+      "value": "угарного газа",
+      "synonyms": [
+        "угарного газа"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
