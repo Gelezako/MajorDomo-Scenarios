@@ -1,0 +1,118 @@
+{
+  "templates": [
+    "какое сейчас качество @gas:gas в помещении?",
+    "какой сейчас показатель чистоты @gas:gas ",
+    "какой уровень @gas:gas ?"
+  ],
+  "userSays": [
+    {
+      "id": "81595d12-9f61-4399-9b5a-ca4f73f5c95a",
+      "data": [
+        {
+          "text": "какое сейчас качество "
+        },
+        {
+          "text": "воздуха",
+          "alias": "gas",
+          "meta": "@gas",
+          "userDefined": true
+        },
+        {
+          "text": " в помещении?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "30e57cf8-f3bd-48de-9e23-fb667c2ad1b9",
+      "data": [
+        {
+          "text": "какой сейчас показатель чистоты "
+        },
+        {
+          "text": "воздуха",
+          "alias": "gas",
+          "meta": "@gas",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a17aac80-bf39-4e5a-8b28-162a83fa4f9a",
+      "data": [
+        {
+          "text": "какой уровень "
+        },
+        {
+          "text": "угарного газа",
+          "alias": "gas",
+          "meta": "@gas",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "d7519795-41f4-491f-a746-1486a8d2c786",
+  "name": "Gas",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@gas",
+          "name": "gas",
+          "value": "$gas",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": "simple_response",
+          "platform": "google",
+          "items": [
+            {
+              "textToSpeech": "секунду"
+            },
+            {
+              "textToSpeech": "секундочку"
+            }
+          ]
+        },
+        {
+          "type": 0,
+          "speech": [
+            "секунду",
+            "секундочку",
+            "сейчас",
+            "смотрю",
+            "сейчас проверю",
+            "сейчас чекну"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": [
+        "google"
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
