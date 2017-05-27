@@ -1,5 +1,5 @@
 /*
-* Music.php
+* SoundMusic.php
 * @author Alex Sokolov <admin@gelezako.com>
 * @copyright Alex Sokolov http://www.blog.gelezako.com (c)
 * @version 0.1
