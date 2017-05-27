@@ -1,0 +1,45 @@
+{
+  "id": "560f9484-5988-4fad-91f5-23ce3a7ea453",
+  "name": "exercises",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "отжиманию",
+      "synonyms": [
+        "отжиманию"
+      ]
+    },
+    {
+      "value": "подтягиванию",
+      "synonyms": [
+        "подтягиванию"
+      ]
+    },
+    {
+      "value": "прессу",
+      "synonyms": [
+        "прессу"
+      ]
+    },
+    {
+      "value": "приседанию",
+      "synonyms": [
+        "приседанию"
+      ]
+    },
+    {
+      "value": "отжался",
+      "synonyms": [
+        "отжался"
+      ]
+    },
+    {
+      "value": "подтянулся",
+      "synonyms": [
+        "подтянулся"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
