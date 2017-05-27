@@ -1,0 +1,41 @@
+{
+  "id": "380be65c-760d-4046-8a55-c02323b2d653",
+  "name": "Currency1",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "евро",
+      "synonyms": [
+        "евро"
+      ]
+    },
+    {
+      "value": "доллар",
+      "synonyms": [
+        "доллар",
+        "даллара",
+        "далларов",
+        "долларах"
+      ]
+    },
+    {
+      "value": "гривна",
+      "synonyms": [
+        "гривна",
+        "гривны",
+        "гривнах"
+      ]
+    },
+    {
+      "value": "рубль",
+      "synonyms": [
+        "рубль",
+        "рубля",
+        "рублей",
+        "рублях"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
