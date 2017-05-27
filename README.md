@@ -43,6 +43,6 @@ usdsale<br>
  - Что 5 марта показывают в аймакс (2D,3D,4D)? (использование дат, система автоматически определит текущий месяц)
  - Что завтра вечером показывают в аймакс (2D,3D,4D)? (в качестве временного периодна можнои спользовать "утром" или "вечером")
  
-Плагин Majordomo для выбора города: https://github.com/Gelezako/MajorDomo-Cinema
+Плагин Majordomo для выбора города для которого нужно озвучивать фильмы в кинотеатре: https://github.com/Gelezako/MajorDomo-Cinema
 
 Видео уроки по настройке плагинов и сценариев: https://www.youtube.com/playlist?list=PLYOYjvcehgZKWUxcNR25o37EdBGtX084E
