@@ -4,10 +4,14 @@
 Control Panel\Ease of Access\Speech Recognition\Text to Speech
 <br>
 необходимо выбрать русский синтез речи. Если у вас нерусская ОС, то вам необходимо установить дополнительно русский синтез речи, готовый не идёт по--умолчанию в нерусской ОС Windows.
-<br>
-Видео уроки по настройке плагинов и сценариев: https://www.youtube.com/playlist?list=PLYOYjvcehgZKWUxcNR25o37EdBGtX084E
+<br>Демонстрация применения и видео инструкция по настройке:
+https://www.youtube.com/watch?v=4B4ImDR2st4
 
 
+# Music
+Голосовое управление музок, источник mixcloud, трубуется установка плагина
+Демонстрация применения и видео инструкция по настройке:
+https://www.youtube.com/watch?v=4B4ImDR2st4
 
 # ExchangeRates
 Сценарий для "Majordomo" (majordomo.smartliving.ru) Получает курсы валют покупки\продажи евро, доллар и рубль по отношению к гривне от API PrivatBank. А так же курсы валют евро, доллар по отношению к рублю Банка России.
@@ -34,6 +38,8 @@ eurosale<br>
 usdbuy<br>
 usdsale<br>
 Указать колличество дней для хранения значений курса.
+Демонстрация применения и видео инструкция по настройке:
+https://www.youtube.com/watch?v=wZSfGWjE6lc
 
 
 # Cinema
