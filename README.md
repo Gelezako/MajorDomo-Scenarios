@@ -8,12 +8,12 @@ Control Panel\Ease of Access\Speech Recognition\Text to Speech
 https://www.youtube.com/watch?v=4B4ImDR2st4
 
 
-# Music
+# SoundMusic
 Голосовое управление музок, источник mixcloud, трубуется установка плагина
 Демонстрация применения и видео инструкция по настройке:
 https://www.youtube.com/watch?v=4B4ImDR2st4
 
-# ExchangeRates
+# SoundExchangeRates
 Сценарий для "Majordomo" (majordomo.smartliving.ru) Получает курсы валют покупки\продажи евро, доллар и рубль по отношению к гривне от API PrivatBank. А так же курсы валют евро, доллар по отношению к рублю Банка России.
 Необходимо установить модуль: ExchangeRates<br>
 https://github.com/Gelezako/MajorDomo-ExchangeRates<br>
@@ -42,7 +42,7 @@ usdsale<br>
 https://www.youtube.com/watch?v=wZSfGWjE6lc
 
 
-# Cinema
+# SoundCinema
 Голосовые команды и озвучивание расписания фильмов в кинотеатрах planetakino.ua
 Поддерживаемые команды:
  - Что сегодня (завтра, послезавтра) показывают в аймакс (2D,3D,4D)? (можнои спользовать: "сегодня", "завтра", "послезавтра" и тип фильма: "аймакс", "2D", "3D", "4D")
@@ -54,12 +54,12 @@ https://www.youtube.com/watch?v=wZSfGWjE6lc
 https://www.youtube.com/watch?v=EDtMvenQhYs&t=17s
 
 
-# YoutubeSearch
+# SoundYoutubeSearch
 Сценарий для поиска клипов на Youtube.
 Демонстрация применения и видео инструкция по настройке:
 https://www.youtube.com/watch?v=6ggg7jzs8qQ
 
-# MQ2
+# SoundMQ2
 Сбор данных с датчика газов, их анализ и голосовое оповещение о качестве воздуха в квартире
 Ссылка на скетч для Arduino
 https://github.com/Gelezako/MQ2-MQTT-Ethernet-Majordomo
