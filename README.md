@@ -44,9 +44,23 @@ usdsale<br>
  - Что завтра вечером показывают в аймакс (2D,3D,4D)? (в качестве временного периодна можнои спользовать "утром" или "вечером")
  
 Плагин Majordomo для выбора города для которого нужно озвучивать фильмы в кинотеатре: https://github.com/Gelezako/MajorDomo-Cinema
+Демонстрация применения и видео инструкция по настройке:
+https://www.youtube.com/watch?v=EDtMvenQhYs&t=17s
 
 
 # YoutubeSearch
-Сценарий для поиска клипов на Youtube
+Сценарий для поиска клипов на Youtube.
+Демонстрация применения и видео инструкция по настройке:
+https://www.youtube.com/watch?v=6ggg7jzs8qQ
+
+# MQ2
+Сбор данных с датчика газов, их анализ и голосовое оповещение о качестве воздуха в квартире
+Ссылка на скетч для Arduino
+https://github.com/Gelezako/MQ2-MQTT-Ethernet-Majordomo
+
+Демонстрация применения и видео инструкция по настройке
+https://www.youtube.com/watch?v=mB0fdDYdvEI
+
+
 
 Видео уроки по настройке плагинов и сценариев: https://www.youtube.com/playlist?list=PLYOYjvcehgZKWUxcNR25o37EdBGtX084E
