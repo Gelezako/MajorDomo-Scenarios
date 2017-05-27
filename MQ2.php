@@ -1,5 +1,5 @@
 /*
-* MajordomoAPIAI.Implementation.php
+* MQ2.php
 * @author Alex Sokolov <admin@gelezako.com>
 * @copyright Alex Sokolov http://www.blog.gelezako.com (c)
 * @version 0.1 ([May 23, 2017])
