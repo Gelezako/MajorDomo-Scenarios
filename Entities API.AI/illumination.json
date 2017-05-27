@@ -1,0 +1,29 @@
+{
+  "id": "ecc6f3d6-6e6e-47db-9f0d-884cb6568470",
+  "name": "illumination",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "освещённость",
+      "synonyms": [
+        "освещённость",
+        "освещение",
+        "освещенность"
+      ]
+    },
+    {
+      "value": "включить",
+      "synonyms": [
+        "включить"
+      ]
+    },
+    {
+      "value": "освещенность",
+      "synonyms": [
+        "освещенность"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
