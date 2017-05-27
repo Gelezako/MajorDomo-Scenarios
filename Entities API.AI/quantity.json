@@ -1,0 +1,29 @@
+{
+  "id": "8a255c67-133c-4913-ac89-f8b6c1cfd483",
+  "name": "quantity",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "30",
+      "synonyms": [
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
