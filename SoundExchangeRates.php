@@ -1,3 +1,11 @@
+/*
+* SoundExchangeRates.php
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright Alex Sokolov http://www.blog.gelezako.com (c)
+* @version 0.1
+*/
+
+
 $url = 'https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=11';
 $xml = simplexml_load_file($url);
 $i=0;
