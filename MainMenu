@@ -1,0 +1,11 @@
+Качество воздуха: %Kitchen.MQ2% ppm
+<br>
+Погода: %ow_day0.weather_type%
+<br>
+Температура: %ow_day0.temperature%
+<br>
+Скорость ветра: %ow_day0.wind_speed% м\с
+<br>
+Влажность: %ow_day0.humidity% %
+<br>
+Давление: %ow_day0.pressure_mmhg% мл.рт.ст
