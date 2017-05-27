@@ -1,0 +1,24 @@
+{
+  "id": "f11775a9-abd7-4e90-90bc-060515d7e5c5",
+  "name": "weather",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "погода",
+      "synonyms": [
+        "погода",
+        "жарко",
+        "холодно",
+        "тепло"
+      ]
+    },
+    {
+      "value": "температура",
+      "synonyms": [
+        "температура"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
