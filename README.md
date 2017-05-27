@@ -9,7 +9,7 @@ Control Panel\Ease of Access\Speech Recognition\Text to Speech
 
 
 
-#ExchangeRates
+# ExchangeRates
 Сценарий для "Majordomo" (majordomo.smartliving.ru) Получает курсы валют покупки\продажи евро, доллар и рубль по отношению к гривне от API PrivatBank. А так же курсы валют евро, доллар по отношению к рублю Банка России.
 Необходимо установить модуль: ExchangeRates<br>
 https://github.com/Gelezako/MajorDomo-ExchangeRates<br>
@@ -36,7 +36,7 @@ usdsale<br>
 Указать колличество дней для хранения значений курса.
 
 
-#Cinema
+# Cinema
 Голосовые команды и озвучивание расписания фильмов в кинотеатрах planetakino.ua
 Поддерживаемые команды:
  - Что сегодня (завтра, послезавтра) показывают в аймакс (2D,3D,4D)? (можнои спользовать: "сегодня", "завтра", "послезавтра" и тип фильма: "аймакс", "2D", "3D", "4D")
@@ -44,5 +44,9 @@ usdsale<br>
  - Что завтра вечером показывают в аймакс (2D,3D,4D)? (в качестве временного периодна можнои спользовать "утром" или "вечером")
  
 Плагин Majordomo для выбора города для которого нужно озвучивать фильмы в кинотеатре: https://github.com/Gelezako/MajorDomo-Cinema
+
+
+# YoutubeSearch
+Сценарий для поиска клипов на Youtube
 
 Видео уроки по настройке плагинов и сценариев: https://www.youtube.com/playlist?list=PLYOYjvcehgZKWUxcNR25o37EdBGtX084E
