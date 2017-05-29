@@ -1,10 +1,58 @@
 {
   "templates": [
+    "какой сейчас курс @Currency:Currency ",
+    "курс @Currency:Currency ",
+    "@Currency:Currency ",
     "Курс валют",
     "Курс @Currency:Currency ",
     "Сколько будет @sys.number:number  @Currency:Currency в @Currency:Currency1 "
   ],
   "userSays": [
+    {
+      "id": "504578f5-c3bc-476c-9f9e-b5bea72f3cce",
+      "data": [
+        {
+          "text": "какой сейчас курс "
+        },
+        {
+          "text": "всех валют",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "33fe9b25-68f0-4950-bd7f-a7e6f03e7b26",
+      "data": [
+        {
+          "text": "курс "
+        },
+        {
+          "text": "рубля",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "5f5f8b47-33d7-4a57-9e56-245f4d167ef6",
+      "data": [
+        {
+          "text": "доллар",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
     {
       "id": "345e2207-7e9c-4a10-99cd-5fcde3599188",
       "data": [
@@ -66,7 +114,7 @@
       "count": 1
     }
   ],
-  "id": "3fdfc5d5-a361-4142-a2e0-42327f699e9b",
+  "id": "a3d6592b-add6-4792-ae2b-ef0b8a8885d2",
   "name": "Rate",
   "auto": true,
   "contexts": [],
