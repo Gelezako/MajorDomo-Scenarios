@@ -69,6 +69,9 @@ $usds*=10;
 $rurb*=10;
 $rurs*=10;
 
+//если валюта по умолчанию не указана, то использовать гривну
+if ($params['Currency1']=="") {$params['Currency1']="гривна";$params['number']=1;}
+	
 //для гривны
 if($params['Currency'] == 'евро' and $params['Currency1'] == '' and $params['number'] == '') say("За 10 евро ".$euros." ".padej($pieces_es[1],"gr"),2);
 else if($params['Currency'] == 'доллара' and $params['Currency1'] == '' and $params['number'] == '') say("За 10 долларов ".$usds." ".padej($pieces_us[1],"gr"),2);
