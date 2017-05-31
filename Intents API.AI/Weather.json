@@ -1,16 +1,380 @@
 {
   "templates": [
+    "@sys.date-period:date-period на улице @WeatherType:WeatherType ?",
+    "@sys.date-period:date-period на улице @WeatherType:WeatherType ?",
+    "@sys.date-period:date-period на улице @WeatherType:WeatherType ?",
+    "какая @sys.date-period:date-period  @weather:weather ",
+    "@sys.date-period:date-period  @WeatherType:WeatherType воздух на улице?",
+    "@sys.date-period:date-period  @WeatherType:WeatherType день?",
+    "@sys.date-period:date-period  @WeatherType:WeatherType ?",
+    "@sys.date-period:date-period  @WeatherType:WeatherType ?",
+    "@sys.date-period:date-period  @WeatherType:WeatherType ?",
+    "@sys.date-period:date-period  @WeatherType:WeatherType день?",
+    "за окном @WeatherType:WeatherType погода?",
+    "за окном @WeatherType:WeatherType погода?",
+    "на улице @WeatherType:WeatherType ?",
+    "на улице @WeatherType:WeatherType ?",
     "Какая будет @sys.date-period:date-period  @weather:weather ?",
     "Какая @sys.date-period:date-period  @weather:weather ?",
     "Какая @weather:weather ?",
-    "@sys.date-period:date-period будет @weather:weather ?",
+    "Завтра будет @WeatherType:WeatherType ?",
     "Какая будет @sys.date-period:date-period  @weather:weather ?",
-    "@sys.date-period:date-period будет @weather:weather ?",
-    "@sys.date-period:date-period будет @weather:weather ?",
-    "@sys.date-period:date-period будет @weather:weather ?",
+    "@sys.date-period:date-period будет @WeatherType:WeatherType ?",
+    "@sys.date-period:date-period будет @WeatherType:WeatherType ?",
+    "@sys.date-period:date-period будет @WeatherType:WeatherType ?",
     "Какая @sys.date-period:date-period  @weather:weather ?"
   ],
   "userSays": [
+    {
+      "id": "6c351582-462f-44f8-84c8-6985e91c145b",
+      "data": [
+        {
+          "text": "послезавтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " на улице "
+        },
+        {
+          "text": "холодно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "bdfab061-63c4-44ed-9763-813615c37074",
+      "data": [
+        {
+          "text": "завтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " на улице "
+        },
+        {
+          "text": "холодно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "680f0212-7f73-4c41-bc55-ea661e254ad0",
+      "data": [
+        {
+          "text": "сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " на улице "
+        },
+        {
+          "text": "холодно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "28e65e86-5b5c-4b9b-834b-c64f7416cdd2",
+      "data": [
+        {
+          "text": "какая "
+        },
+        {
+          "text": "завтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d6cf72fa-b84e-4a2c-be9c-bd21f454156e",
+      "data": [
+        {
+          "text": "сейчас",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "влажный",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": " воздух на улице?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d40941c0-1e6c-4fdc-a059-53dbc671c013",
+      "data": [
+        {
+          "text": "сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ясный",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "день",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "7e6b85a1-68db-4630-bcbc-cf9955b33c79",
+      "data": [
+        {
+          "text": "сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ясно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "456eb2dc-e3bb-499b-9c07-a6674d202426",
+      "data": [
+        {
+          "text": "сейчас",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "пасмурно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "ee833b10-b9e6-4150-90a8-f29eb237734f",
+      "data": [
+        {
+          "text": "сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "ветрено",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "8fc76dda-8f48-46bd-a68e-f271cc2a5323",
+      "data": [
+        {
+          "text": "сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "жаркий",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "день",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "579c0e37-c23a-484b-8bc3-533dfb18704a",
+      "data": [
+        {
+          "text": "за окном "
+        },
+        {
+          "text": "прохладная",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "f951fcaa-346d-4a74-9974-786c9a876ebf",
+      "data": [
+        {
+          "text": "за окном "
+        },
+        {
+          "text": "ясная",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": true
+        },
+        {
+          "text": " погода?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d45468f3-f6a8-40a6-b244-0947b2b8002f",
+      "data": [
+        {
+          "text": "на улице "
+        },
+        {
+          "text": "прохладно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "d1775502-7a26-4287-9f1b-5cf8b1cf7bb8",
+      "data": [
+        {
+          "text": "на улице "
+        },
+        {
+          "text": "тепло",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
     {
       "id": "260c7ba6-302a-49ed-9ce9-1dbe4ad7302a",
       "data": [
@@ -91,8 +455,7 @@
       "data": [
         {
           "text": "Завтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
+          "meta": "@sys.ignore",
           "userDefined": true
         },
         {
@@ -100,8 +463,8 @@
         },
         {
           "text": "тепло",
-          "alias": "weather",
-          "meta": "@weather",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
           "userDefined": true
         },
         {
@@ -153,8 +516,8 @@
         },
         {
           "text": "тепло",
-          "alias": "weather",
-          "meta": "@weather",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
           "userDefined": true
         },
         {
@@ -178,8 +541,8 @@
         },
         {
           "text": "холодно",
-          "alias": "weather",
-          "meta": "@weather",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
           "userDefined": true
         },
         {
@@ -203,8 +566,8 @@
         },
         {
           "text": "жарко",
-          "alias": "weather",
-          "meta": "@weather",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
           "userDefined": true
         },
         {
@@ -259,13 +622,19 @@
           "isList": false
         },
         {
-          "required": true,
+          "required": false,
           "dataType": "@weather",
           "name": "weather",
           "value": "$weather",
           "prompts": [
             "Уточни, что ты спрашиваешь?"
           ],
+          "isList": false
+        },
+        {
+          "dataType": "@WeatherType",
+          "name": "WeatherType",
+          "value": "$WeatherType",
           "isList": false
         }
       ],
