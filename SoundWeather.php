@@ -13,7 +13,7 @@ include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
     $openweather = new app_openweather();
     $openweather->get_weather(gg('ow_city.id'));
     
-    if((string)$params['date-period']===(string)"" or (string)$params['date-period']===(string)"сегодня"){$temp="ow_fact.temperature";$humidity="ow_fact.humidity";$wind="ow_fact.wind_speed";$weather_type="ow_fact.weather_type";}
+    if((string)$params['date-period']===(string)"" or (string)$params['date-period']===(string)"сегодня"  or (string)$params['date-period']===(string)"сейчас"){$temp="ow_fact.temperature";$humidity="ow_fact.humidity";$wind="ow_fact.wind_speed";$weather_type="ow_fact.weather_type";}
     if((string)$params['date-period']===(string)"завтра"){$temp="ow_day1.temperature";$humidity="ow_day1.humidity";$wind="ow_day1.wind_speed";$weather_type="ow_day1.weather_type";}
     if((string)$params['date-period']===(string)"послезавтра"){$temp="ow_day2.temperature";$humidity="ow_day2.humidity";$wind="ow_day2.wind_speed";$weather_type="ow_day2.weather_type";}
 
