@@ -165,3 +165,10 @@ include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
 
 	if((string)$params['WeatherType']===(string)"влажно")say($params['date-period']." влажность на улице ".gg($humidity)." ".humidity($humidity),2);
 
+	
+	if((string)$params['WeatherType']===(string)"гроза" or (string)$params['WeatherType']===(string)"дождь"){
+     	if(gg("ow_fact.weather_type")==="гроза" or gg("ow_fact.weather_type")==="дождь")
+     	say("Да, на улице идёт ".gg("ow_fact.weather_type"),2);
+     	else say("Нет, на улице нет осадков.",2);
+    }
+
