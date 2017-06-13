@@ -1,23 +1,8 @@
-<? php
-
-/**
-SoundWeather
-*
-* @author Alex Sokolov <admin@gelezako.com>
-* @version 0.2 ([10.06.2016])
-
-Сценарий для Majordomo (majordomo.smartliving.ru) на основе данных из плагина получения информации о погоде openweather. Перед применением скрипта установить плагин openweather. 
-*/
-
-include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
+    include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
     $openweather = new app_openweather();
     $openweather->get_weather(gg('ow_city.id'));
-    
-    if((string)$params['date-period']===(string)"" or (string)$params['date-period']===(string)"сегодня"  or (string)$params['date-period']===(string)"сейчас"){$temp="ow_fact.temperature";$humidity="ow_fact.humidity";$wind="ow_fact.wind_speed";$weather_type="ow_fact.weather_type";}
-    if((string)$params['date-period']===(string)"завтра"){$temp="ow_day1.temperature";$humidity="ow_day1.humidity";$wind="ow_day1.wind_speed";$weather_type="ow_day1.weather_type";}
-    if((string)$params['date-period']===(string)"послезавтра"){$temp="ow_day2.temperature";$humidity="ow_day2.humidity";$wind="ow_day2.wind_speed";$weather_type="ow_day2.weather_type";}
-
-    //вычисление окончание слова "градус" для температуры
+	
+	    //вычисление окончание слова "градус" для влажности
 	function degree($temp){
       $tempw=round(gg($temp));
       if($tempw >= 11 and $tempw <= 14){
@@ -90,23 +75,33 @@ include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
          $status.="Погода в ".gg("ow_city.name")." на данный момент: ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".degree($temp)." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".humidity($humidity).". ".$stp.$stw;
          say($status,2);
     }
+	
 
-	elseif((string)$params['WeatherType']===(string)"тепло" and gg($temp)>24){
+	//определяем на когда спрашиваем погоду
+	if((string)$params['date-period']===(string)"" or (string)$params['date-period']===(string)"сейчас"){$temp=gg("ow_fact.temperature");$humidity=gg("ow_fact.humidity");$wind=gg("ow_fact.wind_speed");$weather_type=gg("ow_fact.weather_type");}
+	elseif((string)$params['date-period']===(string)"сегодня" or (string)$params['date-period']==="Сегодня"){$temp=gg("ow_fact.temperature");$humidity=gg("ow_day0.humidity");$wind=gg("ow_day0.wind_speed");$weather_type=gg("ow_day0.weather_type");}
+    elseif((string)$params['date-period']===(string)"завтра"){$temp=gg("ow_day1.temperature");$humidity=gg("ow_day1.humidity");$wind=gg("ow_day1.wind_speed");$weather_type=gg("ow_day1.weather_type");}
+    elseif((string)$params['date-period']==="послезавтра" or (string)$params['date-period']==="после завтра"){$temp=gg("ow_day2.temperature");$humidity=gg("ow_day2.humidity");$wind=gg("ow_day2.wind_speed");$weather_type=gg("ow_day2.weather_type");}
+
+	//если удалось определить время, то выдать результат
+	if(!empty($temp) and !empty($humidity) and !empty($humidity)){
+	
+		if((string)$params['WeatherType']===(string)"тепло" and gg($temp)>24){
         say("Да, ".$params['date-period']." на улице тепло. Можно идти в шортах и футболке. Не забудь взять солнечные очки.",2);
         if((string)gg($weather_type)===(string)"пасмурно" and gg($humidity)>85) //влажность
       		say("И скорей всего будет дождь если уже не идёт.",2);
      	if(gg($wind)>10 and gg($wind)<15)say(" И ещё меного дует ветер.",2);
-        else if(gg($wind)>16 and gg($wind)<20)say(" И ещё поднялся сильный ветер.",2);
-        else if(gg($wind)>21)say(" Фигачит сильный ветер.",2);
+        elseif(gg($wind)>16 and gg($wind)<20)say(" И ещё поднялся сильный ветер.",2);
+        elseif(gg($wind)>21)say(" Фигачит сильный ветер.",2);
     }
     
 
-	elseif((string)$params['WeatherType']===(string)"тепло" and gg($temp)>0 and gg($temp)<25){
+	else if((string)$params['WeatherType']===(string)"тепло" and gg($temp)>0 and gg($temp)<25){
          say($params['date-period']." не очень тепло, на улице достаточно прохладно.",2);
          if((string)gg($weather_type)===(string)"пасмурно" and gg($humidity)>85) //влажность
       		say("И скорей всего будет дождь если уже не идёт.",2);
      	if(gg($wind)>10 and gg($wind)<15)say(" И ещё меного дует ветер.",2);
-        else if(gg($wind)>16 and gg($wind)<20)say(" И ещё поднялся сильный ветер.",2);
+        elseif(gg($wind)>16 and gg($wind)<20)say(" И ещё поднялся сильный ветер.",2);
         else if(gg($wind)>21)say(" Фигачит сильный ветер.",2);
     }
 
@@ -166,9 +161,12 @@ include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
 	if((string)$params['WeatherType']===(string)"влажно")say($params['date-period']." влажность на улице ".gg($humidity)." ".humidity($humidity),2);
 
 	
-	if((string)$params['WeatherType']===(string)"гроза" or (string)$params['WeatherType']===(string)"дождь"){
-     	if(gg("ow_fact.weather_type")==="гроза" or gg("ow_fact.weather_type")==="дождь")
-     	say("Да, на улице идёт ".gg("ow_fact.weather_type"),2);
-     	else say("Нет, на улице нет осадков.",2);
+	if((string)$params['WeatherType']===(string)"гроза" or (string)$params['WeatherType']===(string)"дождь" or (string)$params['WeatherType']===(string)"осадки" or (string)$params['WeatherType']===(string)"легкий дождь"){
+     	if($weather_type===(string)"гроза" or $weather_type===(string)"дождь" or $weather_type===(string)"легкий дождь")
+     	say("Да, на улице ".$params['date-period']." ".$weather_type,2);
+     	else say("Нет, на улице не ожидаются осадки. ".$params['date-period']." будет ".$weather_type,2);
     }
-
+     
+	}//конец глобальной проверки на определение времени
+	
+	else say("Что-то я туплю. Что ты там спрашивал?",2);
