@@ -164,6 +164,7 @@
 	if((string)$params['WeatherType']===(string)"гроза" or (string)$params['WeatherType']===(string)"дождь" or (string)$params['WeatherType']===(string)"осадки" or (string)$params['WeatherType']===(string)"легкий дождь"){
      	if($weather_type===(string)"гроза" or $weather_type===(string)"дождь" or $weather_type===(string)"легкий дождь")
      	say("Да, на улице ".$params['date-period']." ".$weather_type,2);
+	elseif($weather_type===(string)"пасмурно")say("На улице пасмурно, возможно пойдёт дождь.",2);
      	else say("Нет, на улице не ожидаются осадки. ".$params['date-period']." будет ".$weather_type,2);
     }
      
