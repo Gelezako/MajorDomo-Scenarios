@@ -1,0 +1,5 @@
+//Свойство для хранение значения с датчика MQ2 - Kitchen.MQ2
+//Метод срабатывающий после каждого обновления свойства Kitchen.MQ2 - Kitchen.MQ2Time
+
+//Реализация Kitchen.MQ2Time
+sg("Kitchen.MQ2TimeValue", date("Y-m-d H:i:s"));
