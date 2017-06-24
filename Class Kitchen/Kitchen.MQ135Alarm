@@ -1,4 +1,5 @@
 //проверка значений с датчика MQ135
+// Метод вызывается в Timer.onNewMinute
 (int)$state=gg("Kitchen.MQ135State");
 if(gg("Kitchen.MQ135")>80 and gg("Kitchen.MQ135")<100){
        $state+=1;
