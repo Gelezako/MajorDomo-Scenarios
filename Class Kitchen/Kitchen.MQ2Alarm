@@ -1,4 +1,5 @@
-//проверка значений с датчика природного газа MQ2 
+//проверка значений с датчика природного газа MQ2
+// Метод вызывается в Timer.onNewMinute
 (int)$state=gg("Kitchen.MQ2State");
 if(gg("Kitchen.MQ2")>250 and gg("Kitchen.MQ2")<300){
        $state+=1;
