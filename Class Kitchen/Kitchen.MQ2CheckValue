@@ -1,3 +1,4 @@
 //прверка обновлений с датчика MQ2
+// Метод вызывается в Timer.onNewMinute
 if(strtotime(gg("Kitchen.MQ2TimeValue"))<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes'))))
  say("Внимание, данные с датчика качества воздуха не обновляются более трёх минут. Проверьте работу датчика.",2);
