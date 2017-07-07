@@ -1,0 +1,135 @@
+{
+  "templates": [
+    "какая @weather:weather в @place:place ?",
+    "какая  @weather:weather в @place:place ?",
+    "какая @weather:weather в @place:place ?"
+  ],
+  "userSays": [
+    {
+      "id": "6b5758f8-ad20-4e15-bd60-ac13e32db54d",
+      "data": [
+        {
+          "text": "какая "
+        },
+        {
+          "text": "температруа",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": false
+        },
+        {
+          "text": " в "
+        },
+        {
+          "text": "квартире",
+          "alias": "place",
+          "meta": "@place",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d51df2ca-b6f9-4553-ae97-8526eeff7f3b",
+      "data": [
+        {
+          "text": "какая  "
+        },
+        {
+          "text": "влажность",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": false
+        },
+        {
+          "text": " в "
+        },
+        {
+          "text": "доме",
+          "alias": "place",
+          "meta": "@place",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "53cfecd0-cd1a-4764-8c6b-c67542b423ed",
+      "data": [
+        {
+          "text": "какая "
+        },
+        {
+          "text": "температруа",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": " в "
+        },
+        {
+          "text": "комнтае",
+          "alias": "place",
+          "meta": "@place",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "2232902f-4f27-48a9-b84b-7de67be09119",
+  "name": "Temperature",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@place",
+          "name": "place",
+          "value": "$place",
+          "isList": false
+        },
+        {
+          "dataType": "@weather",
+          "name": "weather",
+          "value": "$weather",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "секундочку",
+            "секунду"
+          ]
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
