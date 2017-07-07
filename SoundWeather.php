@@ -1,17 +1,16 @@
-    include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
+include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
     $openweather = new app_openweather();
     $openweather->get_weather(gg('ow_city.id'));
 	
 	    //вычисление окончание слова "градус" для влажности
-	function degree($temp){
-      $tempw=round(gg($temp));
+	function degree($tempw){
       if($tempw >= 11 and $tempw <= 14){
       $degree=" градусов ";
       }
       else{
 
       while ($tempw > 9){
-      $tempw=$tempw-10;
+      $tempw=$tempw%10;
       }
 
       if($tempw == 0 or $tempw >= 5 and $tempw <= 9){
@@ -26,15 +25,14 @@
     //$tNew = abs((float)getGlobal('ow_fact.temperature'));
 
 	//вычисление окончание слова "процент" для влажности
-	function humidity($humidity){
-          $tempw2=round(gg($humidity));
+	function humidity($tempw2){
           if($tempw2 >= 11 and $tempw2 <= 14){
           $tempcels=" процентов ";
           }
           else{
 
           while ($tempw2 > 9){
-          $tempw2=$tempw2-10;
+          $tempw2=$tempw2%10;
           }
 
          if($tempw2 == 0 or $tempw2 >= 5 and $tempw2 <= 9){
@@ -72,7 +70,7 @@
     }
 	
 	if((string)$params['weather']===(string)"погода" and $params['WeatherType']==""){
-         $status.="Погода в ".gg("ow_city.name")." на данный момент: ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".degree($temp)." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".humidity($humidity).". ".$stp.$stw;
+         $status.="Погода в ".gg("ow_city.name")." на данный момент: ".gg("ow_fact.weather_type").". "." Температура: ".round(gg("ow_fact.temperature"))."  ".degree(gg('ow_fact.temperature'))." цельсия. "." Относительная влажность: ".round(gg("ow_fact.humidity"))." ".humidity(gg('ow_fact.humidity')).". ".$stp.$stw;
          say($status,2);
     }
 	
@@ -164,7 +162,7 @@
 	if((string)$params['WeatherType']===(string)"гроза" or (string)$params['WeatherType']===(string)"дождь" or (string)$params['WeatherType']===(string)"осадки" or (string)$params['WeatherType']===(string)"легкий дождь"){
      	if($weather_type===(string)"гроза" or $weather_type===(string)"дождь" or $weather_type===(string)"легкий дождь")
      	say("Да, на улице ".$params['date-period']." ".$weather_type,2);
-	elseif($weather_type===(string)"пасмурно")say("На улице пасмурно, возможно пойдёт дождь.",2);
+     	elseif($weather_type===(string)"пасмурно")say("На улице пасмурно, возможно пойдёт дождь.",2);
      	else say("Нет, на улице не ожидаются осадки. ".$params['date-period']." будет ".$weather_type,2);
     }
      
