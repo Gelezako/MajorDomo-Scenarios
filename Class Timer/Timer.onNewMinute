@@ -2,3 +2,16 @@
 cm('Kitchen.MQ2Alarm');
 //Проверка работоспособности датчика
 cm('Kitchen.MQ2CheckValue');
+
+//Проверка работоспособности датчика MQ135
+cm('Kitchen.MQ135CheckValue');
+
+//Проверка работоспособности датчика MQ135
+cm('Kitchen.MQ135CheckValue');
+
+//Проверка работоспособности датчика DHT22
+cm('Kitchen.DHT22CheckValueH');
+cm('Kitchen.DHT22CheckValueT');
+
+//доброе устро
+cm('Kitchen.DHT22Notification');
