@@ -1,0 +1,23 @@
+{
+  "id": "fdaa8250-1537-4266-9a61-2cccf4771e3d",
+  "name": "place",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "комнате",
+      "synonyms": [
+        "комнате",
+        "квартире",
+        "дома"
+      ]
+    },
+    {
+      "value": "комнтае",
+      "synonyms": [
+        "комнтае"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
