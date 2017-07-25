@@ -1,4 +1,8 @@
-//Проверка работоспособности датчика MQ-135
-// Метод вызывается в Timer.onNewMinute
-if(strtotime(gg("Kitchen.MQ135TimeValue"))<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes'))))
- say("Внимание, данные с датчика качества воздуха 135 не обновляются более трёх минут. Проверьте работу датчика.",2);
+(int)$state=gg("Kitchen.MQ135State");
+if(strtotime(gg("Kitchen.MQ135TimeValue"))<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
+    $state+=1;
+    sg("Kitchen.MQ135State",$state);
+    if($state==0){
+       say("Внимание, данные с датчика качества воздуха 135 не обновляются более трёх минут. Проверьте работу датчика.",2);
+    }
+}
