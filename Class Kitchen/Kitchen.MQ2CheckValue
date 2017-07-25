@@ -1,4 +1,9 @@
-//прверка обновлений с датчика MQ2
-// Метод вызывается в Timer.onNewMinute
-if(strtotime(gg("Kitchen.MQ2TimeValue"))<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes'))))
- say("Внимание, данные с датчика качества воздуха не обновляются более трёх минут. Проверьте работу датчика.",2);
+(int)$state=gg("Kitchen.MQ2State");
+if(strtotime(gg("Kitchen.MQ2TimeValue"))<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
+    $state+=1;
+    sg("Kitchen.MQ2State",$state);
+    if($state==0){
+       say("Внимание, данные с датчика качества воздуха не обновляются более трёх минут. Проверьте работу датчика.",2);
+    }
+}
+
