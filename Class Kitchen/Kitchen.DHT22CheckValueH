@@ -1,0 +1,8 @@
+(int)$state=gg("Kitchen.DHT22StateH");
+if(strtotime(gg("Kitchen.DHT22TimeValueH"))<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
+    $state+=1;
+    sg("Kitchen.DHT22StateH",$state);
+    if($state==0){
+       say("Внимание, данные с датчика влажности не обновляются более трёх минут. Проверьте работу датчика.",2);
+    }
+}
