@@ -1,0 +1,1 @@
+sg("Kitchen.DHT22TimeValueT", date("Y-m-d H:i:s"));
