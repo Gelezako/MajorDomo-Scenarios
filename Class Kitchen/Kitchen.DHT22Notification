@@ -44,4 +44,6 @@ if (timeIs("10:15")){
   say("Доброе утро!",2); 
   sleep(1);
   say("Сейчас в квартире ".gg("Kitchen.Temperature")." ".degree(gg('Kitchen.Temperature'))." тепла, влажность ".gg("Kitchen.Humidity")." ".humidity(gg('Kitchen.Humidity')),2);
+  if((int)gg("Kitchen.MQ135")<80 and (int)gg("Kitchen.MQ2")<250){ say("Качество воздуха хорошее",2);}
+  else say("Квартиру лучше проветрить",2);
 }
