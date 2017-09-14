@@ -1,0 +1,16 @@
+{
+  "id": "b09f2080-88b8-4a9a-9601-f4bea160dfee",
+  "name": "battlevel",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "заряд",
+      "synonyms": [
+        "заряд",
+        "заряда"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
