@@ -1,0 +1,64 @@
+{
+  "templates": [
+    "какой уровень @battlevel:battlevel телефона"
+  ],
+  "userSays": [
+    {
+      "id": "1d94e4df-1509-481c-ac86-7da53eb9a3a5",
+      "data": [
+        {
+          "text": "какой уровень "
+        },
+        {
+          "text": "заряда",
+          "alias": "battlevel",
+          "meta": "@battlevel",
+          "userDefined": true
+        },
+        {
+          "text": " телефона"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "1a5a507b-24c4-4b29-8df6-cadcdecbd80e",
+  "name": "Phone",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@battlevel",
+          "name": "battlevel",
+          "value": "$battlevel",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "секунду",
+            "секундочку",
+            "один момент"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
