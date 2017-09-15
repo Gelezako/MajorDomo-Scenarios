@@ -29,6 +29,6 @@
      return $percent;
     }
 (int)$battlevel=gg("Alex.Battlevel");
-say("Уровень заряда батареи телефона ".gg("Alex.Battlevel")." ".humidity($battlevel),2);
+say("Уровень заряда батареи телефона ".$battlevel." ".humidity($battlevel),2);
 
 if($battlevel<=20)say("Батарею телефона немешало бы подзарядить",2);
