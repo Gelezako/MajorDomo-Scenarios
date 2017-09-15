@@ -59,10 +59,10 @@ https://www.youtube.com/watch?v=EDtMvenQhYs&t=17s
 Демонстрация применения и видео инструкция по настройке:
 https://www.youtube.com/watch?v=6ggg7jzs8qQ
 
-# SoundMQ2
+# SoundMQ2, SoundMQ135, SoundDHT22
 Сбор данных с датчика газов, их анализ и голосовое оповещение о качестве воздуха в квартире
 Ссылка на скетч для Arduino
-https://github.com/Gelezako/MQ2-MQTT-Ethernet-Majordomo
+https://github.com/Gelezako/MQ2-MQ135-DHT22-HC-SR501-MQTT-Ethernet-Majordomo
 
 Демонстрация применения и видео инструкция по настройке
 https://www.youtube.com/watch?v=mB0fdDYdvEI
