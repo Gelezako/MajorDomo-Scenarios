@@ -68,5 +68,8 @@ https://github.com/Gelezako/MQ2-MQTT-Ethernet-Majordomo
 https://www.youtube.com/watch?v=mB0fdDYdvEI
 
 
+# SoundBattLevel
+На телефон необходимо установить Tasker и плагин к таскеру MQTT Publish Plugin https://play.google.com/store/apps/details?id=net.nosybore.mqttpublishplugin. Сделать настройки в Таскере как указано вот тут http://majordomo.smartliving.ru/Main/ScAndroidTasker, но вместо того что бы тправлять данные в модуль gps.phph необходимо настроить отправку данных на MQTT сервер с помощью плагина MQTT Publish Plugin. После этого в MajorDomo в модуле MQTT считать эти данные, связать их с вашими свойствами и использовать с сценарии для озвучивания уровня заряда в батарее.
+
 
 Видео уроки по настройке плагинов и сценариев: https://www.youtube.com/playlist?list=PLYOYjvcehgZKWUxcNR25o37EdBGtX084E
