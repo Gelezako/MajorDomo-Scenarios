@@ -14,7 +14,7 @@ if($state==5){
 	   sg("Kitchen.MQ2State","-10");
 }
 
-if($state>=10){
+if((int)(gg("Kitchen.MQ2State"))>=10){
 	   sg("Kitchen.MQ2State","0");
 }
 
