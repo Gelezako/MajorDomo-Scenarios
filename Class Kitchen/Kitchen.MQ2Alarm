@@ -1,7 +1,7 @@
 //проверка значений с датчика природного газа MQ2 
 (int)$state=gg("Kitchen.MQ2State");
 if((int)gg("Kitchen.MQ2")>250){
-       (int)$state=(int)(gg("Kitchen.MQ2State"))+1;
+       $state+=1;
        sg("Kitchen.MQ2State",$state);
  	if($state==0){
        say("Внимание, концентрация вредных веществ в помещении превысила порог 250 единиц!",2);
