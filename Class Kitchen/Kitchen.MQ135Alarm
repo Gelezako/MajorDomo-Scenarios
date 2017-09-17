@@ -1,10 +1,11 @@
 //проверка значений с датчика MQ135
-
-if((int)gg("Kitchen.MQ135")>=100){
-      (int)$state=(int)(gg("Kitchen.MQ135State"))+1;
+(int)$state=gg("Kitchen.MQ135State");
+ 
+if((int)gg("Kitchen.MQ135")>=120){
+       $state+=1;
        sg("Kitchen.MQ135State",$state);
  	if($state==1){
-       say("Внимание, концентрация углекислого газа в помещении превысила порог 100 единиц! ",2);
+       say("Внимание, концентрация углекислого газа в помещении превысила порог 120 единиц! ",2);
  	}
 }
 
@@ -14,6 +15,6 @@ else if($state==10 and (int)gg("Kitchen.MQ135")>=120){
 	   sg("Kitchen.MQ135State","-10");
 }
 
-else if($state>=10){
+if($state>=10){
 	   sg("Kitchen.MQ135State","-10");
 }
