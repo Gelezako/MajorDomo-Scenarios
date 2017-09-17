@@ -1,35 +1,19 @@
 //проверка значений с датчика MQ135
-(int)$state=gg("Kitchen.MQ135State");
-if((int)gg("Kitchen.MQ135")>80 and (int)gg("Kitchen.MQ135")<100){
-       (int)$state+=1;
+
+if((int)gg("Kitchen.MQ135")>=100){
+      (int)$state=(int)(gg("Kitchen.MQ135State"))+1;
        sg("Kitchen.MQ135State",$state);
- 	if($state==0){
-       say("Внимание, концентрация углекислого газа в помещении превысила порог 80 единиц!",2);
+ 	if($state==1){
+       say("Внимание, концентрация углекислого газа в помещении превысила порог 100 единиц! ",2);
  	}
 }
 
-else if((int)gg("Kitchen.MQ135")>=100 and (int)gg("Kitchen.MQ135")<120){
-      (int) $state+=1;
-       sg("Kitchen.MQ135State",$state);
- 	if($state==0){
-       say("Внимание, концентрация углекислого газа в помещении превысила порог 100 единиц!",2);
- 	}
-}
-
-else if((int)gg("Kitchen.MQ135")>=120){
-       $state+=1;
-       sg("Kitchen.MQ135State",$state);
- 	if($state==0){
-       say("Внимание, концентрация углекислого газа в помещении превысила порог 120 единиц!",2);
- 	}
-}
-
-if($state==10){
+else if($state==10 and (int)gg("Kitchen.MQ135")>=120){
 	   //повторять только каждые 10 мин
 	   say("Концентрация углекислого газа всё ещё высокая.",2);
-	   sg("Kitchen.MQ135State","-11");
+	   sg("Kitchen.MQ135State","-10");
 }
 
-if($state>=10){
-	   sg("Kitchen.MQ135State","0");
+else if($state>=10){
+	   sg("Kitchen.MQ135State","-10");
 }
