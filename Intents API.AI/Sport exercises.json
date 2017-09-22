@@ -1,0 +1,200 @@
+{
+  "templates": [
+    "внести данные",
+    "Я сделал @exercises:exercises  @quantity:quantity раз",
+    "Я @exercises:exercises  @quantity:quantity раз",
+    "Я @exercises:exercises  @quantity:quantity раз",
+    "Запиши результаты занятий по @exercises:exercises ",
+    "Запиши результаты занятий"
+  ],
+  "userSays": [
+    {
+      "id": "7c279442-6f33-4916-8d3d-855fc19eeebc",
+      "data": [
+        {
+          "text": "внести данные"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "db9a96ed-534d-4e95-85a9-39e6f589ddb4",
+      "data": [
+        {
+          "text": "Я сделал "
+        },
+        {
+          "text": "пресс",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "20",
+          "alias": "quantity",
+          "meta": "@quantity",
+          "userDefined": false
+        },
+        {
+          "text": " раз"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "2b7e8b56-1479-4aed-b586-3e2218123f61",
+      "data": [
+        {
+          "text": "Я "
+        },
+        {
+          "text": "подтянулся",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "20",
+          "alias": "quantity",
+          "meta": "@quantity",
+          "userDefined": true
+        },
+        {
+          "text": " раз"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "482fdede-b523-41f2-a352-25d957cc573b",
+      "data": [
+        {
+          "text": "Я "
+        },
+        {
+          "text": "отжался",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "30",
+          "alias": "quantity",
+          "meta": "@quantity",
+          "userDefined": true
+        },
+        {
+          "text": " раз"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8583f801-136f-4c5b-b806-1973f4cc026e",
+      "data": [
+        {
+          "text": "Запиши результаты занятий по "
+        },
+        {
+          "text": "отжиманию",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a9074e55-39b0-4042-9ad2-b8874fe6d508",
+      "data": [
+        {
+          "text": "Запиши результаты занятий"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "1e0bf67f-e023-4978-88ad-afb81060bbcb",
+  "name": "Sport exercises",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@exercises",
+          "name": "exercises",
+          "value": "$exercises",
+          "prompts": [
+            "Какой вид занятий?",
+            "Какие упражнения?",
+            "Что именно ты сделал?",
+            "Я не разобрала какое упраждение ты сделал?",
+            "Я не поняла какое упраждение ты сделал?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@quantity",
+          "name": "quantity",
+          "value": "$quantity",
+          "prompts": [
+            "Сколько?",
+            "Сколько раз?",
+            "Сколько же раз?"
+          ],
+          "defaultValue": "Сколько?\nСколько раз?\nСколько же раз?\nСколько раз сделал?\nСколько раз ты сделал?",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "Хорошо, я записала результаты",
+            "Ок, я записала результаты",
+            "Сделано",
+            "Готово",
+            "Записала",
+            "Хорошо",
+            "Ок",
+            "Я записала результаты",
+            "Сделано, я записала результаты",
+            "Готово, я записала результаты",
+            "Отличный результат",
+            "Неплохо",
+            "Неплохой результат"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}
