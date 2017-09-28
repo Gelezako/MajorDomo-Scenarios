@@ -1,38 +1,198 @@
 {
-  "id": "560f9484-5988-4fad-91f5-23ce3a7ea453",
-  "name": "exercises",
-  "isOverridable": true,
-  "entries": [
+  "templates": [
+    "внести данные",
+    "@exercises:exercises  @sys.number:number ",
+    "Я сделал @exercises:exercises  @sys.number:number раз",
+    "Я @exercises:exercises  @sys.number:number раз",
+    "Я @exercises:exercises  @sys.number:number раз",
+    "Запиши результаты занятий по @exercises:exercises ",
+    "Запиши результаты занятий"
+  ],
+  "userSays": [
     {
-      "value": "отжиманию",
-      "synonyms": [
-        "отжиманию",
-        "отжался",
-        "отжимание"
-      ]
+      "id": "716d4185-caf8-4ea5-a4cd-d771fcdbcc22",
+      "data": [
+        {
+          "text": "внести данные",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
     },
     {
-      "value": "подтягиванию",
-      "synonyms": [
-        "подтягиванию",
-        "подтянулся"
-      ]
+      "id": "e676ee98-d94c-4d02-b98b-296583566efa",
+      "data": [
+        {
+          "text": "отжимание",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "35",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
     },
     {
-      "value": "прессу",
-      "synonyms": [
-        "прессу",
-        "пресс"
-      ]
+      "id": "db9a96ed-534d-4e95-85a9-39e6f589ddb4",
+      "data": [
+        {
+          "text": "Я сделал "
+        },
+        {
+          "text": "пресс",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "20",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " раз"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
     },
     {
-      "value": "приседанию",
-      "synonyms": [
-        "приседанию",
-        "приседание"
-      ]
+      "id": "2b7e8b56-1479-4aed-b586-3e2218123f61",
+      "data": [
+        {
+          "text": "Я "
+        },
+        {
+          "text": "подтянулся",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "20",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " раз"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "482fdede-b523-41f2-a352-25d957cc573b",
+      "data": [
+        {
+          "text": "Я "
+        },
+        {
+          "text": "отжался",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "30",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        },
+        {
+          "text": " раз"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8583f801-136f-4c5b-b806-1973f4cc026e",
+      "data": [
+        {
+          "text": "Запиши результаты занятий по "
+        },
+        {
+          "text": "отжиманию",
+          "alias": "exercises",
+          "meta": "@exercises",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a9074e55-39b0-4042-9ad2-b8874fe6d508",
+      "data": [
+        {
+          "text": "Запиши результаты занятий"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
     }
   ],
-  "isEnum": false,
-  "automatedExpansion": false
+  "id": "1e0bf67f-e023-4978-88ad-afb81060bbcb",
+  "name": "Sport exercises",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@exercises",
+          "name": "exercises",
+          "value": "$exercises",
+          "prompts": [
+            "Какой вид занятий?",
+            "Какие упражнения?",
+            "Что именно ты сделал?",
+            "Я не разобрала какое упраждение ты сделал?",
+            "Я не поняла какое упраждение ты сделал?"
+          ]
+        },
+        {
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        }
+      ],
+      "messages": [],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
 }
