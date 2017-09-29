@@ -1,0 +1,14 @@
+$users = "";
+$objects=getObjectsByClass("Users");
+
+foreach($objects as $obj) {
+ $host = getGlobal($obj['TITLE'].".deviceip");  //прописать ИП телефона для всех пользователей
+ $fullname = getGlobal($obj['TITLE'].".fullName");
+ $online=ping( $host );
+ if ($online){
+     if ($users != ""){ $users .= ", "; }
+     $users .= $fullname;
+     sg($obj['TITLE'].".atHome","1");
+   }
+ else sg($obj['TITLE'].".atHome","0");
+}
