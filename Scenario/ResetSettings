@@ -1,0 +1,8 @@
+//сброс утреннего приветствия
+$objects=getObjectsByClass("Users");
+foreach($objects as $obj) {
+ sg($obj['TITLE'].".sayGM","0");
+}
+ 
+//сброс спортивных значений
+sg("Press.Quantity","0");
