@@ -1,0 +1,73 @@
+	    //вычисление окончание слова "градус" для влажности
+	function degree($tempw){
+      if($tempw >= 11 and $tempw <= 14){
+      $degree=" градусов ";
+      }
+      else{
+
+      if($tempw > 9){
+      $tempw=$tempw%10;
+      }
+
+      if($tempw == 0 or $tempw >= 5 and $tempw <= 9){
+      $degree= градусов ; }
+      if($tempw == 1){
+      $degree= градус ; }
+      if($tempw >= 2 and $tempw <= 4){
+      $degree= градуса ; }
+      }
+     return $degree;
+    }
+
+//вычисление окончание слова "процент" для влажности
+	function humidity($tempw2){
+          if($tempw2 >= 11 and $tempw2 <= 14){
+          $tempcels=" процентов ";
+          }
+          else{
+
+          while ($tempw2 > 9){
+          $tempw2=$tempw2%10;
+          }
+
+         if($tempw2 == 0 or $tempw2 >= 5 and $tempw2 <= 9){
+         $tempcels= процентов ; }
+         if($tempw2 == 1){
+         $tempcels= процент ; }
+         if($tempw2 >= 2 and $tempw2 <= 4){
+         $tempcels= процента ; }
+         }
+     return $tempcels;
+    }
+
+  sleep(1);
+//----- дата
+  $rus_months = array('января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря');
+  $newDatetime = new Datetime();
+  $month = $newDatetime->format('n');
+  $album_data = $newDatetime->format('j '.$rus_months[$month-1].'');
+  $album_data = $album_data." ".$newDatetime->format('Y г.');
+say("Сегодня ".$album_data,2);
+//--------
+
+sleep(1);
+
+//-------- микроклимат в квартире
+  sleep(1);
+  say("Сейчас в квартире ".gg("Kitchen.Temperature")." ".degree(gg('Kitchen.Temperature'))." тепла, влажность ".gg("Kitchen.Humidity")." ".humidity(gg('Kitchen.Humidity')),2);
+  if((int)gg("Kitchen.MQ135")<80 and (int)gg("Kitchen.MQ2")<250){ say("Качество воздуха хорошее",2);}
+  else say("Качество воздуха плохое, квартиру лучше проветрить",2);
+//--------
+
+sleep(1);
+
+//--------Погода на улице
+ say("Погода на улице ".gg("ow_fact.temperature")." ".degree(gg('ow_fact.temperature'))." тепла, влажность ".gg("ow_fact.humidity")." ".humidity(gg('ow_fact.humidity'))." ".gg("ow_fact.weather_type")." ветер ".gg("ow_fact.wind_speed")." метров в секунду.",2);
+ //--------
+ 
+sleep(1);
+
+ //-------- курс валют
+say("Курс евро Приват банка ".gg("Rate.eurosale").". Курс доллара ".gg("Rate.usdsale"),2);
+//--------
+
