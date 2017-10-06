@@ -6,3 +6,5 @@ foreach($objects as $obj) {
  
 //сброс спортивных значений
 sg("Press.Quantity","0");
+sg("Pushup.Quantity","0");
+sg("Pullup.Quantity","0");
