@@ -7,7 +7,7 @@ if((int)gg("Kitchen.MQ2")>250){
                 say("Внимание, концентрация вредных веществ в помещении превысила порог 250 единиц!",2);
        		//световое оповещение
 	        sg("XiRgb01.brightness","0");
-		sg("XiRgb01.color","ff8300");
+		sg("XiRgb01.color","ff000e");
 		for($j = 1; $j <= 3; $j++){
 		for ($i = 2; ; $i=$i+5) {
 		    sg("XiRgb01.brightness",$i);
@@ -29,7 +29,7 @@ if($state==5){
 	   sg("Kitchen.MQ2State","-10");
 	   	//световое оповещение
 	        sg("XiRgb01.brightness","0");
-		sg("XiRgb01.color","ff8300");
+		sg("XiRgb01.color","ff000e");
 		for($j = 1; $j <= 3; $j++){
 		for ($i = 2; ; $i=$i+5) {
 		    sg("XiRgb01.brightness",$i);
