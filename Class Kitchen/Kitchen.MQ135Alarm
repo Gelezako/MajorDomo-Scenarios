@@ -6,13 +6,42 @@ if((int)gg("Kitchen.MQ135")>=120){
        sg("Kitchen.MQ135State",$state);
  	if($state==1){
        say("Внимание, концентрация углекислого газа в помещении превысила порог 120 единиц! ",2);
+        sg("XiRgb01.brightness","0");
+	sg("XiRgb01.color","ff000e");
+	for($j = 1; $j <= 3; $j++){
+	for ($i = 2; ; $i=$i+5) {
+	    sg("XiRgb01.brightness",$i);
+	    usleep(50000);
+	     if ($i >= 100)break;
+	}
+	for ($i = 100; ; $i=$i-5) {
+	    sg("XiRgb01.brightness",$i);
+	    usleep(50000);
+	     if ($i <= 0)break;
+	}
+	}
  	}
 }
 
 else if($state==10 and (int)gg("Kitchen.MQ135")>=120){
 	   //повторять только каждые 10 мин
-	   say("Концентрация углекислого газа всё ещё высокая.",2);
-	   sg("Kitchen.MQ135State","-10");
+	        say("Концентрация углекислого газа всё ещё высокая.",2);
+	        sg("Kitchen.MQ135State","-10");
+		//световое оповещение
+	        sg("XiRgb01.brightness","0");
+		sg("XiRgb01.color","ff8300");
+		for($j = 1; $j <= 3; $j++){
+		for ($i = 2; ; $i=$i+5) {
+		    sg("XiRgb01.brightness",$i);
+		    usleep(50000);
+		     if ($i >= 100)break;
+		}
+		for ($i = 100; ; $i=$i-5) {
+		    sg("XiRgb01.brightness",$i);
+		    usleep(50000);
+		     if ($i <= 0)break;
+		}
+		}
 }
 
 if($state>=10){
