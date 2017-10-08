@@ -4,6 +4,20 @@ if(strtotime(gg("Kitchen.MQ2TimeValue"))<strtotime(date('Y-m-d H:i:s', strtotime
     sg("Kitchen.MQ2State",$state);
     if($state==0){
        say("Внимание, данные с датчика качества воздуха не обновляются более трёх минут. Проверьте работу датчика.",2);
+        sg("XiRgb01.brightness","0");
+        sg("XiRgb01.color","ff8300");
+        for($j = 1; $j <= 3; $j++){
+        for ($i = 2; ; $i=$i+5) {
+            sg("XiRgb01.brightness",$i);
+            usleep(50000);
+             if ($i >= 100)break;
+        }
+        for ($i = 100; ; $i=$i-5) {
+            sg("XiRgb01.brightness",$i);
+            usleep(50000);
+             if ($i <= 0)break;
+        }
+        }
     }
 }
 
