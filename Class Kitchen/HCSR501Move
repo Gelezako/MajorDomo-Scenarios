@@ -1,0 +1,22 @@
+if(gg("Kitchen.HCSR501")=='1'){
+ $minutes=round((strtotime("now")-gg("Kitchen.LatestActivity")));
+   if($minutes>=3){ //1440
+     if(timeBetween('06:00', '08:00') and gg("Vika.sayGM")==0){
+        say("Доброе утро Вика.",2);
+        sleep(2);
+        say("Надеюсь ты выспалась и у тебя хорошее настроение",2);
+        sg("admin.sayGM","1");
+     }
+     else if(timeBetween('08:01', '11:59') and gg("admin.sayGM")==0){
+         say("Доброе утро Алекс",2);
+         sleep(2);
+         say("Надеюсь ты выспался и у тебя хорошее настроение",2);
+         sg("admin.sayGM","1");
+     }
+   }
+ //say("прошло ".$minutes." минут",2);
+ cm("Kitchen.onActivity");
+}
+   //exec('C:\_majordomo\apps\facedetect\checkface.bat');
+   
+
