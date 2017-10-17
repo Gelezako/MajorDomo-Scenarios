@@ -3,7 +3,7 @@
 if((int)gg("Kitchen.MQ2")>250){
        $state+=1;
        sg("Kitchen.MQ2State",$state);
- 	if($state==0){
+ 	if($state==0 and timeBetween('10:00', '23:00')){
                 say("Внимание, концентрация вредных веществ в помещении превысила порог 250 единиц!",2);
        		//световое оповещение
 	        sg("XiRgb01.brightness","0");
@@ -23,7 +23,7 @@ if((int)gg("Kitchen.MQ2")>250){
  	}
 }
 
-if($state==5){
+if($state==5 and timeBetween('10:00', '23:00')){
 	   //повторять только каждые 10 мин
 	   say("Концентрация вредных веществ всё ещё высокая.",2);
 	   sg("Kitchen.MQ2State","-10");
