@@ -2,9 +2,9 @@
 
 if($params['color']=="синий"){$color="0010ff";sg("XiRgb01.color","0010ff");}
 if($params['color']=="красный") {$color="ff000e";sg("XiRgb01.color","ff000e");}
-if($params['color']=="белый") {$color="00ff25";sg("XiRgb01.color","fffff3");}
-if($params['color']=="жёлтый" or $params['color']=="желтый") {$color="00ff25";sg("XiRgb01.color","ffff2d");}
-if($params['color']=="фиолетовый") {$color="00ff25";sg("XiRgb01.color","ff00f3");}
+if($params['color']=="белый") {$color="fffff3";sg("XiRgb01.color","fffff3");}
+if($params['color']=="жёлтый" or $params['color']=="желтый") {$color="ffff2d";sg("XiRgb01.color","ffff2d");}
+if($params['color']=="фиолетовый") {$color="ff00f3";sg("XiRgb01.color","ff00f3");}
 if($params['color']=="зелёный" or $params['color']=="зеленый") {$color="00ff25";sg("XiRgb01.color","00ff25");}
 
 if($params['number']!="")sg("XiRgb01.brightness",$params['number']);
