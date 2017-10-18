@@ -49,9 +49,9 @@ foreach ($data->showtimes->day as $day){ //ищем все дни проката
                    foreach ($data->movies->movie as $movie) {
                    //находим название фильма в диапазоне времени если он задан
                                 if((string)$movie['id']==(string)$show['movie-id'] and $time[0]=='')
-                                      $films[] = "Фильм : ".$movie->title.". ";                             
+                                      $films[] = "razd".$movie->title.". ";                             
                                    else if((string)$movie['id']==(string)$show['movie-id'] and $time[0]!='' and strtotime($show['time'])>=strtotime($time[0]) and strtotime($show['time'])<=strtotime($time[1])){
-                              		 $films[] = "Фильм : ".$movie->title.". "; 
+                              		 $films[] = "razd".$movie->title.". "; 
                                 }
                             	
                             }
@@ -62,18 +62,30 @@ foreach ($data->showtimes->day as $day){ //ищем все дни проката
 }
 
   if(!empty($films)){
-		$st = implode(",", array_unique($films));
+	$st = implode(",", array_unique($films));
         $st = str_replace('і', 'и', $st);
         $st = str_replace('І', 'И', $st);
         $st = str_replace('ґ', 'г', $st);
         $st = str_replace("'", 'ь', $st);
         $st = str_replace('е', 'э', $st);
         $st = str_replace('є', 'е', $st);
+        $st = str_replace('(16+)', '', $st);
+        $st = str_replace('(0+)', '', $st);
+        $st = str_replace('(12+)', '', $st);
+        $st = str_replace('мовою оригиналу', 'без перевода', $st);
 		$st = str_replace('Фыльм', 'Фильм', $st);
-		say($st,2);
+   $f = explode("razd", $st);
+   $i = 1;
+   for ($i = 1; $i < count($f); $i++) {
+    say($f[$i],2);
+    sleep(2);
+   }
   }
+ 
+
+ 
+ 
  else if($params['films']!='' and $params['date']!='')
   say("Уже нет фильмов на эту дату. Возможно идут фильмы в других залах, к примеру в 2D.",2);
 }
 else say("Я не смогла загрузить данные",2);
-
