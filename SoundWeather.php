@@ -1,4 +1,12 @@
-include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
+/**
+* Сценарий для Majordomo
+* Озвучивание прогноза погоды
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright Alex Sokolov http://blog.gelezako.com (c)
+**/    
+
+
+    include_once(DIR_MODULES . 'app_openweather/app_openweather.class.php');
     $openweather = new app_openweather();
     $openweather->get_weather(gg('ow_city.id'));
 	
