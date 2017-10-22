@@ -1,20 +1,254 @@
 {
-  "templates": [
-    "@state:state  @sys.color:color ночник на @sys.number:number процентов",
-    "измени цвет на @sys.color:color и яркость на @sys.number:number процентов",
-    "@state:state ночник на @sys.number:number процентов",
-    "@state:state ночник",
-    "изменить яркость на @sys.number:number процентов",
-    "изменить цвет на @sys.color:color "
+  "id": "e76ca229-34b6-404a-b99c-9620a4ef6108",
+  "name": "XiaomiGateway",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "3be95b19-0258-4c91-9f9b-21ff8a18b153",
+          "dataType": "@sys.color",
+          "name": "color",
+          "value": "$color",
+          "isList": false
+        },
+        {
+          "id": "19318aea-e912-4eea-9639-42bd37afb051",
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        },
+        {
+          "id": "01d26d09-7f63-4315-94a2-06943766fe23",
+          "dataType": "@state",
+          "name": "state",
+          "value": "$state",
+          "prompts": [],
+          "defaultValue": "",
+          "isList": false
+        },
+        {
+          "id": "8b3397b4-a9b5-46d2-8ef9-2514127c8d9a",
+          "dataType": "@illumination",
+          "name": "illumination",
+          "value": "$illumination",
+          "isList": false
+        },
+        {
+          "id": "68244d72-9756-4914-a438-f0371e99bc6a",
+          "dataType": "@sys.any",
+          "name": "any",
+          "value": "$any",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "секунду.",
+            "секундочку.",
+            "момент.",
+            "один момент.",
+            "делаю",
+            "уже бегу"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
   ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1508689024,
+  "fallbackIntent": false,
+  "events": [],
   "userSays": [
+    {
+      "id": "f7c4bc18-68b2-48ce-901a-b6110eb303a2",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "диско",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1507484877,
+      "isAuto": false
+    },
+    {
+      "id": "f63caee6-ebc5-49af-8890-92fe9a2b5710",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "дискотеку",
+          "alias": "any",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1507484877,
+      "isAuto": false
+    },
+    {
+      "id": "f8122b69-496a-4551-9d4f-feb63058873c",
+      "data": [
+        {
+          "text": "turn on",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1495382341,
+      "isAuto": false
+    },
+    {
+      "id": "9005eb31-7ed6-482e-bb6d-8d5c6e627c36",
+      "data": [
+        {
+          "text": "изменить цвет "
+        },
+        {
+          "text": "зелёный",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        },
+        {
+          "text": " яркость "
+        },
+        {
+          "text": "10",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1495128071,
+      "isAuto": false
+    },
+    {
+      "id": "76ad31a9-6322-4cba-9c46-4f70220df3eb",
+      "data": [
+        {
+          "text": "какая "
+        },
+        {
+          "text": "освещённость",
+          "alias": "illumination",
+          "meta": "@illumination",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1495115628,
+      "isAuto": false
+    },
+    {
+      "id": "1ab646ba-bd2b-4cdf-82ca-659fcd08d374",
+      "data": [
+        {
+          "text": "какая "
+        },
+        {
+          "text": "освещенность",
+          "alias": "illumination",
+          "meta": "@illumination",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1495115563,
+      "isAuto": false
+    },
+    {
+      "id": "dec5f55f-0ef8-4aa7-8833-4322c2dade8d",
+      "data": [
+        {
+          "text": "какая сейчас "
+        },
+        {
+          "text": "освещённость",
+          "alias": "illumination",
+          "meta": "@illumination",
+          "userDefined": true
+        },
+        {
+          "text": " в комнате?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1495108496,
+      "isAuto": false
+    },
+    {
+      "id": "f1ac569c-fda2-4362-a124-285c4b237b9e",
+      "data": [
+        {
+          "text": "переключи на "
+        },
+        {
+          "text": "зеленый",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        },
+        {
+          "text": " цвет"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1495107897,
+      "isAuto": false
+    },
     {
       "id": "f0470d80-4494-4629-a6ca-055a25967e32",
       "data": [
         {
           "text": "включить",
-          "alias": "state",
-          "meta": "@state",
+          "alias": "illumination",
+          "meta": "@illumination",
           "userDefined": true
         },
         {
@@ -40,7 +274,9 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 1495108496,
+      "isAuto": false
     },
     {
       "id": "159fa452-bf54-410e-b4e9-7b23fde5f583",
@@ -68,7 +304,9 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 1495039857,
+      "isAuto": false
     },
     {
       "id": "bbd24dd3-b9cc-41ef-84aa-6b69ff2f6ad7",
@@ -93,7 +331,9 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 1495038225,
+      "isAuto": false
     },
     {
       "id": "2add9260-1420-4667-8080-c1a3c63e1574",
@@ -109,7 +349,9 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 1495038225,
+      "isAuto": false
     },
     {
       "id": "b002172d-8ca4-4c98-a5a0-7ea80133ec22",
@@ -128,7 +370,9 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 1495037795,
+      "isAuto": false
     },
     {
       "id": "d63db20e-5f6a-4ab7-b7c6-c973483c957b",
@@ -144,64 +388,11 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
     }
   ],
-  "id": "e76ca229-34b6-404a-b99c-9620a4ef6108",
-  "name": "XiaomiGateway",
-  "auto": true,
-  "contexts": [],
-  "responses": [
-    {
-      "resetContexts": false,
-      "affectedContexts": [],
-      "parameters": [
-        {
-          "dataType": "@sys.color",
-          "name": "color",
-          "value": "$color",
-          "isList": false
-        },
-        {
-          "dataType": "@sys.number",
-          "name": "number",
-          "value": "$number",
-          "isList": false
-        },
-        {
-          "dataType": "@state",
-          "name": "state",
-          "value": "$state",
-          "prompts": [],
-          "defaultValue": "",
-          "isList": false
-        }
-      ],
-      "messages": [
-        {
-          "type": 0,
-          "speech": [
-            "секунду.",
-            "секундочку.",
-            "меняю.",
-            "ща.",
-            "щас.",
-            "погодь.",
-            "жди.",
-            "момент.",
-            "один момент."
-          ]
-        }
-      ]
-    }
-  ],
-  "priority": 500000,
-  "cortanaCommand": {
-    "navigateOrService": "NAVIGATE",
-    "target": ""
-  },
-  "webhookUsed": false,
-  "webhookForSlotFilling": false,
-  "fallbackIntent": false,
-  "events": []
+  "followUpIntents": [],
+  "templates": []
 }
