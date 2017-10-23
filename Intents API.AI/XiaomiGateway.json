@@ -54,8 +54,7 @@
             "секундочку.",
             "момент.",
             "один момент.",
-            "делаю",
-            "уже бегу"
+            "делаю"
           ]
         }
       ],
@@ -70,10 +69,259 @@
   },
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1508689024,
+  "lastUpdate": 1508767879,
   "fallbackIntent": false,
   "events": [],
   "userSays": [
+    {
+      "id": "f1280142-618b-46fa-9f08-ea7ddec76f41",
+      "data": [
+        {
+          "text": "установить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "яркость",
+          "alias": "illumination",
+          "meta": "@illumination",
+          "userDefined": false
+        },
+        {
+          "text": " на "
+        },
+        {
+          "text": "10",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "%"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1508711807,
+      "isAuto": false
+    },
+    {
+      "id": "7006a372-2f39-4407-868a-3293f9c25527",
+      "data": [
+        {
+          "text": "установить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "яркость",
+          "alias": "illumination",
+          "meta": "@illumination",
+          "userDefined": false
+        },
+        {
+          "text": " ночника на "
+        },
+        {
+          "text": "100",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "%"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1508711807,
+      "isAuto": false
+    },
+    {
+      "id": "10ea6229-4edb-4e52-a2d2-71d3a2ec53ae",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "синий",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1508711060,
+      "isAuto": false
+    },
+    {
+      "id": "e30b45ae-4658-4abc-b86d-dc5dc3fda49e",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "красный",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        },
+        {
+          "text": " на ночнике"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1508711060,
+      "isAuto": false
+    },
+    {
+      "id": "e329a89a-cd77-48a3-930e-fea9893cc600",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "красный",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        },
+        {
+          "text": " на "
+        },
+        {
+          "text": "100",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": "%"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1508692195,
+      "isAuto": false
+    },
+    {
+      "id": "c9c656ce-7d7d-4fd0-aa93-dfa71d06d5ae",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "яркость",
+          "alias": "illumination",
+          "meta": "@illumination",
+          "userDefined": false
+        },
+        {
+          "text": " на "
+        },
+        {
+          "text": "10",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        },
+        {
+          "text": " процентов"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1508692195,
+      "isAuto": false
+    },
+    {
+      "id": "466151e6-b978-4144-9d57-14284b6f445a",
+      "data": [
+        {
+          "text": "включи "
+        },
+        {
+          "text": "яркость",
+          "alias": "illumination",
+          "meta": "@illumination",
+          "userDefined": true
+        },
+        {
+          "text": " на "
+        },
+        {
+          "text": "10",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1508691717,
+      "isAuto": false
+    },
+    {
+      "id": "9017674b-38a9-4b7f-be74-9554fd6d25a0",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "синий",
+          "alias": "color",
+          "meta": "@sys.color",
+          "userDefined": true
+        },
+        {
+          "text": " цвет"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1508689823,
+      "isAuto": false
+    },
     {
       "id": "f7c4bc18-68b2-48ce-901a-b6110eb303a2",
       "data": [
