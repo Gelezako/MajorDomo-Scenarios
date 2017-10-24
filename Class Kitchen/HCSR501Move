@@ -19,7 +19,7 @@ if(gg("Kitchen.HCSR501")=='1'){
              say("Доброе утро Вика.",2);
              sleep(2);
              say("Надеюсь ты выспалась и у тебя хорошее настроение",2);
-             sg("admin.sayGM","1");
+             sg("Vika.sayGM","1");
           }
           //утреннее приветсвие
           else if(timeBetween('08:01', '11:59') and gg("admin.sayGM")==0){
