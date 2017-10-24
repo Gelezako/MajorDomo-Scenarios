@@ -20,3 +20,4 @@ if(strtotime(gg("Kitchen.DHT22TimeValueH"))<strtotime(date('Y-m-d H:i:s', strtot
         }
     }
 }
+if(gg("Kitchen.DHT22StateH")>30)sg("Kitchen.DHT22StateH","-5");
