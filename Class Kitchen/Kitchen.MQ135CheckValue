@@ -20,3 +20,5 @@ if(strtotime(gg("Kitchen.MQ135TimeValue"))<strtotime(date('Y-m-d H:i:s', strtoti
         }
     }
 }
+
+if(gg("Kitchen.MQ135State")>30)sg("Kitchen.MQ135State","-5");
