@@ -3,7 +3,8 @@ if(strtotime(gg("Kitchen.MQ135TimeValue"))<strtotime(date('Y-m-d H:i:s', strtoti
     $state+=1;
     sg("Kitchen.MQ135State",$state);
     if($state==0){
-       say("Внимание, данные с датчика качества воздуха 135 не обновляются более трёх минут. Проверьте работу датчика.",2);
+        if(timeBetween('09:00', '23:00'))
+            say("Внимание, данные с датчика качества воздуха 135 не обновляются более трёх минут. Проверьте работу датчика.",2);
         sg("XiRgb01.brightness","0");
         sg("XiRgb01.color","ff8300");
         for($j = 1; $j <= 3; $j++){
