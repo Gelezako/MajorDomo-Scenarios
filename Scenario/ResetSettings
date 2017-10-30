@@ -8,3 +8,4 @@ foreach($objects as $obj) {
 sg("Press.Quantity","0");
 sg("Pushup.Quantity","0");
 sg("Pullup.Quantity","0");
+say("сброс настроек выполнен");
