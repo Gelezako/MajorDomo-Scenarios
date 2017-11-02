@@ -1,0 +1,7 @@
+# Gateway offline
+if(timeBetween('10:00', '23:00')) say("Шлюз недоступен",2);
+else say("Шлюз недоступен");
+
+# Internet
+if(timeBetween('10:00', '23:00')) say("Нет доступа в интернет",2);
+else say("Нет доступа в интернет");
