@@ -1,0 +1,5 @@
+if((int)gg("Motion03.voltage")<4000 and (int)gg("Motion03.voltage")!="")say("Необходимо заменить батарейку в датчике движения",2);
+if((int)gg("Openclose01.voltage")<100 and (int)gg("Openclose01.voltage")!="")say("Необходимо заменить батарейку в датчике входной двери",2);
+
+
+
