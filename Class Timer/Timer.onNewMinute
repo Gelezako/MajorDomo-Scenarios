@@ -15,3 +15,6 @@ cm('Kitchen.DHT22CheckValueT');
 
 //доброе устро
 cm('Kitchen.DHT22Notification');
+
+//проверка уровня батареи
+cm('admin.CheckBattLevel');
