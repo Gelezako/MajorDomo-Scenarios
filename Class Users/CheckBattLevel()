@@ -1,2 +1,6 @@
-if((int)gg("admin.Battlevel")<30 and (int)gg("admin.Battlevel")!="" and (int)gg("admin.Charging")!=0 and (int)gg("admin.atHome")==1)say("Алекс, уровенень батареи ниже 30",2);
+if((int)gg("admin.Battlevel")<30 and (int)gg("admin.Battlevel")!="" and (int)gg("admin.atHome")==1)say("Алекс, уровенень батареи ниже 30",2);
 
+$minutes=round((strtotime("now")-gg("admin.CoordinatesUpdatedTimestamp")));
+   if($minutes>=20){ 
+   		say("Данные о заряде телефона не приходят более двадцати минут",2);
+   }
