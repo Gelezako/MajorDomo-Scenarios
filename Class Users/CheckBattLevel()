@@ -1,1 +1,1 @@
-if((int)gg("admin.Battlevel")<30 and (int)gg("admin.Battlevel")!="")say("Алекс, уровенень батареи ниже 30",2);
+if((int)gg("admin.Battlevel")<30 and (int)gg("admin.Battlevel")!="" and (int)gg("admin.Charging")!=0)say("Алекс, уровенень батареи ниже 30",2);
