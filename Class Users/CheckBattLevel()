@@ -1,14 +1,13 @@
 if((int)gg("admin.Battlevel")<50 and (int)gg("admin.Battlevel")!="" and (int)gg("admin.atHome")==1){
  $now=round((strtotime("now")-gg("admin.CoordinatesUpdatedTimestamp")));
- if($now<60) //произносим сообщение только 1 раз
+ if($now<60 and timeBetween('09:00', '23:00')) //произносим сообщение только 1 раз  итолько днём
  	say("Алекс, уровенень батареи телефона ниже тридцати процентов.",2);
 }
 
 $seconds=round((strtotime("now")-gg("admin.CoordinatesUpdatedTimestamp")));
-   if($seconds>20*60){ 
+   if($seconds>20*60 and timeBetween('09:00', '23:00')){ 
    		say("Данные о заряде телефона не приходят более двадцати минут",2);
    }
-
 
 
 
