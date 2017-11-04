@@ -5,12 +5,10 @@
 * @copyright Alex Sokolov http://blog.gelezako.com (c)
 **/
 
-	    sg("XiRgb01.brightness","0");
-	    sleep(1);
-	    sg("XiRgb01.color","");
-	    sleep(1);
-	    sg("XiRgb01.color","ff000e");
-	    sleep(2);
+    sg("XiRgb01.brightness","0");
+    sg("XiRgb01.color","");
+    sg("XiRgb01.color","ff000e");
+    sleep(3);
 		for($j = 1; $j <= 3; $j++){
 		for ($i = 2; ; $i=$i+5) {
 		    sg("XiRgb01.brightness",$i);
