@@ -5,7 +5,7 @@ if(strtotime(gg("Kitchen.MQ2TimeValue"))<strtotime(date('Y-m-d H:i:s', strtotime
     if($state==0){
         if(timeBetween('09:00', '23:00'))
          say("Внимание, данные с датчика качества воздуха не обновляются более трёх минут. Проверьте работу датчика.",2);
-         runScript("warning");
+         runScript("AlarmXiaomiGateway");
     }
 }
 
