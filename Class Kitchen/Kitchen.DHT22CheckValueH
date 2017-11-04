@@ -5,7 +5,7 @@ if(strtotime(gg("Kitchen.DHT22TimeValueH"))<strtotime(date('Y-m-d H:i:s', strtot
     if($state==0){
         if(timeBetween('09:00', '23:00'))
             say("Внимание, данные с датчика влажности не обновляются более трёх минут. Проверьте работу датчика.",2);
-            runScript("warning");
+            runScript("AlarmXiaomiGateway");
     }
 }
 if(gg("Kitchen.DHT22StateH")>30)sg("Kitchen.DHT22StateH","-5");
