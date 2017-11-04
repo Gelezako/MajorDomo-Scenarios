@@ -5,7 +5,7 @@ if((int)gg("Kitchen.MQ2")>250){
        sg("Kitchen.MQ2State",$state);
  	if($state==0 and timeBetween('10:00', '23:00')){
                 say("Внимание, концентрация вредных веществ в помещении превысила порог 250 единиц!",2);
-		runScript("warning");
+		runScript("AlarmXiaomiGateway");
  	}
 }
 
