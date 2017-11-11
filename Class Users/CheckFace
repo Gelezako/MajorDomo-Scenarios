@@ -1,0 +1,12 @@
+$users = "";
+$objects=getObjectsByClass("Users");
+
+foreach($objects as $obj) {
+ $EuclidValue = getGlobal($obj['TITLE'].".EuclidValue");  
+ $fullname = getGlobal($obj['TITLE'].".fullName");
+ $atHome = getGlobal($obj['TITLE'].".atHome");
+     if ($EuclidValue<=0.6 and $EuclidValue!=""){
+      say("Привет ".$fullname.", как дела, что новенького?",2);
+      sg($atHome,"1");
+      }
+}
