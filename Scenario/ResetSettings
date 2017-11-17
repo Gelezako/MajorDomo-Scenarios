@@ -1,11 +1,9 @@
 //сброс утреннего приветствия
-$objects=getObjectsByClass("Users");
-foreach($objects as $obj) {
- sg($obj['TITLE'].".sayGM","0");
-}
- 
+sg("admin.Morning",0);
+sg("Vika.Morning",0);
+
 //сброс спортивных значений
-sg("Press.Quantity","0");
-sg("Pushup.Quantity","0");
-sg("Pullup.Quantity","0");
+//sg("Press.Quantity","0");
+//sg("Pushup.Quantity","0");
+//sg("Pullup.Quantity","0");
 say("сброс настроек выполнен");
