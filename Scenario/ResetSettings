@@ -1,6 +1,8 @@
 //сброс утреннего приветствия
-sg("admin.Morning",0);
+sg("admin.Morning",0); // с датчика движения
 sg("Vika.Morning",0);
+sg("admin.Greeting",0); // с нейронки
+sg("Vika.Greeting",0);
 
 //сброс спортивных значений
 //sg("Press.Quantity","0");
