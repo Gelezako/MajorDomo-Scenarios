@@ -1,3 +1,11 @@
 //Необходимо добавить ссылку на РСС ленту в разделе "RSS каналы"
 
-say("Новая статья "$params['TITLE'],2); // reading news
+ say('последние новости из гитхаба:',1);
+   $states = SQLSelect('SELECT  `TITLE` ,  `ADDED` FROM  `rss_items` ORDER BY  `ADDED` DESC LIMIT 0 , 10');
+// отбери заголовок, когда добавлено из таблицы записи_RSS, отсортируй по времени добавления по убыванию и ограничь показ пятью записями
+   $cnt=Count($states);
+   For($i=0; $i<$cnt; $i++) {
+      say("новость номер ".$i,1);
+      say($states[$i]['TITLE'],1);
+      sleep(1);
+   }
