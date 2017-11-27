@@ -4,6 +4,8 @@ sg("Vika.Morning",0);
 sg("admin.Greeting",0); // с нейронки
 sg("Vika.Greeting",0);
 
+sg("admin.RSS",0); 
+
 //сброс спортивных значений
 //sg("Press.Quantity","0");
 //sg("Pushup.Quantity","0");
