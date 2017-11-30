@@ -1,0 +1,24 @@
+    // Лампочка
+    sg("Bulb_0x00000000034853c5.bright","1");
+    //sg("Bulb_0x00000000034853c5.status","1");
+    //sg("Bulb_0x00000000034853c5.rgb","");
+    sg("Bulb_0x00000000034853c5.rgb","ff000e");
+       
+for($j = 1; $j <= 3; $j++){
+        for ($i = 0; ; $i=$i+10) {
+            sg("Bulb_0x00000000034853c5.bright",$i);
+            sg("Bulb_0x00000000034853c5.status","1");
+            usleep(50000);
+            if ($i >= 100)break;
+        }
+sleep(1);
+ for ($i = 100; ; $i=$i-10) {
+            sg("Bulb_0x00000000034853c5.bright",$i);
+            sg("Bulb_0x00000000034853c5.status","1");
+            usleep(50000);
+            if ($i <= 0)break;
+        }
+sleep(1);
+}
+usleep(50000);
+sg("Bulb_0x00000000034853c5.status","0");
