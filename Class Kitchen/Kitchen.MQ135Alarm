@@ -5,8 +5,9 @@ if((int)gg("Kitchen.MQ135")>=120){
        $state+=1;
        sg("Kitchen.MQ135State",$state);
  	if($state==1 and timeBetween('10:00', '23:00')){
-       say("Внимание, концентрация углекислого газа в помещении превысила порог 120 единиц! ",2);
-       runScript("AlarmXiaomiGateway");
+          say("Внимание, концентрация углекислого газа в помещении превысила порог 120 единиц! ",2);
+          runScriptSafe("AlarmXiaomiYeelightStripe");
+          runScriptSafe("AlarmXiaomiGateway");
  	}
 }
 
@@ -14,7 +15,8 @@ else if($state==10 and (int)gg("Kitchen.MQ135")>=120 and timeBetween('10:00', '2
 	   //повторять только каждые 10 мин
 	        say("Концентрация углекислого газа всё ещё высокая.",2);
 	        sg("Kitchen.MQ135State","-10");
-                runScript("AlarmXiaomiGateway");
+                runScriptSafe("AlarmXiaomiYeelightStripe");
+                runScriptSafe("AlarmXiaomiGateway");
 }
 
 if($state>=10){
