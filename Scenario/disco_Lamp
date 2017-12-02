@@ -1,0 +1,24 @@
+sg("color_0x00000000034853c5.status","0");
+sleep(1);
+sg("color_0x00000000034853c5.rgb","");
+sleep(1);
+for($j = 1; $j <= 3; $j++){
+sg("color_0x00000000034853c5.rgb","ff000e");
+ sg("color_0x00000000034853c5.status","1");
+usleep(1000000);
+sg("color_0x00000000034853c5.rgb","fffff3");
+ sg("color_0x00000000034853c5.status","1");
+usleep(1000000);
+sg("color_0x00000000034853c5.rgb","ffff2d");
+ sg("color_0x00000000034853c5.status","1");
+usleep(1000000);
+sg("color_0x00000000034853c5.rgb","ff00f3");
+ sg("color_0x00000000034853c5.status","1");
+usleep(1000000);
+sg("color_0x00000000034853c5.rgb","00ff25");
+ sg("color_0x00000000034853c5.status","1");
+usleep(1000000);
+sg("color_0x00000000034853c5.rgb","0010ff");
+ sg("color_0x00000000034853c5.status","1");
+}
+sg("color_0x00000000034853c5.status","0");
