@@ -69,7 +69,7 @@ sleep(1);
 sleep(1);
 
 //-------- курс валют
-say("Курс евро Приват банка ".gg("Rate.eurosale").". Курс доллара ".gg("Rate.usdsale"),2);
+say("Курс евро Приват банка ".gg("exchange_rate.eurosale").". Курс доллара ".gg("exchange_rate.usdsale"),2);
 //--------
 
 sleep(1);
