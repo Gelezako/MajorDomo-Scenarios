@@ -1,0 +1,12 @@
+//Анализ свойства atHome, выставить запускать при изменении
+
+$users = "";
+$objects=getObjectsByClass("Users");
+
+foreach($objects as $obj) {
+ $atHome = getGlobal($obj['TITLE'].".atHome");
+ if ($atHome=="1")
+   sg($obj['TITLE'].".seenAt","дома");
+ else  if ($atHome=="0")
+  sg($obj['TITLE'].".seenAt","");
+}
