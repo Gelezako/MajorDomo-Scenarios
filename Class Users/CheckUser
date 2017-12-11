@@ -1,0 +1,26 @@
+// Определяет какой именно пользователь в каком месте находится
+// В классе "User" добавить свойства: "Location" и "LocateUpdated"
+// В классе "Rooms" добавить свойство: "User" и запускать этот метод на его изменение.
+// В рузельтате Заполняется свойство "admin.Location" и "admin.LocateUpdated". Можно выводить в "State".
+// Метод вызывать GET запросом http://192.168.0.108:80/objects/?op=set&object=Balcony&p=User&v=admin 
+// Для вызова можно использовать либо NFC либо распознавание лица https://www.youtube.com/watch?v=7k9tDY_ajrY&index=13&list=PLYOYjvcehgZKWUxcNR25o37EdBGtX084E
+
+$objectsRooms=getObjectsByClass("Rooms");
+$time=date('H:i');
+foreach($objectsRooms as $obj) {
+  $user = getGlobal($obj['TITLE'].".User");
+  $location = getGlobal($obj['TITLE'].".Title");
+     if ($user == "admin"){
+     	sg("admin.Location",$location);
+        sg("admin.LocateUpdated",$time);
+        cm($obj['TITLE'].".onActivity");
+        sg($obj['TITLE'].".User","");
+     }
+     else if ($user == "Vika"){
+     	sg("Vika.Location",$location);
+        sg("admin.LocateUpdated",$time);
+        cm($obj['TITLE'].".onActivity");
+        sg($obj['TITLE'].".User","");
+     }
+}
+
