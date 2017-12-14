@@ -1,0 +1,9 @@
+say("Входная дверь открыта",2);
+/*
+   if((int)gg("Openclose01.status")==1){
+   cm("Camera01.takeSnapshot");
+   $img = "C:/_majordomo/htdocs/cms/images/" .gg('Camera01.snapshot');
+   rename($img, "C:/_majordomo/apps/facedetect/checkface.jpg");
+   exec('C:\_majordomo\apps\facedetect\checkface.bat');
+   }
+*/
