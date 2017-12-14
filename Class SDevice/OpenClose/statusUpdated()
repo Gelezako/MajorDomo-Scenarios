@@ -1,4 +1,23 @@
 say("Входная дверь открыта",2);
+
+// проверяем если кто-то из пользователей дома
+$atHome=0;
+$objects=getObjectsByClass("Users");
+foreach($objects as $obj) {
+ $atHome = getGlobal($obj['TITLE'].".atHome");
+}
+
+(int)$counter=0;
+$objects=getObjectsByClass("Rooms");
+foreach($objects as $obj) {
+ $atHome = getGlobal($obj['TITLE'].".SomebodyHere");
+ if($atHome==1 and getGlobal($obj['TITLE'].".Title")!="Коридор"){$counter=1;}
+}
+
+if((int)strtotime("now")-(int)gg("Openclose01.updated")>10 and (int)gg("Sensor_light01.status ")<1000 and $atHome==0 and $counter==0)
+ runScript("allLightOnScenario");
+
+
 /*
    if((int)gg("Openclose01.status")==1){
    cm("Camera01.takeSnapshot");
