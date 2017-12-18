@@ -1,12 +1,18 @@
 //Анализ свойства atHome, выставить запускать при изменении
 
-$users = "";
 $objects=getObjectsByClass("Users");
-
 foreach($objects as $obj) {
  $atHome = getGlobal($obj['TITLE'].".atHome");
- if ($atHome=="1")
-   sg($obj['TITLE'].".seenAt","дома");
- else  if ($atHome=="0")
-  sg($obj['TITLE'].".seenAt","");
+ $isGuest = getGlobal($obj['TITLE'].".isGuest");
+ $name = getGlobal($obj['TITLE'].".fullName");
+ $timeUpdated = getGlobal($obj['TITLE'].".CoordinatesUpdatedTimestamp");
+ if ($atHome=="1" and $isGuest==1){
+   $time=strtotime("now")-$timeUpdated;
+   if($time>21600){ //если прошло больше 6ти часов с последнего визита, то приветствие   
+   say("Привет ".$name." Что нового?",2);
+   sg($obj['TITLE'].".CoordinatesUpdatedTimestamp",strtotime("now")); //Обновить время присутствия
+   }
+ }
 }
+
+
