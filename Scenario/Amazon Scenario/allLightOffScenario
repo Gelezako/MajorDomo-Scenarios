@@ -1,0 +1,4 @@
+sg("XiRgb01.brightness",0);
+sg("color_0x00000000034853c58067.status",0);
+sg("mono_0x0000000003360b8319.status",0);
+sg("stripe_0x0000000003618b9011.status",0);
