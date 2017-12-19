@@ -1,34 +1,39 @@
-say("Входная дверь открыта",2);
+//определаем когда последний раз открывалась дверь
+$timeUpdated=strtotime("now")-registeredEventTime("openDoor");
+say("разница ".$timeUpdated);
+registerEvent("openDoor", "Время открытия двери",$expire_in=365);
 
-// проверяем если кто-то из пользователей дома
-$atHome=0;
-$objects=getObjectsByClass("Users");
-foreach($objects as $obj) {
- $atHome = getGlobal($obj['TITLE'].".atHome");
+if($timeUpdated>10){
+   say("Входная дверь открыта",2);
+
+   //логика для включения света если никого нет дома
+   // проверяем если кто-то из пользователей дома
+   $atHome=0;
+   $objects=getObjectsByClass("Users");
+   foreach($objects as $obj) {
+    $atHome += getGlobal($obj['TITLE'].".atHome");
+    //say("состояние кто дома: ".$atHome);
+   }   
+
+   (int)$counter=0;
+   $objects=getObjectsByClass("Rooms");
+   foreach($objects as $obj) {
+    $counter = $counter+getGlobal($obj['TITLE'].".SomebodyHere");
+    if(getGlobal($obj['TITLE'].".SomebodyHere")==1 and $obj['TITLE']=="Hall"){
+    $counter=$counter-1;}
+    //say("состояние по помещениям: ".$counter);
+   }
+   
+    if((int)gg("Sensor_light01.status")<700){
+     say("в квартире темно");
+     if($atHome==0 and $counter==0){
+       say("в квартире никого, включаю свет");
+       runScript("allLightOnScenario");
+     }
+    }
 }
-say("состояние кто дома: ".$atHome);
 
-(int)$counter=0;
-$objects=getObjectsByClass("Rooms");
-foreach($objects as $obj) {
- $counter = getGlobal($obj['TITLE'].".SomebodyHere");
- if($counter==1 and getGlobal($obj['TITLE'].".Title")!="Коридор"){$counter=0;}
-}
-say("состояние по помещениям: ".$counter);
-say("разница: ".(time()-gg("Openclose01.updated")));
-
-if((int)strtotime("now")-(int)gg("Openclose01.updated")<10){
- say("дверь давно не открывали");
- if((int)gg("Sensor_light01.status")<700){
-  say("в квартире темно");
-  if($atHome==0 and $counter==0){
-    say("в квартире никого, включаю свет");
- 	runScript("allLightOnScenario");
-  }
- }
-}
-
-
+//логика для создания фото с камеры
 /*
    if((int)gg("Openclose01.status")==1){
    cm("Camera01.takeSnapshot");
