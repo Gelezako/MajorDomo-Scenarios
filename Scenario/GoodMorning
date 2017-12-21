@@ -51,7 +51,7 @@ if(timeBetween('10:00', '11:00')){
 say("Сегодня ".$album_data,2);
 //--------
 
-sleep(1);
+sleep(5);
 
 //-------- микроклимат в квартире
   sleep(1);
@@ -60,19 +60,19 @@ sleep(1);
   else say("Качество воздуха плохое, квартиру лучше проветрить",2);
 //--------
 
-sleep(1);
+sleep(5);
 
 //--------Погода на улице
  say("Погода на улице ".gg("ow_fact.temperature")." ".degree(gg('ow_fact.temperature'))." тепла, влажность ".gg("ow_fact.humidity")." ".humidity(gg('ow_fact.humidity'))." ".gg("ow_fact.weather_type")." ветер ".gg("ow_fact.wind_speed")." метров в секунду.",2);
  //--------
  
-sleep(1);
+sleep(5);
 
 //-------- курс валют
 say("Курс евро Приват банка ".gg("exchange_rate.eurosale").". Курс доллара ".gg("exchange_rate.usdsale"),2);
 //--------
 
-sleep(1);
+sleep(5);
  
 //-------- новости из RSS
 say("Новые статьи из хабра ".gg("admin.RSS"),2); // reading news
