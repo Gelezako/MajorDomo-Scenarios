@@ -1,0 +1,3 @@
+%Admin.seenAt% (%Admin.CoordinatesUpdated%)
+<br><br>
+<a href="http://maps.google.com/maps?q=loc:%Admin.Coordinates%" target=_blank><img src="http://maps.googleapis.com/maps/api/staticmap?center=%Admin.Coordinates%&size=300x300&maptype=hybrid&sensor=false&zoom=16&markers=%Admin.Coordinates%"></a>
