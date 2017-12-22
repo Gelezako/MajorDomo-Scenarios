@@ -1,0 +1,68 @@
+<style>
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+.container {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 270px;
+  height: 100px;
+  border-radius: 15px;
+  border:1px solid #444;
+}
+.container img {
+  width: 80px;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  float: left;
+}
+.batt {
+  padding-right: 20px;
+  padding-top: 15px;
+  float: right;
+}
+
+.info {
+  padding-top: 10px;
+  height: 80px;
+}
+.name {
+  font-size: 140%;
+  font-family: fantasy;
+}
+.loc {
+  font-size: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+.time {
+  font-size: 60%;
+  color:grey;
+}
+ </style>
+
+
+<div class="container">
+ 	<img src="http://server/cms/icons/110_user.ico">
+    <div class="batt">
+     <i class="fa fa-battery-quarter" aria-hidden="true"> %admin.Battlevel% %</i>
+     </div>
+    <div class="info">
+      <div class="name">%admin.fullName%</div>
+      <div class="loc"><span class="loc_icon fa fa-map-marker" aria-hidden="true"></span> %admin.seenAt%</div>
+      <div class="time"><span class="ref_icon fa fa-refresh" aria-hidden="true"></span> %admin.CoordinatesUpdated%</div>
+    </div>
+  </div>
+ <br>
+ 
+ <div class="container">
+ 	<img src="http://server/cms/icons/woman.png">
+    <div class="batt">
+     <i class="fa fa-battery-quarter" aria-hidden="true"> %vika.Battlevel% %</i>
+     </div>
+    <div class="info">
+      <div class="name">%Vika.fullName%</div>
+      <div class="loc"><span class="loc_icon fa fa-map-marker" aria-hidden="true"></span> %Vika.seenAt%</div>
+      <div class="time"><span class="ref_icon fa fa-refresh" aria-hidden="true"></span> %Vika.CoordinatesUpdated%</div>
+    </div>
+  </div>
