@@ -1,0 +1,20 @@
+<script src="https://use.fontawesome.com/7a155330f4.js"></script>
+Качество воздуха: 
+<br>
+Дым %Kitchen.MQ2% ppm<br>
+Углекислый газ %Kitchen.MQ135% ppm<br>
+Температура дома: <i class="fa fa-thermometer-empty" aria-hidden="true">  %Kitchen.Temperature% C</i>
+ 
+<br>
+Влажность воздуха дома <i class="fa fa-tint" aria-hidden="true"> %Kitchen.Humidity% %</i>
+<br>
+Погода: <i class="fa fa-sun-o" aria-hidden="true"> %ow_fact.weather_type%</i>
+ <br>
+Температура улица: <i class="fa fa-thermometer-empty" aria-hidden="true">   %ow_fact.temperature% C</i>
+<br>
+Скорость ветра: %ow_fact.wind_speed% м\с
+<br>
+Влажность улица: <i class="fa fa-tint" aria-hidden="true"> %ow_fact.humidity% %</i>
+<br>
+Давление: %ow_fact.pressure_mmhg% мл.рт.ст
+
