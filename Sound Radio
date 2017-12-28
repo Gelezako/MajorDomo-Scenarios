@@ -1,0 +1,47 @@
+/**
+* Сценарий для Majordomo
+* Голосовое управление радио на Xiaomi Gateway
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright Alex Sokolov http://blog.gelezako.com (c)
+* @version 0.1 
+**/
+
+
+if($params['state']=="выключить") sg("XiRgb01.current_volume","0");
+
+if($params['state']=="включить"){
+    if($params['channel']=="люкс фм"){
+     sg("XiRgb01.current_program","527782036");
+     sg("XiRgb01.current_status","run");
+     }
+     else if($params['channel']=="наше"){
+     sg("XiRgb01.current_program","527782031");
+     sg("XiRgb01.current_status","run");
+     }
+     else if($params['channel']=="диджей фм" or $params['channel']=="диджей"){
+     sg("XiRgb01.current_program","527782065");
+     sg("XiRgb01.current_status","run");
+     }
+     else if($params['channel']=="мфм"){
+     sg("XiRgb01.current_program","527782302");
+     sg("XiRgb01.current_status","run");
+     }
+     else if($params['channel']=="релакс"){
+     sg("XiRgb01.current_program","527782309");
+     sg("XiRgb01.current_status","run");
+     }
+     else if($params['channel']=="sound"){
+     sg("XiRgb01.current_program","527782034");
+     sg("XiRgb01.current_status","run");
+     }
+     else if($params['channel']=="громада" or $params['channel']=="громадське"){
+     sg("XiRgb01.current_program","527782034");
+     sg("XiRgb01.current_status","run");
+     }
+     else if($params['channel']=="хит фм"){
+     sg("XiRgb01.current_program","527782034");
+     sg("XiRgb01.current_status","run");
+     }
+ 	 else if($params['channel']=="") sg("XiRgb01.current_status","run");
+}
+if($params['number']!="") sg("XiRgb01.current_volume",$params['number']);
