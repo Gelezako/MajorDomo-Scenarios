@@ -1,0 +1,507 @@
+{
+  "id": "de2ee44c-f37d-41a3-a637-7de97f1f8d47",
+  "name": "Radio",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "c10ee08f-039b-4e80-83c1-f95328a5ee3f",
+          "required": false,
+          "dataType": "@state",
+          "name": "state",
+          "value": "$state",
+          "isList": false
+        },
+        {
+          "id": "01b63907-b256-49fb-ae25-a86af24cf4f8",
+          "required": false,
+          "dataType": "@channel",
+          "name": "channel",
+          "value": "$channel",
+          "isList": false
+        },
+        {
+          "id": "ca45e509-1c80-453e-a954-c639104a41a3",
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        },
+        {
+          "id": "cb78eac1-922d-4d12-8a87-2cdac4b99757",
+          "required": false,
+          "dataType": "@volume",
+          "name": "volume",
+          "value": "$volume",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1514459086,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "85d78e73-e480-4ccf-b735-babdcde63960",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Хит ФМ",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "a59ab703-a3de-4d5a-bf95-b836b8f1e330",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "DJ FM",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "c9a65a7a-ed6c-460a-bb31-2b39df738793",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Хит ФМ",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "5353b074-2004-4ea9-bb8a-29a1b8c03d1c",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "266da049-5128-4589-93c6-1402366f5d7d",
+      "data": [
+        {
+          "text": "выключить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "5ec1b859-5dc8-4b00-9217-7dc32cc77dea",
+      "data": [
+        {
+          "text": "выставь "
+        },
+        {
+          "text": "громкость",
+          "alias": "volume",
+          "meta": "@volume",
+          "userDefined": false
+        },
+        {
+          "text": " радио "
+        },
+        {
+          "text": "5",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "64379774-6ea7-4186-bcee-4d45b9f225f9",
+      "data": [
+        {
+          "text": "громкость",
+          "alias": "volume",
+          "meta": "@volume",
+          "userDefined": false
+        },
+        {
+          "text": " радио на "
+        },
+        {
+          "text": "5",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "a16f3446-48d6-4556-877d-49f10815da5e",
+      "data": [
+        {
+          "text": "громкость",
+          "alias": "volume",
+          "meta": "@volume",
+          "userDefined": true
+        },
+        {
+          "text": " на "
+        },
+        {
+          "text": "5",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "6728d137-d8aa-4d8e-8b12-20ce6f5d2f38",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sound",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " radio"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "09b49673-5c93-4cb9-bb68-074c446fe91a",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "mfm",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "fd2c4968-4eb6-47c6-a504-c55966d661a9",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "громада",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "876f539f-dcd9-47ac-ab77-4b0cf05e0236",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "sound",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "8f90db0a-d47b-4114-83bf-0963ab18ac86",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "релакс",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "452adc04-fc6b-48a2-a9ed-ef6011c170f4",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "мфм",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "f4bcb710-8742-406e-8668-d443fe50fe4e",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "хит фм",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "a2c197e7-ce22-4dab-8db2-7af7252ea51c",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "диджей фм",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": true
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "97917821-b827-4eca-bd6e-24dfe8715a57",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "наше",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": true
+        },
+        {
+          "text": " радио"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "2723d44f-f168-4a12-b912-fcf45d399a7f",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " радио "
+        },
+        {
+          "text": "люкс фм",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1514459086,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}
