@@ -1,0 +1,62 @@
+{
+  "id": "e62111b9-0c0b-4fd4-baf3-116a1213c0e9",
+  "name": "channel",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "люкс фм",
+      "synonyms": [
+        "люкс фм"
+      ]
+    },
+    {
+      "value": "наше",
+      "synonyms": [
+        "наше"
+      ]
+    },
+    {
+      "value": "диджей фм",
+      "synonyms": [
+        "диджей фм",
+        "диджей",
+        "DJ FM"
+      ]
+    },
+    {
+      "value": "мфм",
+      "synonyms": [
+        "мфм",
+        "mfm"
+      ]
+    },
+    {
+      "value": "релакс",
+      "synonyms": [
+        "релакс"
+      ]
+    },
+    {
+      "value": "sound",
+      "synonyms": [
+        "sound"
+      ]
+    },
+    {
+      "value": "громада",
+      "synonyms": [
+        "громада",
+        "громадське"
+      ]
+    },
+    {
+      "value": "хит фм",
+      "synonyms": [
+        "хит фм",
+        "Хит ФМ"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
