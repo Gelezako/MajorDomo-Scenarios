@@ -1,0 +1,44 @@
+{
+  "id": "94cf4cc2-f7ca-40b4-9b47-68df85bcf826",
+  "name": "channelTV",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "виасат история",
+      "synonyms": [
+        "виасат история",
+        "Viasat History"
+      ]
+    },
+    {
+      "value": "tv",
+      "synonyms": [
+        "tv",
+        "ТВ",
+        "телевизор, телек"
+      ]
+    },
+    {
+      "value": "виасат спорт",
+      "synonyms": [
+        "виасат спорт",
+        "Viasat Sport"
+      ]
+    },
+    {
+      "value": "Viasat Explorer",
+      "synonyms": [
+        "Viasat Explorer"
+      ]
+    },
+    {
+      "value": "viasat природа",
+      "synonyms": [
+        "viasat природа",
+        "viasat nature"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
