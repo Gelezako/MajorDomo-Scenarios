@@ -1,0 +1,192 @@
+{
+  "id": "7d708b56-9ef3-4187-8f99-ad9557126181",
+  "name": "tv",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "d6bfdd06-6f0d-408f-8a7e-4eb569859477",
+          "required": false,
+          "dataType": "@state",
+          "name": "state",
+          "value": "$state",
+          "isList": false
+        },
+        {
+          "id": "2847779d-a0d0-4b2a-b9c3-467f00394a13",
+          "required": false,
+          "dataType": "@channelTV",
+          "name": "channelTV",
+          "value": "$channelTV",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "включаю"
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1514563630,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "d37608ad-d2ae-4504-818f-af98ba3ecf66",
+      "data": [
+        {
+          "text": "выключить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "тв",
+          "alias": "channelTV",
+          "meta": "@channelTV",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "389d10aa-ae60-42e6-bbc0-28b79963ef58",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "тв",
+          "alias": "channelTV",
+          "meta": "@channelTV",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "3b0588be-6246-4731-a2d3-1850236b6d82",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " канал "
+        },
+        {
+          "text": "Viasat природа",
+          "alias": "channelTV",
+          "meta": "@channelTV",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "469d5796-da88-4477-8fed-2314ef3460d9",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " канал "
+        },
+        {
+          "text": "Viasat History",
+          "alias": "channelTV",
+          "meta": "@channelTV",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "01ad7afd-75e1-4902-be86-9ab3b02ab6ac",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " канал "
+        },
+        {
+          "text": "Viasat Nature",
+          "alias": "channelTV",
+          "meta": "@channelTV",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "isAuto": false
+    },
+    {
+      "id": "78ce7b4d-ad72-4a70-98b9-f7b7e479cd45",
+      "data": [
+        {
+          "text": "включи",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " канал "
+        },
+        {
+          "text": "виасат история",
+          "alias": "channelTV",
+          "meta": "@channelTV",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1514563630,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}
