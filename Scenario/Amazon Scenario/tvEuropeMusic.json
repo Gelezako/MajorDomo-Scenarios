@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "192.168.0.108"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12351,
+                    "on_cmd": "http://127.0.0.1/objects/?script=tvEuropeMusic",
+                    "off_cmd": "",
+                    "method": "GET",
+                    "name": "europe music"
+                }			    
+            ]
+        }
+    }
+}

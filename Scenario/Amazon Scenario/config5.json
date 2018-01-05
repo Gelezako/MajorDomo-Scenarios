@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "192.168.0.108"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12344,
+                    "on_cmd": "http://127.0.0.1/objects/?script=tvon",
+                    "off_cmd": "http://127.0.0.1/objects/?script=tvoff",
+                    "method": "GET",
+                    "name": "tv"
+                }			    
+            ]
+        }
+    }
+}
