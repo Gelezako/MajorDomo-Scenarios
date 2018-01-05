@@ -1,0 +1,8 @@
+// $params['state'] (ex 'включить');
+// $params['channelTV'] (ex 'виасат история');
+if($params['state']=="включить"){
+ if($params['channelTV']=="tv" or $params['channelTV']=="ТВ") runscript("tvon");
+ if($params['channelTV']=="Viasat природа") runscript("tvViasatNature");
+ if($params['channelTV']=="Viasat Explorer") runscript("tvViasatExplore");
+}
+if($params['state']=="выключить")runscript("tvoff");
