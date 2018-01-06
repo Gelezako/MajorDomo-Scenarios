@@ -12,7 +12,7 @@ if(timeBetween('02:00', '12:00') and gg("admin.RSS")!=1){
       $string = str_replace("[recovery mode]", " ", $string);
       $string = str_replace("[Перевод]", " ", $string);
       say("новость номер ".$j,2);
-      say($string,1);
+      say($string,2);
     sleep(1);
    }
 sg("admin.RSS",1); 
