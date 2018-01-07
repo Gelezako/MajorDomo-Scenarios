@@ -1,6 +1,6 @@
 //определаем когда последний раз открывалась дверь
 $timeUpdated=strtotime("now")-registeredEventTime("openDoor");
-say("разница ".$timeUpdated);
+//say("разница ".$timeUpdated);
 registerEvent("openDoor", "Время открытия двери",$expire_in=365);
 
 if($timeUpdated>10){
