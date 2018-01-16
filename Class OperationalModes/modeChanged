@@ -1,0 +1,9 @@
+//Индикатор вкл\выкл режима
+
+$this->setProperty("updated",time());
+$this->setProperty("updatedTime",date('H:i'));
+if ($this->getProperty('active')) {
+ say("Режим ".$this->getProperty('title')." активирован.");
+} else {
+ say("Режим ".$this->getProperty('title')." выключен.");
+}
