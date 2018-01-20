@@ -1,0 +1,2 @@
+sg("ThisComputer.SunRiseTime",date("H:i", gg("ow_fact.sunrise")));
+sg("ThisComputer.SunSetTime",date("H:i", gg("ow_fact.sunset")));
