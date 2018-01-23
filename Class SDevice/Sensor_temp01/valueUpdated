@@ -1,0 +1,13 @@
+(int)$state=gg("Sensor_temp01.state");
+$timeupdated=gg("Sensor_temp01.updated");
+if($timeupdated<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
+    $state+=1;
+    sg("Sensor_temp01.state",$state);
+    if($state==0){
+     if(timeBetween('09:00', '23:00'))
+       say("Внимание, данные с датчика температуры не обновляются более трёх минут. Проверьте работу датчика.",2);
+        runScriptSafe("AlarmXiaomiYeelightStripe");
+        runScriptSafe("AlarmXiaomiGateway");
+   }
+}
+if(gg("Sensor_temp01.state")>30)sg("Sensor_temp01.state","-5");
