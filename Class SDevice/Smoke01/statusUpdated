@@ -14,7 +14,7 @@ if($timeupdated<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
 if(gg("Smoke01.state")>30)sg("Smoke01.state","-5");
 
 //проверка значений с датчика MQ135
-(int)$state=gg("Kitchen.MQ135State");
+(int)$state=gg("Smoke01.state2");
  
 if((int)gg("Smoke01.value")>=200){
        $state+=1;
