@@ -10,4 +10,4 @@ if($timeupdated<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
         runScriptSafe("AlarmXiaomiGateway");
    }
 }
-if(gg("Sensor_humidity01.state")>30)sg("Sensor_humidity01","-5");
+if(gg("Sensor_humidity01.state")>30)sg("Sensor_humidity01.state","-5");
