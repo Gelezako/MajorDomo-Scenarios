@@ -1,0 +1,13 @@
+$state=gg("Smoke02.state");
+$timeupdated=gg("Smoke02.updated");
+if($timeupdated<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
+    $state+=1;
+    sg("Smoke02.state",$state);
+    if($state==0){
+     if(timeBetween('09:00', '23:00'))
+       say("Внимание, данные с датчика влажности не обновляются более трёх минут. Проверьте работу датчика.",2);
+        runScriptSafe("AlarmXiaomiYeelightStripe");
+        runScriptSafe("AlarmXiaomiGateway");
+   }
+}
+if(gg("Smoke02.state")>30)sg("Smoke02.state","-5");
