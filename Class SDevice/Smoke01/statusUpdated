@@ -1,3 +1,4 @@
+//проверка работоспособности
 $state=gg("Smoke01.state");
 $timeupdated=gg("Smoke01.updated");
 if($timeupdated<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
@@ -11,3 +12,29 @@ if($timeupdated<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
    }
 }
 if(gg("Smoke01.state")>30)sg("Smoke01.state","-5");
+
+//проверка значений с датчика MQ135
+(int)$state=gg("Kitchen.MQ135State");
+ 
+if((int)gg("Smoke01.value")>=200){
+       $state+=1;
+       sg("Smoke01.state2",$state);
+ 	if($state==1 and timeBetween('10:00', '23:00')){
+        say("Внимание, концентрация углекислого газа в помещении превысила порог 200 единиц! ",2);
+        //световое оповещение
+        runScriptSafe("AlarmXiaomiYeelightStripe");
+        runScriptSafe("AlarmXiaomiGateway");
+ 	}
+}
+
+else if($state==30 and (int)gg("Smoke01.value")>=120  and timeBetween('10:00', '23:00')){
+	   //повторять только каждые 10 мин
+	   say("Концентрация углекислого газа всё ещё высокая.",2);
+	   sg("Smoke01.state2","-30");
+        runScriptSafe("AlarmXiaomiYeelightStripe");
+        runScriptSafe("AlarmXiaomiGateway");
+}
+
+if($state>=30){
+	   sg("Smoke01.state2","-30");
+}
