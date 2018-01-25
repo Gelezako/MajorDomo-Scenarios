@@ -1,0 +1,15 @@
+{
+  "id": "099250ad-50ea-463d-88ab-0ce197ec5959",
+  "name": "volume",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "громкость",
+      "synonyms": [
+        "громкость"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
