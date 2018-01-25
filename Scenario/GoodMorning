@@ -63,7 +63,7 @@ sleep(5);
 sleep(5);
 
 //--------Погода на улице
- say("Погода на улице ".gg("ow_fact.temperature")." ".degree(gg('ow_fact.temperature'))." тепла, влажность ".gg("ow_fact.humidity")." ".humidity(gg('ow_fact.humidity'))." ".gg("ow_fact.weather_type")." ветер ".gg("ow_fact.wind_speed")." метров в секунду.",2);
+ say("Погода на улице ".gg("ow_fact.temperature")." ".degree(gg('ow_fact.temperature'))." , влажность ".gg("ow_fact.humidity")." ".humidity(gg('ow_fact.humidity'))." ".gg("ow_fact.weather_type")." ветер ".gg("ow_fact.wind_speed")." метров в секунду.",2);
  //--------
  
 sleep(5);
