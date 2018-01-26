@@ -1,0 +1,5 @@
+if (gg("NobodyHomeMode.active")==0) {
+  sg("ThisComputer.HomeStatus","Кто-то есть.");
+} else if (gg("NobodyHomeMode.active")==1){
+  sg("ThisComputer.HomeStatus","Никого нет.");
+}
