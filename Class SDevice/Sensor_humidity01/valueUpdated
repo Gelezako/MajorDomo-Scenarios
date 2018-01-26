@@ -1,3 +1,11 @@
+/**
+* Сценарий для Majordomo
+* проверка работоспособности для датчиков
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright Alex Sokolov http://blog.gelezako.com (c)
+* @version 0.1 ([Sep 14, 2017])
+**/
+
 //модуль вызывается каждую минуту
 $state=gg("Sensor_humidity01.state");
 $timeupdated=gg("Sensor_humidity01.updated");
