@@ -1,0 +1,2 @@
+//если есть движение, то отключить режим "никого нет дома"
+if(gg("NobodyHomeMode.active")==1)sg("NobodyHomeMode.active",0);
