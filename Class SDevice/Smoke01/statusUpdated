@@ -1,3 +1,4 @@
+//модуль вызывается каждую минуту
 //проверка работоспособности
 $state=gg("Smoke01.state");
 $timeupdated=gg("Smoke01.updated");
