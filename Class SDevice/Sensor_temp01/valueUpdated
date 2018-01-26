@@ -1,3 +1,11 @@
+/**
+* Сценарий для Majordomo
+* проверка работоспособности для датчиков
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright Alex Sokolov http://blog.gelezako.com (c)
+* @version 0.1 ([2018])
+**/
+
 //модуль вызывается каждую минуту
 (int)$state=gg("Sensor_temp01.state");
 $timeupdated=gg("Sensor_temp01.updated");
