@@ -1,3 +1,4 @@
+//модуль вызывается каждую минуту
 $state=gg("Sensor_humidity01.state");
 $timeupdated=gg("Sensor_humidity01.updated");
 if($timeupdated<strtotime(date('Y-m-d H:i:s', strtotime('-3 minutes')))){
