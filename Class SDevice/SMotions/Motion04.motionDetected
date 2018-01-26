@@ -1,0 +1,53 @@
+if(gg("Motion04.status")=='1'){
+  //определаем когда последний раз открывалась дверь
+  $timeUpdated=strtotime("now")-registeredEventTime("Motion04Time");
+  //say("разница ".$timeUpdated);
+  registerEvent("Motion04Time", "Время срабатывания датчика движения",$expire_in=365);
+   if($timeUpdated>10){
+          // включение ночника
+          if(timeBetween('22:00', '08:00') and (int)gg("Sensor_light01.status")<1000){
+              //say("Включаю ночник");
+                  sg("XiRgb01.brightness","0");
+                  sleep(1);
+                  sg("XiRgb01.color","00ff25");//зелёный
+                  sleep(2);
+              for ($i = 2; ; $i=$i+5) {
+                  sg("XiRgb01.brightness",$i);
+                  usleep(50000);
+                   if ($i >= 100)break;
+              }
+              SetTimeOut("TurnOffXiRgb01","sg('XiRgb01.brightness','0');", 3*60); //Выключить ночник через 3 мин
+           
+          }
+          //утреннее приветсвие
+          else if(timeBetween('08:01', '11:59') and gg("admin.Morning")==0){
+              say("Доброе утро.",2);
+              sleep(2);
+              //say("Надеюсь у тебя хорошее настроение",2);
+              sleep(2);
+              runscript("GoodMorning");
+              sg("admin.Morning","1");
+          }
+          //событие днём
+          else if(timeBetween('12:00', '21:59')){
+			  runScriptSafe("disco");
+              runScriptSafe("disco_Stripe");
+              //say("Включаю дискотеку");
+         }
+           
+   }
+//cm("Livingroom.onActivity");
+//cm("Kitchen.updateActivityStatus"); 
+}
+
+
+ //say("прошло ".$minutes." минут",2);
+//say("обновление присутствия, значение ".gg("Kitchen.HCSR501"),2);
+//cm("Kitchen.onActivity"); // выставляет значение Kitchen.SomebodyHere=1 и выставляет активность на главной странице
+
+//cm("Balcony.onActivity");
+//cm("Kitchen.updateActivityStatus"); // должно сбрасывать активные помещения и пишет где и когда было последнее движение
+//sg("Kitchen.HCSR501","0");//нельзя делать, вызывает зацикливание вызова функции
+ //exec('C:\_majordomo\apps\facedetect\checkface.bat');
+   
+
