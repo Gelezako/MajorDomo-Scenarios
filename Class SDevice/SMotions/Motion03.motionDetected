@@ -1,0 +1,24 @@
+/*
+
+if(timeBetween('09:00', '12:00') and (int)gg("admin.Greeting")!=1){
+   say("движение возле компа");
+   sleep(4);
+   cm("Camera01.takeSnapshot");
+   sleep(3);
+   $img = "C:/_majordomo/htdocs/cms/images/" .gg('Camera01.snapshot');
+   rename($img, "C:/_majordomo/apps/facedetect/checkface.jpg");
+   exec('C:\_majordomo\apps\facedetect\checkface.bat');
+   }
+*/
+
+
+//вкоючить ленту
+sg("stripe_0x0000000003618b9011.rgb","");
+sg("stripe_0x0000000003618b9011.rgb","3cb2f2");
+sg("stripe_0x0000000003618b9011.status","1");
+
+//если мало света и движение на диване, то включить лампочку
+if((int)gg("Sensor_light01.value")<500){
+ sg("mono_0x0000000003360b8319.bright","100");
+ sg("mono_0x0000000003360b8319.status","1");
+}
