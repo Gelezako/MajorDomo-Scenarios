@@ -8,16 +8,16 @@
 
 sg("Gateway.brightness","0");
 for($j = 1; $j <= 3; $j++){
-sg("Gateway.color","ff000e");
+sg("Gateway.rgb","ff000e");
 usleep(1000000);
-sg("Gateway.color","fffff3");
+sg("Gateway.rgb","fffff3");
 usleep(1000000);
-sg("Gateway.color","ffff2d");
+sg("Gateway.rgb","ffff2d");
 usleep(1000000);
-sg("Gateway.color","ff00f3");
+sg("Gateway.rgb","ff00f3");
 usleep(1000000);
-sg("Gateway.color","00ff25");
+sg("Gateway.rgb","00ff25");
 usleep(1000000);
-sg("Gateway.color","0010ff");
+sg("Gateway.rgb","0010ff");
 }
 sg("Gateway.brightness","0");
