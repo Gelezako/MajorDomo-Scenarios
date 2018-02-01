@@ -1,0 +1,23 @@
+/**
+* Сценарий для Majordomo
+* Xiaomi gateway disco mode
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright Alex Sokolov http://blog.gelezako.com (c)
+* @version 0.1
+**/
+
+sg("Gateway.brightness","0");
+for($j = 1; $j <= 3; $j++){
+sg("Gateway.color","ff000e");
+usleep(1000000);
+sg("Gateway.color","fffff3");
+usleep(1000000);
+sg("Gateway.color","ffff2d");
+usleep(1000000);
+sg("Gateway.color","ff00f3");
+usleep(1000000);
+sg("Gateway.color","00ff25");
+usleep(1000000);
+sg("Gateway.color","0010ff");
+}
+sg("Gateway.brightness","0");
