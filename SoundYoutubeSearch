@@ -14,7 +14,7 @@ if($params['typemusic']=='' and $params['music-artist']!='')
  	$url='http://localhost/modules/SearchYoutube/search.php?q='.$params['music-artist'].'&maxResults='.gg("Youtube.maxCount");
 else if($params['music-artist']=='' and $params['typemusic']!='')
  	$url='http://localhost/modules/SearchYoutube/search.php?q='.$params['typemusic'].'&maxResults='.gg("Youtube.maxCount");
-else if($params['state']!='выключить'){
+else if($params['state']=='выключить'){
     getURL('http://localhost:8080/requests/status.xml?command=pl_stop');
 }
 else if($params['typemusic']=='' and $params['music-artist']=='' and $params['next']==''){
