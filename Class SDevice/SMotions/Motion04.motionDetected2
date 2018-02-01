@@ -11,7 +11,7 @@ if(gg("Motion04.status")=='1'){
               //say("Включаю ночник");
                   sg("Gateway.brightness","0");
                   sleep(1);
-                  sg("Gateway.color","00ff25");//зелёный
+                  sg("Gateway.rgb","00ff25");//зелёный
                   sleep(2);
               for ($i = 2; ; $i=$i+5) {
                   sg("Gateway.brightness",$i);
@@ -32,7 +32,7 @@ if(gg("Motion04.status")=='1'){
           }
           //событие днём
           else if(timeBetween('12:00', '21:59')){
-			  runScriptSafe("disco");
+			  runScriptSafe("disco2");
               //runScriptSafe("disco_Stripe");
               //say("Включаю дискотеку");
          }
