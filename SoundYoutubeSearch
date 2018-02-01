@@ -14,8 +14,11 @@ if($params['typemusic']=='' and $params['music-artist']!='')
  	$url='http://localhost/modules/SearchYoutube/search.php?q='.$params['music-artist'].'&maxResults='.gg("Youtube.maxCount");
 else if($params['music-artist']=='' and $params['typemusic']!='')
  	$url='http://localhost/modules/SearchYoutube/search.php?q='.$params['typemusic'].'&maxResults='.gg("Youtube.maxCount");
-else if($params['typemusic']=='' and $params['music-artist']==''and $params['next']==''){
- 	$url=''; say("Неполучается найти",2);}
+else if($params['state']!='выключить'){
+    getURL('http://localhost:8080/requests/status.xml?command=pl_stop');
+}
+else if($params['typemusic']=='' and $params['music-artist']=='' and $params['next']==''){
+ 	$url=''; say("Неполучается найти трек на ютубе",2);}
 
 //узнаем была ли команда воспроизвести другой трек,если треков больше чем один, то воспроизводим
 if($params['next']!='' and (int)gg("Youtube.maxCount")>1){
