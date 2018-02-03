@@ -62,6 +62,7 @@ foreach ($data->showtimes->day as $day){ //ищем все дни проката
 }
 
   if(!empty($films)){
+	say("Вот что я нашла в прокате",2);
 	$st = implode(",", array_unique($films));
         $st = str_replace('і', 'и', $st);
         $st = str_replace('І', 'И', $st);
