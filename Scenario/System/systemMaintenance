@@ -17,3 +17,5 @@ require(ROOT.'scripts/startup_maintenance.php');
   
 // optimize phistory
 getURL('http://localhost/scripts/optimize_history.php',0);
+
+say("Отптимизация бд выполнена");
