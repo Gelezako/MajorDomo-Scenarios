@@ -1,3 +1,5 @@
 //Выключить телевизор и подсветку
 sg("stripe_0x0000000003618b9011.status","0");
 sg('MiRemote360.ir_code', 'Z6VHAPoBAABDAgAAogYAAOQIAAClEQAArh8AAKScAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFEBAgEBAQEBAgIBAgICAgIBAQECAQEBAQICAgECAgICBgNQA=');
+cm("Livingroom.onActivity");
+if (gg("NobodyHomeMode.active")==1) sg("NobodyHomeMode.active",0);
