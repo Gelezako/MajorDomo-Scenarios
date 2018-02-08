@@ -1,3 +1,5 @@
+cm("SecurityArmedMode.ToDo"); //режим безопасности
+
 //определаем когда последний раз открывалась дверь
 $timeUpdated=strtotime("now")-registeredEventTime("openDoor");
 //say("разница ".$timeUpdated);
