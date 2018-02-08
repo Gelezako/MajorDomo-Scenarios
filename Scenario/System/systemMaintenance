@@ -1,0 +1,19 @@
+//вызывается в onNewMinute каждую ночь в 03:00
+
+require(ROOT.'scripts/startup_maintenance.php');
+//safe_exec("C:\\_majordomo\\apps\\curl.exe --max-time=1800 http://192.168.0.17/scripts/optimize_history.php");
+
+// optimize gps
+  $records=SQLSelect("SELECT ID, DEVICEID, LOCATION_ID FROM gpslog ORDER BY DEVICEID, ADDED DESC");
+  $total=count($records);
+  $to_delete=array();
+  for($i=1;$i<$total-1;$i++) {
+   if (!$records[$i]['LOCATION_ID']) continue;
+   if ($records[$i]['LOCATION_ID']==$records[$i+1]['LOCATION_ID'] && $records[$i]['LOCATION_ID']==$records[$i-1]['LOCATION_ID']) {
+    //$to_delete[]=$records[$i]['ID'];
+    SQLExec("DELETE FROM gpslog WHERE ID=".$records[$i]['ID']);
+   }
+  }
+  
+// optimize phistory
+getURL('http://localhost/scripts/optimize_history.php',0);
