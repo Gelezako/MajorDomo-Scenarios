@@ -1,2 +1,4 @@
 // Следующий канал на TV
 sg('MiRemote360.ir_code', 'Z6VHAA8CAABEAgAApAYAAMwIAACjEQAAviEAAKScAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABFEBAgEBAQEBAgIBAgICAgICAQEBAQEBAQECAgICAgICBgNQA=');
+cm("Livingroom.onActivity");
+if (gg("NobodyHomeMode.active")==1) sg("NobodyHomeMode.active",0);
