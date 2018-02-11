@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12359,
+                    "on_cmd": "http://127.0.0.1/objects/?script=tvLeft",
+                    "off_cmd": "http://127.0.0.1/objects/?script=tvLeft",
+                    "method": "GET",
+                    "name": "tv left"
+                }			    
+            ]
+        }
+    }
+}

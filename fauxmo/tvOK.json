@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12361,
+                    "on_cmd": "http://127.0.0.1/objects/?script=tvOK",
+                    "off_cmd": "http://127.0.0.1/objects/?script=tvOK",
+                    "method": "GET",
+                    "name": "tv ok"
+                }			    
+            ]
+        }
+    }
+}

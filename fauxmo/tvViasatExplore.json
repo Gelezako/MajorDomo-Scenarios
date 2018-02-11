@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12353,
+                    "on_cmd": "http://127.0.0.1/objects/?script=tvViasatExplore",
+                    "off_cmd": "",
+                    "method": "GET",
+                    "name": "viasat explore"
+                }			    
+            ]
+        }
+    }
+}

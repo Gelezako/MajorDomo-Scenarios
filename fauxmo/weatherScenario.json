@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12341,
+                    "on_cmd": "http://127.0.0.1/objects/?script=weatherScenario",
+                    "off_cmd": "",
+                    "method": "GET",
+                    "name": "weather scenario"
+                }			    
+            ]
+        }
+    }
+}

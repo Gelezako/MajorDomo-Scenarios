@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12346,
+                    "on_cmd": "http://127.0.0.1/objects/?script=tvNextChannel",
+                    "off_cmd": "",
+                    "method": "GET",
+                    "name": "next channel"
+                }			    
+            ]
+        }
+    }
+}

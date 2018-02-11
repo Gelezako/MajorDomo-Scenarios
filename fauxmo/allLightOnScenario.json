@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12342,
+                    "on_cmd": "http://127.0.0.1/objects/?script=allLightOnScenario",
+                    "off_cmd": "http://127.0.0.1/objects/?script=allLightOffScenario",
+                    "method": "GET",
+                    "name": "all light scenario"
+                }			    
+            ]
+        }
+    }
+}

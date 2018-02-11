@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12343,
+                    "on_cmd": "http://127.0.0.1/objects/?script=news",
+                    "off_cmd": "http://127.0.0.1/objects/?script=cinema",
+                    "method": "GET",
+                    "name": "news scenario"
+                }			    
+            ]
+        }
+    }
+}

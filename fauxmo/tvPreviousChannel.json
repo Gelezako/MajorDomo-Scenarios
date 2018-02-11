@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12347,
+                    "on_cmd": "http://127.0.0.1/objects/?script=tvPreviousChannel",
+                    "off_cmd": "",
+                    "method": "GET",
+                    "name": "previous channel"
+                }			    
+            ]
+        }
+    }
+}

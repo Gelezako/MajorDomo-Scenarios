@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12358,
+                    "on_cmd": "http://127.0.0.1/objects/?script=tvMenu",
+                    "off_cmd": "http://127.0.0.1/objects/?script=tvMenu",
+                    "method": "GET",
+                    "name": "tv menu"
+                }			    
+            ]
+        }
+    }
+}

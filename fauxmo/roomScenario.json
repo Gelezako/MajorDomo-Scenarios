@@ -1,0 +1,18 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+				{
+                    "port": 12345,
+                    "on_cmd": "http://127.0.0.1/objects/?script=roomScenario",
+                    "off_cmd": "",
+                    "method": "GET",
+                    "name": "room scenario"
+                }			    
+            ]
+        }
+    }
+}
