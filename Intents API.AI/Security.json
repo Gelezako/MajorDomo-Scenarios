@@ -1,0 +1,85 @@
+{
+  "id": "269beeca-6960-4ce3-a5fd-a1edc9a755bc",
+  "name": "Security",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "08b4fed4-0b87-4281-b8d3-fc898011c165",
+          "required": false,
+          "dataType": "@state",
+          "name": "state",
+          "value": "$state",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "ок",
+            "готово",
+            "сделано",
+            "охрана включена"
+          ]
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1518624397,
+  "fallbackIntent": false,
+  "events": [],
+  "userSays": [
+    {
+      "id": "b3b615c2-6761-4865-b6ed-1deefc7c859d",
+      "data": [
+        {
+          "text": "выключить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " охрану"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1518624397,
+      "isAuto": false
+    },
+    {
+      "id": "bb792076-4691-4f19-b343-59695b6fde45",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " охрану"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1518624397,
+      "isAuto": false
+    }
+  ],
+  "followUpIntents": [],
+  "templates": []
+}
