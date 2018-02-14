@@ -1,0 +1,2 @@
+if($params['state']=="включить")sg("SecurityArmedMode.active","1");
+else if($params['state']=="выключить")sg("SecurityArmedMode.active","0");
