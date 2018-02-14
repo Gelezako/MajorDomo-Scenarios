@@ -1,2 +1,9 @@
-if($params['state']=="включить")sg("SecurityArmedMode.active","1");
-else if($params['state']=="выключить")sg("SecurityArmedMode.active","0");
+
+/**
+* SoundSecurity
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright http://blog.gelezako.com (c)
+*/
+
+if($params['state']=="включить"){sg("SecurityArmedMode.active","1");sayReply(getRandomLine(DONE),2);}
+else if($params['state']=="выключить"){sg("SecurityArmedMode.active","0");sayReply(getRandomLine(DONE),2);}
