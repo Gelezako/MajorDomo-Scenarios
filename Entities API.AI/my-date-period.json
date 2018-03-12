@@ -1,0 +1,29 @@
+{
+  "id": "8b3ca376-f35f-45b3-8fa0-07d16f3b5c90",
+  "name": "my-date-period",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "сейчас",
+      "synonyms": [
+        "сейчас",
+        "сегодня"
+      ]
+    },
+    {
+      "value": "завтра",
+      "synonyms": [
+        "завтра"
+      ]
+    },
+    {
+      "value": "послезавтра",
+      "synonyms": [
+        "послезавтра",
+        "после завтра"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
