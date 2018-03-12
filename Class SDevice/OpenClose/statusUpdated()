@@ -1,11 +1,20 @@
+//логика для создания фото с камеры
+
+   if((int)gg("Openclose01.status")==1){
+   //say("делаю снимок",2);
+   cm("Camera01.takeSnapshot");
+   $img = "C:/_majordomo/htdocs/cms/images/" .gg('Camera01.snapshot');
+   rename($img, "C:/_majordomo/apps/facedetect/checkface.jpg");
+   exec('C:\_majordomo\apps\facedetect\checkface.bat');
+   }
+
 cm("SecurityArmedMode.ToDo"); //режим безопасности
 
 //определаем когда последний раз открывалась дверь
 $timeUpdated=strtotime("now")-registeredEventTime("openDoor");
-//say("разница ".$timeUpdated);
 registerEvent("openDoor", "Время открытия двери",$expire_in=365);
 
-if($timeUpdated>10){
+if($timeUpdated>60){
    say("Входная дверь открыта",2);
 
    //логика для включения света если никого нет дома
@@ -30,17 +39,13 @@ if($timeUpdated>10){
      say("в квартире темно");
      if($atHome==0 and $counter==0){
        say("в квартире никого, включаю свет");
-       runScript("allLightOnScenario");
+       say("Добро пожаловать домой. Включаю подсветку и телевизор.",2);
+       runScript("tvon");
+       runScript("nightlighton");
+       sg("color_0x00000000034853c58067.status",1);
+       sleep(1);
+       runScript("tvMusicBox");
      }
     }
 }
 
-//логика для создания фото с камеры
-/*
-   if((int)gg("Openclose01.status")==1){
-   cm("Camera01.takeSnapshot");
-   $img = "C:/_majordomo/htdocs/cms/images/" .gg('Camera01.snapshot');
-   rename($img, "C:/_majordomo/apps/facedetect/checkface.jpg");
-   exec('C:\_majordomo\apps\facedetect\checkface.bat');
-   }
-*/
