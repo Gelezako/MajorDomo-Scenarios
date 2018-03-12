@@ -1,0 +1,14 @@
+// new device
+$debmsg = '';
+foreach($params as $index => $val) {$debmsg .= ($index . "->" . $val."; ");}
+DebMes($debmsg);
+$tm=registeredEventTime('btcall'); 
+if ((time()-$tm)>5 || $tm<0) {
+ registerEvent('btcall'); 
+}
+if ($params['new']) {
+say('Обнаружено новое блютуз устройство',2);
+}
+if ($params['user']!='') {
+say($params['user'].', очень рада видеть дома!',2);
+} 
