@@ -1,48 +1,358 @@
 {
-  "templates": [
-    "Мне нужно чтобы ты сказала @sys.date:date будет @WeatherType:WeatherType или нет",
-    "Какая @weather:weather ",
-    "Какая @weather:weather ",
-    "@sys.date-period:date-period будет идти @WeatherType:WeatherType ",
-    "на улице идет @WeatherType:WeatherType ",
-    "а @sys.date-period:date-period будет идти @WeatherType:WeatherType ",
-    "@sys.date-period:date-period будет @WeatherType:WeatherType ",
-    "будет ли @sys.date-period:date-period идти @WeatherType:WeatherType ",
-    "@sys.date-period:date-period будет @WeatherType:WeatherType ",
-    "@sys.date-period:date-period идет @WeatherType:WeatherType ",
-    "а Нет там @WeatherType:WeatherType идет",
-    "@sys.date-period:date-period будет идти @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period будет @WeatherType:WeatherType ?",
-    "после @sys.date-period:date-period ожидаются @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period будет идти @WeatherType:WeatherType ?",
-    "на улице идёт @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period на улице @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period на улице @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period на улице @WeatherType:WeatherType ?",
-    "какая @sys.date-period:date-period  @weather:weather ",
-    "@sys.date-period:date-period  @WeatherType:WeatherType воздух на улице?",
-    "@sys.date-period:date-period  @WeatherType:WeatherType день?",
-    "@sys.date-period:date-period  @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period  @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period  @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period  @WeatherType:WeatherType день?",
-    "за окном @WeatherType:WeatherType погода?",
-    "за окном @WeatherType:WeatherType погода?",
-    "на улице @WeatherType:WeatherType ?",
-    "на улице @WeatherType:WeatherType ?",
-    "Какая будет @sys.date-period:date-period  @weather:weather ?",
-    "Какая @sys.date-period:date-period  @weather:weather ?",
-    "Какая @weather:weather ?",
-    "@sys.date-period:date-period будет @WeatherType:WeatherType ?",
-    "Какая будет @sys.date-period:date-period  @weather:weather ?",
-    "@sys.date-period:date-period будет @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period будет @WeatherType:WeatherType ?",
-    "@sys.date-period:date-period будет @WeatherType:WeatherType ?",
-    "Какая @sys.date-period:date-period  @weather:weather ?"
+  "id": "de6b6185-aac9-464e-868b-29732e86f9b0",
+  "name": "Weather",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "91d0e7c3-d8aa-46db-9c31-827e0f8d292b",
+          "required": false,
+          "dataType": "@sys.date-period",
+          "name": "date-period",
+          "value": "$date-period",
+          "isList": false
+        },
+        {
+          "id": "6ec0b4ba-aaed-4fff-a755-b39b66202444",
+          "required": false,
+          "dataType": "@weather",
+          "name": "weather",
+          "value": "$weather",
+          "prompts": [
+            "Уточни, что ты спрашиваешь?"
+          ],
+          "isList": false
+        },
+        {
+          "id": "b6535008-b7c3-46db-9f50-e0491c90655c",
+          "required": false,
+          "dataType": "@WeatherType",
+          "name": "WeatherType",
+          "value": "$WeatherType",
+          "isList": false
+        },
+        {
+          "id": "2e4cfbee-a2f7-44ca-a826-763e0d25985b",
+          "required": false,
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        },
+        {
+          "id": "b7e7d41c-dedc-4780-a0e9-63c9704d05af",
+          "required": false,
+          "dataType": "@my-date-period",
+          "name": "my-date-period",
+          "value": "$my-date-period",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {
+        "skype": true,
+        "google": true
+      },
+      "speech": []
+    }
   ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1520864162,
+  "fallbackIntent": false,
+  "events": [],
   "userSays": [
     {
-      "id": "691ac912-a4bc-473d-aa83-e111aed6dd33",
+      "id": "02e732b2-2fd3-4543-8e70-d3065a77fd06",
+      "data": [
+        {
+          "text": "какая "
+        },
+        {
+          "text": "завтра",
+          "alias": "my-date-period",
+          "meta": "@my-date-period",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520864162,
+      "isAuto": false
+    },
+    {
+      "id": "f8da6dac-d251-476b-88b9-cd00202c03e0",
+      "data": [
+        {
+          "text": "какая "
+        },
+        {
+          "text": "сегодня",
+          "alias": "my-date-period",
+          "meta": "@my-date-period",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520864162,
+      "isAuto": false
+    },
+    {
+      "id": "fb25cb04-51ea-4792-bc69-a0e60393b7a1",
+      "data": [
+        {
+          "text": "сейчас",
+          "alias": "my-date-period",
+          "meta": "@my-date-period",
+          "userDefined": true
+        },
+        {
+          "text": " идет "
+        },
+        {
+          "text": "дождь",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520864162,
+      "isAuto": false
+    },
+    {
+      "id": "aa42487b-7375-476b-a5a2-1ec6e38d96ea",
+      "data": [
+        {
+          "text": "за окном "
+        },
+        {
+          "text": "прохладная",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "37f009d9-0d4b-477e-8271-a7ac4fb94a90",
+      "data": [
+        {
+          "text": "Какая "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "5208ded7-7352-4cfd-896e-cc40bb76bef3",
+      "data": [
+        {
+          "text": "Какая "
+        },
+        {
+          "text": "температура",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "6194c660-81d0-4963-8762-e3d113eecccd",
+      "data": [
+        {
+          "text": "сейчас",
+          "alias": "my-date-period",
+          "meta": "@my-date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "пасмурно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520864162,
+      "isAuto": false
+    },
+    {
+      "id": "44f56197-094f-4445-9d46-46bc75c091fb",
+      "data": [
+        {
+          "text": "послезавтра",
+          "alias": "my-date-period",
+          "meta": "@my-date-period",
+          "userDefined": false
+        },
+        {
+          "text": " на улице "
+        },
+        {
+          "text": "холодно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520864162,
+      "isAuto": false
+    },
+    {
+      "id": "c668546e-8b26-41c1-a885-83c3cb097bd0",
+      "data": [
+        {
+          "text": "завтра",
+          "alias": "my-date-period",
+          "meta": "@my-date-period",
+          "userDefined": false
+        },
+        {
+          "text": " будет "
+        },
+        {
+          "text": "дождь",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520864162,
+      "isAuto": false
+    },
+    {
+      "id": "7b9782c0-2360-4d45-ace5-1e053ca63fd9",
+      "data": [
+        {
+          "text": "после "
+        },
+        {
+          "text": "завтра",
+          "alias": "my-date-period",
+          "meta": "@my-date-period",
+          "userDefined": false
+        },
+        {
+          "text": " ожидаются "
+        },
+        {
+          "text": "осадки",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520864162,
+      "isAuto": false
+    },
+    {
+      "id": "e5365f3e-b5a9-40dc-ad4d-11ee6222f5e2",
+      "data": [
+        {
+          "text": "на улице "
+        },
+        {
+          "text": "тепло",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "6447fbb5-d973-4bee-ba6e-c77a5ac60652",
       "data": [
         {
           "text": "Мне нужно чтобы ты сказала "
@@ -67,43 +377,12 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "6fba0655-0376-46c6-b46b-99f61c4feec4",
-      "data": [
-        {
-          "text": "Какая "
-        },
-        {
-          "text": "температура",
-          "alias": "weather",
-          "meta": "@weather",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "e556f343-7d8c-433c-b994-c351a128f2c4",
-      "data": [
-        {
-          "text": "Какая ",
-          "userDefined": false
-        },
-        {
-          "text": "погода",
-          "alias": "weather",
-          "meta": "@weather",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "2a7b5336-aeec-4496-a599-5fbfcbc68b81",
+      "id": "3b3309a3-911b-4695-804d-b45b20d32fbc",
       "data": [
         {
           "text": "завтра",
@@ -122,164 +401,12 @@
         }
       ],
       "isTemplate": false,
-      "count": 2
+      "count": 2,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "ba9c357f-629b-4803-83e7-c7328ab98695",
-      "data": [
-        {
-          "text": "на улице идет "
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "9925f1f8-c933-4d79-97cc-3ea6f76dcb0f",
-      "data": [
-        {
-          "text": "а ",
-          "userDefined": false
-        },
-        {
-          "text": "завтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
-        },
-        {
-          "text": " будет идти ",
-          "userDefined": false
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "928587f7-50c6-4045-b141-fa5d48c5ed55",
-      "data": [
-        {
-          "text": "послезавтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
-        },
-        {
-          "text": " будет ",
-          "userDefined": false
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "83e9a9cb-2553-4469-a6af-b2531d6b1a4e",
-      "data": [
-        {
-          "text": "будет ли "
-        },
-        {
-          "text": "сегодня",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": true
-        },
-        {
-          "text": " идти "
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "c97b15c3-8991-4de7-a071-5600db2152d7",
-      "data": [
-        {
-          "text": "Сегодня",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
-        },
-        {
-          "text": " будет "
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "316aa05d-f441-485e-b589-e7e4d14123ee",
-      "data": [
-        {
-          "text": "сейчас",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": true
-        },
-        {
-          "text": " идет "
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "3604e0b7-ac2c-4cca-8d5d-846664a51d06",
-      "data": [
-        {
-          "text": "а Нет там "
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        },
-        {
-          "text": " идет"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "c77ae93a-78cf-4036-8cb1-dae64e8fbb84",
+      "id": "658755d5-9a44-4819-a7cb-4c5bc819829a",
       "data": [
         {
           "text": "после завра",
@@ -301,207 +428,39 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "0b6ebec0-c991-47c1-a150-9d35d6494b13",
+      "id": "343e964c-a7cf-4a96-ab56-35c8c041fb93",
       "data": [
         {
-          "text": "завтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
+          "text": "будет ли "
         },
-        {
-          "text": " будет "
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "b82990e3-56e7-47de-a893-b91be81a9482",
-      "data": [
-        {
-          "text": "после "
-        },
-        {
-          "text": "завтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
-        },
-        {
-          "text": " ожидаются "
-        },
-        {
-          "text": "осадки",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": true
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "840900c1-4771-42fb-a439-c1d7e0f6fc18",
-      "data": [
-        {
-          "text": "завтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
-        },
-        {
-          "text": " будет идти "
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "cd6c8538-688b-474c-9440-9f4d8fc487a8",
-      "data": [
-        {
-          "text": "на улице идёт "
-        },
-        {
-          "text": "дождь",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": true
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "6c351582-462f-44f8-84c8-6985e91c145b",
-      "data": [
-        {
-          "text": "послезавтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
-        },
-        {
-          "text": " на улице "
-        },
-        {
-          "text": "холодно",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "bdfab061-63c4-44ed-9763-813615c37074",
-      "data": [
-        {
-          "text": "завтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
-        },
-        {
-          "text": " на улице "
-        },
-        {
-          "text": "холодно",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": false
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "680f0212-7f73-4c41-bc55-ea661e254ad0",
-      "data": [
         {
           "text": "сегодня",
           "alias": "date-period",
           "meta": "@sys.date-period",
-          "userDefined": false
+          "userDefined": true
         },
         {
-          "text": " на улице "
+          "text": " идти "
         },
         {
-          "text": "холодно",
+          "text": "дождь",
           "alias": "WeatherType",
           "meta": "@WeatherType",
           "userDefined": false
-        },
-        {
-          "text": "?"
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "28e65e86-5b5c-4b9b-834b-c64f7416cdd2",
-      "data": [
-        {
-          "text": "какая "
-        },
-        {
-          "text": "завтра",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": false
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "погода",
-          "alias": "weather",
-          "meta": "@weather",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "d6cf72fa-b84e-4a2c-be9c-bd21f454156e",
+      "id": "dd2413cd-7570-408f-89bb-8ac90ea34084",
       "data": [
         {
           "text": "сейчас",
@@ -523,10 +482,162 @@
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "d40941c0-1e6c-4fdc-a059-53dbc671c013",
+      "id": "7211d1f1-a96f-4ea7-a14b-5a15d9396411",
+      "data": [
+        {
+          "text": "Какая "
+        },
+        {
+          "text": "сейчас",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": " ?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "a90ec507-e44d-4b13-b8f7-5a753d743bd3",
+      "data": [
+        {
+          "text": "Сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " будет "
+        },
+        {
+          "text": "дождь",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "82855bb5-d936-48a8-bbdb-a579bda94978",
+      "data": [
+        {
+          "text": "на улице "
+        },
+        {
+          "text": "прохладно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "08982127-a575-4aa1-bde4-a17863db43c6",
+      "data": [
+        {
+          "text": "Какая "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "bdcbe729-8c2f-4aba-b6e5-0870b149a632",
+      "data": [
+        {
+          "text": "Завтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " будет "
+        },
+        {
+          "text": "тепло",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "3d371415-e6a5-4a2d-ab5f-bdefd21403c0",
+      "data": [
+        {
+          "text": "сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
+        },
+        {
+          "text": " на улице "
+        },
+        {
+          "text": "холодно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "beaf7428-353c-4b48-b3b8-01a2cd4664b6",
       "data": [
         {
           "text": "сегодня",
@@ -556,10 +667,33 @@
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "7e6b85a1-68db-4630-bcbc-cf9955b33c79",
+      "id": "02251b86-c981-4702-877c-f1bd4e7d39ad",
+      "data": [
+        {
+          "text": "а Нет там "
+        },
+        {
+          "text": "дождь",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
+        },
+        {
+          "text": " идет"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "e641e28a-e0c0-4d77-b9cd-113f4d47ba93",
       "data": [
         {
           "text": "сегодня",
@@ -581,22 +715,45 @@
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "456eb2dc-e3bb-499b-9c07-a6674d202426",
+      "id": "ba980d46-5375-4ee1-becc-5bd9e5f3cfd0",
       "data": [
         {
-          "text": "сейчас",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
+          "text": "за окном "
+        },
+        {
+          "text": "ясная",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
           "userDefined": true
         },
         {
-          "text": " "
+          "text": " погода?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "d0bba547-c61a-414e-9df9-3bdbe822512b",
+      "data": [
+        {
+          "text": "завтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": false
         },
         {
-          "text": "пасмурно",
+          "text": " будет идти "
+        },
+        {
+          "text": "дождь",
           "alias": "WeatherType",
           "meta": "@WeatherType",
           "userDefined": false
@@ -606,10 +763,90 @@
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "ee833b10-b9e6-4150-90a8-f29eb237734f",
+      "id": "c2ecdcd7-c859-422e-be74-ee71c5b915b7",
+      "data": [
+        {
+          "text": "Какая будет "
+        },
+        {
+          "text": "завтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "погода",
+          "alias": "weather",
+          "meta": "@weather",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "290a9a91-bb49-4f04-bd28-04c1273613de",
+      "data": [
+        {
+          "text": "Сегодня",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
+          "userDefined": true
+        },
+        {
+          "text": " будет "
+        },
+        {
+          "text": "жарко",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "e8c633f7-22a9-4bf7-b22c-2bd5dd1e5c23",
+      "data": [
+        {
+          "text": "на улице идёт "
+        },
+        {
+          "text": "дождь",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
+    },
+    {
+      "id": "2719e762-a74c-42da-b498-e84569b8ccd5",
       "data": [
         {
           "text": "сегодня",
@@ -631,10 +868,12 @@
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "8fc76dda-8f48-46bd-a68e-f271cc2a5323",
+      "id": "83f89bbf-aed2-4010-a630-c787f19938b3",
       "data": [
         {
           "text": "сегодня",
@@ -664,122 +903,82 @@
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "579c0e37-c23a-484b-8bc3-533dfb18704a",
+      "id": "73967617-1e2b-4f43-a28e-656d43c01d37",
       "data": [
         {
-          "text": "за окном "
-        },
-        {
-          "text": "прохладная",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
+          "text": "послезавтра",
+          "alias": "date-period",
+          "meta": "@sys.date-period",
           "userDefined": false
         },
         {
-          "text": " "
-        },
-        {
-          "text": "погода",
-          "meta": "@sys.ignore",
+          "text": " будет ",
           "userDefined": false
         },
         {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "f951fcaa-346d-4a74-9974-786c9a876ebf",
-      "data": [
-        {
-          "text": "за окном "
-        },
-        {
-          "text": "ясная",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": true
-        },
-        {
-          "text": " погода?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "d45468f3-f6a8-40a6-b244-0947b2b8002f",
-      "data": [
-        {
-          "text": "на улице "
-        },
-        {
-          "text": "прохладно",
+          "text": "дождь",
           "alias": "WeatherType",
           "meta": "@WeatherType",
           "userDefined": false
-        },
-        {
-          "text": "?"
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "d1775502-7a26-4287-9f1b-5cf8b1cf7bb8",
+      "id": "787b76f7-1ab6-4d3c-b0c4-8fc2f5bb0a61",
       "data": [
         {
-          "text": "на улице "
+          "text": "на улице идет "
         },
         {
-          "text": "тепло",
+          "text": "дождь",
           "alias": "WeatherType",
           "meta": "@WeatherType",
-          "userDefined": true
-        },
-        {
-          "text": "?"
+          "userDefined": false
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "260c7ba6-302a-49ed-9ce9-1dbe4ad7302a",
+      "id": "1dc83540-ce1d-4b4d-9548-af5110c03b13",
       "data": [
-        {
-          "text": "Какая будет "
-        },
         {
           "text": "завтра",
           "alias": "date-period",
           "meta": "@sys.date-period",
-          "userDefined": true
+          "userDefined": false
         },
         {
-          "text": " "
+          "text": " на улице "
         },
         {
-          "text": "температура",
-          "alias": "weather",
-          "meta": "@weather",
-          "userDefined": true
+          "text": "холодно",
+          "alias": "WeatherType",
+          "meta": "@WeatherType",
+          "userDefined": false
         },
         {
           "text": "?"
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "2c0f649f-f7bf-4736-a230-6e2ca0180ec5",
+      "id": "5aae6eec-fdb9-4ac4-89ff-9ba1573dc18d",
       "data": [
         {
           "text": "Какая "
@@ -804,54 +1003,41 @@
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "c8b79c5d-8ca5-4e1e-806a-bff703b1e139",
+      "id": "f173e7ca-8384-4bc4-b842-e57488878586",
       "data": [
         {
-          "text": "Какая "
+          "text": "а ",
+          "userDefined": false
         },
         {
-          "text": "погода",
-          "alias": "weather",
-          "meta": "@weather",
-          "userDefined": true
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "71d9c1a1-748e-4226-a2bd-9839853b6b05",
-      "data": [
-        {
-          "text": "Завтра",
+          "text": "завтра",
           "alias": "date-period",
           "meta": "@sys.date-period",
-          "userDefined": true
+          "userDefined": false
         },
         {
-          "text": " будет "
+          "text": " будет идти ",
+          "userDefined": false
         },
         {
-          "text": "тепло",
+          "text": "дождь",
           "alias": "WeatherType",
           "meta": "@WeatherType",
-          "userDefined": true
-        },
-        {
-          "text": "?"
+          "userDefined": false
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "3d91b670-bb71-4e58-9fe2-7c0886ed02f1",
+      "id": "155c01cc-ebaa-43d5-8c38-9bfd12d1ec43",
       "data": [
         {
           "text": "Какая будет "
@@ -866,7 +1052,7 @@
           "text": " "
         },
         {
-          "text": "погода",
+          "text": "температура",
           "alias": "weather",
           "meta": "@weather",
           "userDefined": true
@@ -876,10 +1062,12 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 1,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "3e95184c-18f3-4ad1-8fbc-8aa86f4afb5d",
+      "id": "1b833a84-749f-426f-9047-97820dbd6355",
       "data": [
         {
           "text": "Сегодня",
@@ -901,10 +1089,12 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
     },
     {
-      "id": "a2e6be4b-d9c1-4c6e-b905-f2b597691379",
+      "id": "f021d668-b991-494f-828f-c0a080995759",
       "data": [
         {
           "text": "Сегодня",
@@ -926,113 +1116,11 @@
         }
       ],
       "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "ba7e6772-3cfc-484c-b180-2b9a87f23010",
-      "data": [
-        {
-          "text": "Сегодня",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": true
-        },
-        {
-          "text": " будет "
-        },
-        {
-          "text": "жарко",
-          "alias": "WeatherType",
-          "meta": "@WeatherType",
-          "userDefined": true
-        },
-        {
-          "text": "?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "67e19069-f310-455c-aa3e-6eaa83a530ca",
-      "data": [
-        {
-          "text": "Какая "
-        },
-        {
-          "text": "сейчас",
-          "alias": "date-period",
-          "meta": "@sys.date-period",
-          "userDefined": true
-        },
-        {
-          "text": " "
-        },
-        {
-          "text": "погода",
-          "alias": "weather",
-          "meta": "@weather",
-          "userDefined": true
-        },
-        {
-          "text": " ?"
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
+      "count": 0,
+      "updated": 1520799189,
+      "isAuto": false
     }
   ],
-  "id": "de6b6185-aac9-464e-868b-29732e86f9b0",
-  "name": "Weather",
-  "auto": true,
-  "contexts": [],
-  "responses": [
-    {
-      "resetContexts": false,
-      "affectedContexts": [],
-      "parameters": [
-        {
-          "dataType": "@sys.date-period",
-          "name": "date-period",
-          "value": "$date-period",
-          "isList": false
-        },
-        {
-          "required": false,
-          "dataType": "@weather",
-          "name": "weather",
-          "value": "$weather",
-          "prompts": [
-            "Уточни, что ты спрашиваешь?"
-          ],
-          "isList": false
-        },
-        {
-          "dataType": "@WeatherType",
-          "name": "WeatherType",
-          "value": "$WeatherType",
-          "isList": false
-        }
-      ],
-      "messages": [
-        {
-          "type": 0,
-          "speech": []
-        }
-      ],
-      "defaultResponsePlatforms": [
-        "google",
-        "skype"
-      ]
-    }
-  ],
-  "priority": 500000,
-  "cortanaCommand": {
-    "navigateOrService": "NAVIGATE",
-    "target": ""
-  },
-  "webhookUsed": false,
-  "webhookForSlotFilling": false,
-  "fallbackIntent": false,
-  "events": []
+  "followUpIntents": [],
+  "templates": []
 }
