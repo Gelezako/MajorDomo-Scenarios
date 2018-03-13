@@ -1,12 +1,12 @@
-//Анализ свойства atHome, выставить запускать при изменении
-
 $objects=getObjectsByClass("Users");
 foreach($objects as $obj) {
  $atHome = getGlobal($obj['TITLE'].".atHome");
  $isGuest = getGlobal($obj['TITLE'].".isGuest");
  $name = getGlobal($obj['TITLE'].".fullName");
  $timeUpdated = getGlobal($obj['TITLE'].".CoordinatesUpdatedTimestamp");
- if ($atHome=="1" and $isGuest==1){
+ if ($atHome=="1"){
+  cm("NobodyHomeMode.deactivate"); //если кто-то есть дома, то деактивирвать режим "никого дома"
+  if ($isGuest=="1")
    $time=strtotime("now")-$timeUpdated;
    if($time>21600){ //если прошло больше 6ти часов с последнего визита, то приветствие   
    say("Привет ".$name." Что нового?",2);
@@ -14,5 +14,4 @@ foreach($objects as $obj) {
    }
  }
 }
-
 
