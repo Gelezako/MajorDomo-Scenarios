@@ -1,0 +1,2 @@
+if(gg("SecurityArmedMode.active")==0)cm("SecurityArmedMode.activate");
+else if(gg("SecurityArmedMode.active")==1)cm("SecurityArmedMode.deactivate");
