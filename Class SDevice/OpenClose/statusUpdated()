@@ -42,6 +42,7 @@ if($timeUpdated>60){
        say("Добро пожаловать домой. Включаю подсветку и телевизор.",2);
        runScript("tvon");
        runScript("nightlighton");
+       sg("color_0x00000000034853c58067.rgb","00BFFF");
        sg("color_0x00000000034853c58067.status",1);
        sleep(1);
        runScript("tvMusicBox");
