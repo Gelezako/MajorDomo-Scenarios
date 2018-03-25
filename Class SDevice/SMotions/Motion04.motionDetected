@@ -20,7 +20,7 @@ if(gg("Motion04.status")=='1'){
            
           }
           //утреннее приветсвие
-          else if(timeBetween('08:01', '11:59') and gg("admin.Morning")==0){
+          else if(timeBetween('08:01', '11:59') and gg("admin.Morning")==0  gg("GuestsMode.active")!=1){
               say("Доброе утро.",2);
               sleep(2);
               //say("Надеюсь у тебя хорошее настроение",2);
