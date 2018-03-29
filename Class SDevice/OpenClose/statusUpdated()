@@ -35,7 +35,7 @@ if($timeUpdated>60){
     //say("состояние по помещениям: ".$counter);
    }
    
-    if((int)gg("Sensor_light01.status")<700){
+    if((int)gg("Sensor_light01.value")<700){
      say("в квартире темно");
      if($atHome==0 and $counter==0){
        say("в квартире никого, включаю свет");
