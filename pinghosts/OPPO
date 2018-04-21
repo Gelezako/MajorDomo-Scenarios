@@ -1,0 +1,9 @@
+//OPPO
+sg("admin.atHome",1);
+cm("NobodyHomeMode.deactivate");
+getRandomLine($onlineAdmin);
+
+//RedmiNote
+sg("Vika.atHome",1);
+cm("NobodyHomeMode.deactivate");
+getRandomLine($onlineVika);
