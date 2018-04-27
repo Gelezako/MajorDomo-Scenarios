@@ -3,7 +3,7 @@ if(gg("Motion04.status")=='1'){
   $timeUpdated=strtotime("now")-registeredEventTime("Motion04Time");
   //say("разница ".$timeUpdated);
   registerEvent("Motion04Time", "Время срабатывания датчика движения",$expire_in=365);
-   if($timeUpdated>10){
+   if($timeUpdated>100){
           // включение ночника
           if(timeBetween('22:00', '08:00') and (int)gg("Sensor_light01.status")<1000){
               //say("Включаю ночник");
