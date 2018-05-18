@@ -68,17 +68,19 @@ sleep(5);
 //--------Погода на улице
  say("Погода на улице ".gg("ow_fact.temperature")." ".degree(gg('ow_fact.temperature')),2);
  sleep(2);
- say("влажность ".gg("ow_fact.humidity")." ".humidity(gg('ow_fact.humidity'))." ".gg("ow_fact.weather_type")." ветер ".gg("ow_fact.wind_speed")." метров в секунду.",2);
- sleep(2);
+ say("влажность ".gg("ow_fact.humidity")." ".humidity(gg('ow_fact.humidity')),2);
+ sleep(1);
+ say(gg("ow_fact.weather_type"),2);
+ sleep(1);
  say("ветер ".gg("ow_fact.wind_speed")." метров в секунду.",2);
  //--------
  
-sleep(5);
+sleep(3);
 
 //-------- курс валют
-say("Курс евро Приват банка ".gg("exchange_rate.eurosale"),2);
+say("Курс евро Приват банка ".gg("exchange_rate.eurobuy"),2);
 sleep(3);
-say("Курс доллара ".gg("exchange_rate.usdsale"),2);
+say("Курс доллара ".gg("exchange_rate.usdbuy"),2);
 //--------
  
 //-------- новости из RSS
