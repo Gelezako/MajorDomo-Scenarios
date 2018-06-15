@@ -1,0 +1,44 @@
+//выполнить runScript('anekdots',array('UPDATE'=>TRUE));
+
+function update_a(){
+     // SQL запрос выполнить единожды для создания таблицы
+     //SQLExec("CREATE TABLE `anekdots` ( `ID` int(10) unsigned NOT NULL AUTO_INCREMENT, `TITLE` varchar(255) NOT NULL DEFAULT '',   `R_TRASH` int(10) NOT NULL DEFAULT '0', `LAST_UPDATE` timestamp, PRIMARY KEY (`ID`)) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;");
+     SQLExec("TRUNCATE anekdots;");
+     DebMes("Anekdots updating");
+     $xml_file="http://www.anekdot.ru/rss/export_top.xml"; // адрес xml файла
+     $t=time();
+     $sql=array();
+     $anekdot = array();
+     $xml = simplexml_load_file($xml_file); // раскладываем xml на массив
+     $xml_cnt = count($xml->channel->item);
+     $random= rand(0,$xml_cnt);
+     $num=1;
+     foreach( $xml->channel->item as $curr) {
+        $anekdot[]= (string) $curr->description;
+	 }
+     foreach($anekdot as $an){
+     $a=preg_replace('/<br>/',' ',$an); 
+     $sql['TITLE']=$a;
+     $sql['LAST_UPDATE']=$t;
+     $sql['ID']=$num;
+     SQLInsert('anekdots',$sql);
+     $num++;}
+}
+
+
+function read_a(){
+    $co=SQLSelectOne("SELECT ID,TITLE FROM anekdots WHERE R_TRASH = 0  ORDER BY RAND() LIMIT 1;");
+    SQLExec("UPDATE anekdots SET R_TRASH=1 WHERE ID='".$co['ID']."'");
+    return $co['TITLE'];
+}
+
+$r=read_a();
+if ( empty($r)){
+sayReply("Новых анекдотов нет, обновляю список",10);
+ update_a();
+ read_a();
+}elseif($params['UPDATE']){
+ update_a();
+}else{
+ sayReply("$r",10);
+}
