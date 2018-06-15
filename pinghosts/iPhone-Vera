@@ -1,0 +1,9 @@
+sg("Vera.Greeting",1);
+sg("Vera.atHome",1);
+sg("GuestsMode.active",1);
+if(gg("Vera.Greeting")!=1) say(getRandomLine("onlineVera"),2);
+say("Хочешь прикол?",2);
+sleep(1);
+runScript('anekdots');
+sleep(1);
+say("Только не говори что это тупой прикол",2);
