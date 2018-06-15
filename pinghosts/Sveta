@@ -1,0 +1,7 @@
+sg("Sveta.Greeting",1);
+sg("Sveta.atHome",1);
+sg("GuestsMode.active",1);
+if(gg("Sveta.Greeting")!=1) say(getRandomLine("onlineSveta"),2);
+say("Хочешь прикол?",2);
+sleep(1);
+runScript('anekdots');
