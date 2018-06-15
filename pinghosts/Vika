@@ -1,0 +1,4 @@
+sg("Vika.Greeting",1);
+sg("Vika.atHome",1);
+sg("GuestsMode.active",1);
+if(gg("Vika.Greeting")!=1) say(getRandomLine("onlineVika"),2);
