@@ -1,0 +1,6 @@
+sg("Olya.atHome","1");
+sg("GuestsMode.active",1);
+say(getRandomLine("onlineOlya"),2);
+say("Хочешь прикол?",2);
+sleep(1);
+runScript('anekdots');
