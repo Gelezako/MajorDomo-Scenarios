@@ -1,0 +1,6 @@
+sg("Galya.atHome",1);
+sg("GuestsMode.active",1);
+say(getRandomLine("onlineGalya"),2);
+say("Хочешь прикол?",2);
+sleep(1);
+runScript('anekdots');
