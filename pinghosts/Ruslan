@@ -1,0 +1,7 @@
+sg("Ruslan.Greeting",1);
+sg("Ruslan.atHome",1);
+sg("GuestsMode.active",1);
+if(gg("Ruslan.Greeting")!=1) say(getRandomLine("onlineRuslan"),2);
+say("Хочешь прикол?",2);
+sleep(1);
+runScript('anekdots');
