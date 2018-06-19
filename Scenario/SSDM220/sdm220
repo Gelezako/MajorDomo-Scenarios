@@ -1,0 +1,12 @@
+/*
+Создать сценарий с именем "sdm220" для парсинга переменных и записи в свойтво объекта
+print($params['volt']);
+print($params['curr']);
+print($params['p_act']);
+print($params['p_app']);
+print($params['p_rea']);
+print($params['pf']);
+print($params['phi']);
+print($params['freq']);
+*/
+sg('Sensor_voltage01.value', $params['volt']);
