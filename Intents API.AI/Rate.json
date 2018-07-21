@@ -1,86 +1,82 @@
 {
-  "templates": [
-    "какой сейчас курс @Currency:Currency ",
-    "курс @Currency:Currency ",
-    "@Currency:Currency ",
-    "Курс валют",
-    "Курс @Currency:Currency ",
-    "Сколько будет @sys.number:number  @Currency:Currency в @Currency:Currency1 "
+  "id": "a3d6592b-add6-4792-ae2b-ef0b8a8885d2",
+  "name": "Rate",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "id": "eaad16c0-6bc0-4374-bfb9-c9c396e57430",
+          "required": false,
+          "dataType": "@sys.number",
+          "name": "number",
+          "value": "$number",
+          "isList": false
+        },
+        {
+          "id": "fb4df051-cb84-477d-9da7-c2436549c144",
+          "required": false,
+          "dataType": "@Currency",
+          "name": "Currency",
+          "value": "$Currency",
+          "prompts": [
+            "Какая валюта?"
+          ],
+          "isList": false
+        },
+        {
+          "id": "d07da2d9-2886-4137-b1af-e34b6f3563d3",
+          "required": false,
+          "dataType": "@Currency",
+          "name": "Currency1",
+          "value": "$Currency1",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": []
+        },
+        {
+          "type": 0,
+          "speech": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
   ],
+  "priority": 500000,
+  "cortanaCommand": {
+    "navigateOrService": "NAVIGATE",
+    "target": ""
+  },
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "lastUpdate": 1532190804,
+  "fallbackIntent": false,
+  "events": [],
   "userSays": [
     {
-      "id": "504578f5-c3bc-476c-9f9e-b5bea72f3cce",
+      "id": "3c28a8c3-786d-485f-b85a-30a7867551df",
       "data": [
         {
-          "text": "какой сейчас курс "
-        },
-        {
-          "text": "всех валют",
-          "alias": "Currency",
-          "meta": "@Currency",
+          "text": "расскажи о киноленте дурак",
+          "meta": "@sys.ignore",
           "userDefined": false
         }
       ],
       "isTemplate": false,
-      "count": 1
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
     },
     {
-      "id": "33fe9b25-68f0-4950-bd7f-a7e6f03e7b26",
-      "data": [
-        {
-          "text": "курс "
-        },
-        {
-          "text": "рубля",
-          "alias": "Currency",
-          "meta": "@Currency",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "5f5f8b47-33d7-4a57-9e56-245f4d167ef6",
-      "data": [
-        {
-          "text": "доллар",
-          "alias": "Currency",
-          "meta": "@Currency",
-          "userDefined": true
-        }
-      ],
-      "isTemplate": false,
-      "count": 1
-    },
-    {
-      "id": "345e2207-7e9c-4a10-99cd-5fcde3599188",
-      "data": [
-        {
-          "text": "Курс валют"
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "0f9bbb2d-c685-4cf3-a2e0-8158f11cb6db",
-      "data": [
-        {
-          "text": "Курс "
-        },
-        {
-          "text": "евро",
-          "alias": "Currency",
-          "meta": "@Currency",
-          "userDefined": false
-        }
-      ],
-      "isTemplate": false,
-      "count": 0
-    },
-    {
-      "id": "10c363b5-fbd2-438f-a590-12bb0544d468",
+      "id": "7e10a5a8-0886-474b-8dec-ca6d71f24790",
       "data": [
         {
           "text": "Сколько будет "
@@ -111,65 +107,111 @@
         }
       ],
       "isTemplate": false,
-      "count": 1
-    }
-  ],
-  "id": "a3d6592b-add6-4792-ae2b-ef0b8a8885d2",
-  "name": "Rate",
-  "auto": true,
-  "contexts": [],
-  "responses": [
+      "count": 1,
+      "updated": 0,
+      "isAuto": false
+    },
     {
-      "resetContexts": false,
-      "affectedContexts": [],
-      "parameters": [
+      "id": "74fd1388-b52f-4d8d-8208-9e33d9d774d4",
+      "data": [
         {
-          "required": false,
-          "dataType": "@sys.number",
-          "name": "number",
-          "value": "$number",
-          "isList": false
+          "text": "Курс "
         },
         {
-          "required": true,
-          "dataType": "@Currency",
-          "name": "Currency",
-          "value": "$Currency",
-          "prompts": [
-            "Какая валюта?"
-          ],
-          "isList": false
-        },
-        {
-          "required": false,
-          "dataType": "@Currency",
-          "name": "Currency1",
-          "value": "$Currency1",
-          "isList": false
+          "text": "евро",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": false
         }
       ],
-      "messages": [
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "e8bc40d8-9c04-402f-9b19-ee794693d5dd",
+      "data": [
         {
-          "type": 0,
-          "speech": [
-            "Сейчас посчитаю",
-            "Секундочку"
-          ]
+          "text": "какой сейчас курс "
         },
         {
-          "type": 0,
-          "speech": []
+          "text": "всех валют",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": false
         }
-      ]
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1496066382,
+      "isAuto": false
+    },
+    {
+      "id": "67a558ff-d8dd-4094-a1db-8b9f7e251edc",
+      "data": [
+        {
+          "text": "курс "
+        },
+        {
+          "text": "рубля",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1496060185,
+      "isAuto": false
+    },
+    {
+      "id": "6bdf9970-4d0a-4fa8-b6c1-a8b01fb73898",
+      "data": [
+        {
+          "text": "Курс валют"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "3dd6fef3-6447-4dcc-a689-2b079f4433f6",
+      "data": [
+        {
+          "text": "расскажи о киноленте "
+        },
+        {
+          "text": "дурак",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 0,
+      "isAuto": false
+    },
+    {
+      "id": "70e6b2e0-1a8d-4a0c-a1c7-35da15526ab8",
+      "data": [
+        {
+          "text": "доллар",
+          "alias": "Currency",
+          "meta": "@Currency",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 1,
+      "updated": 1495991589,
+      "isAuto": false
     }
   ],
-  "priority": 500000,
-  "cortanaCommand": {
-    "navigateOrService": "NAVIGATE",
-    "target": ""
-  },
-  "webhookUsed": false,
-  "webhookForSlotFilling": false,
-  "fallbackIntent": false,
-  "events": []
+  "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
+  "templates": []
 }
