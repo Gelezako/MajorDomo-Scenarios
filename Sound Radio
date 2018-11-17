@@ -7,10 +7,16 @@
 **/
 
 
+// $params['state'] (ex 'включить');
+// $params['channel']
+// $params['number']
+// $params['volume']
+// $params['room'] (ex 'Livingroom');
+
 if($params['state']=="выключить") sg("XiRgb01.current_volume","0");
 
 if($params['state']=="включить"){
-    if($params['channel']=="люкс фм"){
+    if($params['channel']=="люкс фм"){
      sg("XiRgb01.current_program","527782036");
      sg("XiRgb01.current_status","run");
      }
@@ -42,10 +48,25 @@ if($params['state']=="включить"){
      sg("XiRgb01.current_program","527782034");
      sg("XiRgb01.current_status","run");
      }
-     else if($params['room'] =="Livingroom"){
+ 	 else if($params['room'] =="Livingroom"){
      sg("RadioSetting.PlayTerminal", "JBL");
-     cm('RadioSetting.Control', array('sta:FM'));
+     cm('RadioSetting.Control', array('sta:zaicevfm'));
      say("включаю радио на гугл хоум",2);
+     }
+  	 else if($params['terminal'] =="JBL"){
+     sg("RadioSetting.PlayTerminal", "JBL");
+      	if($params['channel'] =="kissfm"){
+     	cm('RadioSetting.Control', array('sta:zaicevfm'));
+     	say("включаю радио кисс фм на гугл хоум",2);
+        }
+        else if($params['channel'] =="релакс"){
+     	cm('RadioSetting.Control', array('sta:relax'));
+     	say("включаю радио релакс на гугл хоум",2);
+        }
+        else if($params['channel'] =="roks"){
+     	cm('RadioSetting.Control', array('sta:roks'));
+     	say("включаю радио рокс на гугл хоум",2);
+        }
      }
  	 else if($params['channel']=="") sg("XiRgb01.current_status","run");
 }
