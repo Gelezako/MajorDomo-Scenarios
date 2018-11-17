@@ -39,6 +39,14 @@
           "name": "volume",
           "value": "$volume",
           "isList": false
+        },
+        {
+          "id": "aa93f1fc-41ef-42d1-b012-b3fccc677335",
+          "required": false,
+          "dataType": "@room",
+          "name": "room",
+          "value": "$room",
+          "isList": false
         }
       ],
       "messages": [
@@ -58,10 +66,100 @@
   },
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1514459086,
+  "lastUpdate": 1542481563,
   "fallbackIntent": false,
   "events": [],
   "userSays": [
+    {
+      "id": "2c75ba61-07e7-46e4-b2f3-1ed50374b001",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " радио на "
+        },
+        {
+          "text": "кухне",
+          "alias": "room",
+          "meta": "@room",
+          "userDefined": false
+        },
+        {
+          "text": " с "
+        },
+        {
+          "text": "громкостью",
+          "alias": "volume",
+          "meta": "@volume",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "50",
+          "alias": "number",
+          "meta": "@sys.number",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1542481563,
+      "isAuto": false
+    },
+    {
+      "id": "930b5e13-a8cb-4a57-bb6d-913e6e0727af",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " радио на "
+        },
+        {
+          "text": "кухне",
+          "alias": "room",
+          "meta": "@room",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1542481563,
+      "isAuto": false
+    },
+    {
+      "id": "4ba5a127-8be1-4f2b-8d3b-65b057c0615e",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " радио в "
+        },
+        {
+          "text": "зале",
+          "alias": "room",
+          "meta": "@room",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1542481057,
+      "isAuto": false
+    },
     {
       "id": "85d78e73-e480-4ccf-b735-babdcde63960",
       "data": [
@@ -503,5 +601,7 @@
     }
   ],
   "followUpIntents": [],
+  "liveAgentHandoff": false,
+  "endInteraction": false,
   "templates": []
 }
