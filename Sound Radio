@@ -42,6 +42,11 @@ if($params['state']=="включить"){
      sg("XiRgb01.current_program","527782034");
      sg("XiRgb01.current_status","run");
      }
+     else if($params['room'] =="Livingroom"){
+     sg("RadioSetting.PlayTerminal", "JBL");
+     cm('RadioSetting.Control', array('sta:FM'));
+     say("включаю радио на гугл хоум",2);
+     }
  	 else if($params['channel']=="") sg("XiRgb01.current_status","run");
 }
 if($params['number']!="") sg("XiRgb01.current_volume",$params['number']);
