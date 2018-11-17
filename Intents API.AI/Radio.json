@@ -47,6 +47,14 @@
           "name": "room",
           "value": "$room",
           "isList": false
+        },
+        {
+          "id": "713f6500-b504-4a49-9029-555403d7b2d7",
+          "required": false,
+          "dataType": "@terminal",
+          "name": "terminal",
+          "value": "$terminal",
+          "isList": false
         }
       ],
       "messages": [
@@ -66,10 +74,67 @@
   },
   "webhookUsed": false,
   "webhookForSlotFilling": false,
-  "lastUpdate": 1542481563,
+  "lastUpdate": 1542485586,
   "fallbackIntent": false,
   "events": [],
   "userSays": [
+    {
+      "id": "7c8b527d-418d-4ed8-aa15-5b8988155a15",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " радио "
+        },
+        {
+          "text": "кисс фм",
+          "alias": "channel",
+          "meta": "@channel",
+          "userDefined": false
+        },
+        {
+          "text": " на "
+        },
+        {
+          "text": "гугл хоум",
+          "alias": "terminal",
+          "meta": "@terminal",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1542485070,
+      "isAuto": false
+    },
+    {
+      "id": "1d90ec13-219d-450b-9a7e-f3251aca56f2",
+      "data": [
+        {
+          "text": "включить",
+          "alias": "state",
+          "meta": "@state",
+          "userDefined": false
+        },
+        {
+          "text": " радио на "
+        },
+        {
+          "text": "гугл хоум",
+          "alias": "terminal",
+          "meta": "@terminal",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0,
+      "updated": 1542485070,
+      "isAuto": false
+    },
     {
       "id": "2c75ba61-07e7-46e4-b2f3-1ed50374b001",
       "data": [
