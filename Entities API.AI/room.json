@@ -1,0 +1,84 @@
+{
+  "id": "994283e0-59e9-403e-9353-4dc465fdce4b",
+  "name": "room",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Livingroom",
+      "synonyms": [
+        "Гостиная",
+        "гостинной",
+        "зал",
+        "зале"
+      ]
+    },
+    {
+      "value": "Bedroom",
+      "synonyms": [
+        "Спальня",
+        "спальне"
+      ]
+    },
+    {
+      "value": "Kitchen",
+      "synonyms": [
+        "Кухня",
+        "кухне"
+      ]
+    },
+    {
+      "value": "Hall",
+      "synonyms": [
+        "Коридор",
+        "коридоре",
+        "хол",
+        "холе"
+      ]
+    },
+    {
+      "value": "Bathroom",
+      "synonyms": [
+        "Ванная",
+        "ванной",
+        "душ",
+        "душе"
+      ]
+    },
+    {
+      "value": "Kinderroom",
+      "synonyms": [
+        "Детская",
+        "детской"
+      ]
+    },
+    {
+      "value": "Toilet",
+      "synonyms": [
+        "Туалет",
+        "туалете"
+      ]
+    },
+    {
+      "value": "Balcony",
+      "synonyms": [
+        "Балкон",
+        "балконе"
+      ]
+    },
+    {
+      "value": "Rabota",
+      "synonyms": [
+        "Работа",
+        "работе"
+      ]
+    },
+    {
+      "value": "зале",
+      "synonyms": [
+        "зале"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
