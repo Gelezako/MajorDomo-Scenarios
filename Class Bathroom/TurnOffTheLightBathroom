@@ -1,0 +1,7 @@
+// Добавить код в метод statusUpdated вытяжки
+// автоматическое выключение света в ванной через час, если забыли выключить. Добавить продление по датчику движения.
+if(gg("Relay10.status") == 1){
+ClearTimeOut("TurnOffTheLightBathroom");
+SetTimeOut("TurnOffTheLightBathroom","sg('Relay10.status',0);",3600);
+say("выключаю  свет в ванной, который забыли выключить",2);
+}
