@@ -1,0 +1,7 @@
+// Добавить код в метод statusUpdated вытяжки
+// автоматическое выключение вытяжки в ванной через 30 мин, если забыли выключить. Добавить продление по датчику газа и влажности.
+if(gg("Relay11.status") == 1){
+ClearTimeOut("TurnOffExhaustBathroom");
+SetTimeOut("TurnOffExhaustBathroom","sg('Relay11.status',0);",1800);
+say("выключаю вытяжку в ванной",2);
+}
