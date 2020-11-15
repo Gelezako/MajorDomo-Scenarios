@@ -1,0 +1,45 @@
+/**
+* Сценарий для Majordomo
+* управление вытяжками на кухне на основе датчиков гари, газа и влажности
+* @author Alex Sokolov <admin@gelezako.com>
+* @copyright Alex Sokolov http://blog.gelezako.com (c)
+* @version 0.1 ([2020])
+**/
+
+// Добавить метод exhaust и выставить в настройках как метод для срабатывания при изменение значения value 
+// Добавить свойство LatestChangeStatus т.к. Updated Timestamp работает некорректно
+
+$Relay03minutes=round((strtotime("now")-gg("Relay03.LatestChangeStatus"))); // определяем последнее время переключения вытяжки
+$Relay04minutes=round((strtotime("now")-gg("Relay04.LatestChangeStatus")));
+
+
+        if(gg("Smoke01.value") >= 90 || gg("Smoke02.value") >= 110 || gg("HumSensor01.value") > 25){ // проверка не повысился ли уровень гари, газа и влажности на кухне  
+            if(gg("Relay03.status") == 0 and $Relay03minutes >= 180){
+            //Debmes("Минуты в блоке включения Relay03 = ".$Relay03minutes);                
+            sg("Relay03.status", "1");
+            sg("Relay03.LatestChangeStatus", strtotime("now"));
+            say("Включаю вытяжку над плитой", 2);
+            }
+            if(gg("Relay04.status") == 0 and $Relay04minutes >= 180){
+            //Debmes("Минуты в блоке включения Relay04 = ".$Relay04minutes);                
+            sg("Relay04.status", "1");
+            sg("Relay04.LatestChangeStatus", strtotime("now"));
+            say("Включаю общую вытяжку", 2);
+            }
+        }
+
+
+        if(gg("Smoke01.value") <= 80 and gg("Smoke02.value") <= 100 and gg("HumSensor01.value") < 21){ 
+            if(gg("Relay03.status") == 1 and $Relay03minutes >= 180){
+            //Debmes("Минуты в блоке выключения Relay03 = ".$Relay03minutes);                
+            sg("Relay03.status", "0");
+            sg("Relay03.LatestChangeStatus", strtotime("now"));
+            say("Выключаю вытяжку над плитой", 2);
+            }
+            if(gg("Relay04.status") == 1 and $Relay04minutes >= 180){
+            //Debmes("Минуты в блоке выключения Relay04 = ".$Relay04minutes);                
+            sg("Relay04.status", "0");
+            sg("Relay04.LatestChangeStatus", strtotime("now"));
+            say("Выключаю общую вытяжку", 2);
+            }
+        }
